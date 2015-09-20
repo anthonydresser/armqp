@@ -21,7 +21,16 @@
 
 
 module main(
-
-    // some content
+    input clk,
+    input [7:0] vData,
+    output vClk
     );
+    
+     clk_wiz_0 instance_name
+      (
+      // Clock in ports
+       .clk_in1(clk),      // input clk_in1
+       // Clock out ports
+       .clk_out1(vClk))     // output clk_out1
+    
 endmodule
