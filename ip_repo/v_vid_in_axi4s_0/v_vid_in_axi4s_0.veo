@@ -1,5 +1,4 @@
-// 
-// (c) Copyright 2008 - 2013 Xilinx, Inc. All rights reserved.
+// (c) Copyright 1995-2015 Xilinx, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of Xilinx, Inc. and is protected under U.S. and
@@ -45,35 +44,49 @@
 // THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 // PART OF THIS FILE AT ALL TIMES.
 // 
-//----------------------------------------------------------------------------
-// User entered comments
-//----------------------------------------------------------------------------
-// None
-//
-//----------------------------------------------------------------------------
-//  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
-//   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
-//----------------------------------------------------------------------------
-// CLK_OUT1____12.000______0.000______50.0______645.500____670.352
-//
-//----------------------------------------------------------------------------
-// Input Clock   Freq (MHz)    Input Jitter (UI)
-//----------------------------------------------------------------------------
-// __primary______________24____________0.010
+// DO NOT MODIFY THIS FILE.
+
+// IP VLNV: xilinx.com:ip:v_vid_in_axi4s:3.0
+// IP Revision: 7
 
 // The following must be inserted into your Verilog file for this
 // core to be instantiated. Change the instance name and port connections
 // (in parentheses) to your own signal names.
 
 //----------- Begin Cut here for INSTANTIATION Template ---// INST_TAG
-
-  clk_wiz_1 instance_name
-   (
-   // Clock in ports
-    .clk_in1(clk_in1),      // input clk_in1
-    // Clock out ports
-    .clk_12M(clk_12M),     // output clk_12M
-    // Status and control signals
-    .reset(reset), // input reset
-    .locked(locked));      // output locked
+v_vid_in_axi4s_0 your_instance_name (
+  .vid_io_in_clk(vid_io_in_clk),              // input wire vid_io_in_clk
+  .rst(rst),                                  // input wire rst
+  .vid_io_in_ce(vid_io_in_ce),                // input wire vid_io_in_ce
+  .vid_active_video(vid_active_video),        // input wire vid_active_video
+  .vid_vblank(vid_vblank),                    // input wire vid_vblank
+  .vid_hblank(vid_hblank),                    // input wire vid_hblank
+  .vid_vsync(vid_vsync),                      // input wire vid_vsync
+  .vid_hsync(vid_hsync),                      // input wire vid_hsync
+  .vid_field_id(vid_field_id),                // input wire vid_field_id
+  .vid_data(vid_data),                        // input wire [15 : 0] vid_data
+  .aclk(aclk),                                // input wire aclk
+  .aclken(aclken),                            // input wire aclken
+  .aresetn(aresetn),                          // input wire aresetn
+  .m_axis_video_tdata(m_axis_video_tdata),    // output wire [15 : 0] m_axis_video_tdata
+  .m_axis_video_tvalid(m_axis_video_tvalid),  // output wire m_axis_video_tvalid
+  .m_axis_video_tready(m_axis_video_tready),  // input wire m_axis_video_tready
+  .m_axis_video_tuser(m_axis_video_tuser),    // output wire m_axis_video_tuser
+  .m_axis_video_tlast(m_axis_video_tlast),    // output wire m_axis_video_tlast
+  .fid(fid),                                  // output wire fid
+  .vtd_active_video(vtd_active_video),        // output wire vtd_active_video
+  .vtd_vblank(vtd_vblank),                    // output wire vtd_vblank
+  .vtd_hblank(vtd_hblank),                    // output wire vtd_hblank
+  .vtd_vsync(vtd_vsync),                      // output wire vtd_vsync
+  .vtd_hsync(vtd_hsync),                      // output wire vtd_hsync
+  .vtd_field_id(vtd_field_id),                // output wire vtd_field_id
+  .wr_error(wr_error),                        // output wire wr_error
+  .empty(empty),                              // output wire empty
+  .axis_enable(axis_enable)                  // input wire axis_enable
+);
 // INST_TAG_END ------ End INSTANTIATION Template ---------
+
+// You must compile the wrapper file v_vid_in_axi4s_0.v when simulating
+// the core, v_vid_in_axi4s_0. When compiling the wrapper file, be sure to
+// reference the Verilog simulation library.
+

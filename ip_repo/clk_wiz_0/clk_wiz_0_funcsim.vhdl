@@ -1,10 +1,10 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Tue Sep 22 18:25:31 2015
+-- Date        : Tue Sep 22 18:24:32 2015
 -- Host        : Windows running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim c:/Users/Anthony/armqp/ip_repo/clk_wiz_1/clk_wiz_1_funcsim.vhdl
--- Design      : clk_wiz_1
+-- Command     : write_vhdl -force -mode funcsim c:/Users/Anthony/armqp/ip_repo/clk_wiz_0/clk_wiz_0_funcsim.vhdl
+-- Design      : clk_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
 -- Device      : xc7z020clg484-1
@@ -13,22 +13,22 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity clk_wiz_1_clk_wiz_1_clk_wiz is
+entity clk_wiz_0_clk_wiz_0_clk_wiz is
   port (
     clk_in1 : in STD_LOGIC;
-    clk_12M : out STD_LOGIC;
+    clk_24M : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of clk_wiz_1_clk_wiz_1_clk_wiz : entity is "clk_wiz_1_clk_wiz";
-end clk_wiz_1_clk_wiz_1_clk_wiz;
+  attribute ORIG_REF_NAME of clk_wiz_0_clk_wiz_0_clk_wiz : entity is "clk_wiz_0_clk_wiz";
+end clk_wiz_0_clk_wiz_0_clk_wiz;
 
-architecture STRUCTURE of clk_wiz_1_clk_wiz_1_clk_wiz is
-  signal clk_12M_clk_wiz_1 : STD_LOGIC;
-  signal clk_in1_clk_wiz_1 : STD_LOGIC;
-  signal clkfbout_buf_clk_wiz_1 : STD_LOGIC;
-  signal clkfbout_clk_wiz_1 : STD_LOGIC;
+architecture STRUCTURE of clk_wiz_0_clk_wiz_0_clk_wiz is
+  signal clk_24M_clk_wiz_0 : STD_LOGIC;
+  signal clk_in1_clk_wiz_0 : STD_LOGIC;
+  signal clkfbout_buf_clk_wiz_0 : STD_LOGIC;
+  signal clkfbout_clk_wiz_0 : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED : STD_LOGIC;
@@ -59,8 +59,8 @@ architecture STRUCTURE of clk_wiz_1_clk_wiz_1_clk_wiz is
 begin
 clkf_buf: unisim.vcomponents.BUFG
      port map (
-      I => clkfbout_clk_wiz_1,
-      O => clkfbout_buf_clk_wiz_1
+      I => clkfbout_clk_wiz_0,
+      O => clkfbout_buf_clk_wiz_0
     );
 clkin1_ibufg: unisim.vcomponents.IBUF
     generic map(
@@ -68,22 +68,22 @@ clkin1_ibufg: unisim.vcomponents.IBUF
     )
         port map (
       I => clk_in1,
-      O => clk_in1_clk_wiz_1
+      O => clk_in1_clk_wiz_0
     );
 clkout1_buf: unisim.vcomponents.BUFG
      port map (
-      I => clk_12M_clk_wiz_1,
-      O => clk_12M
+      I => clk_24M_clk_wiz_0,
+      O => clk_24M
     );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
-      CLKFBOUT_MULT_F => 62.375000,
+      CLKFBOUT_MULT_F => 50.250000,
       CLKFBOUT_PHASE => 0.000000,
       CLKFBOUT_USE_FINE_PS => false,
-      CLKIN1_PERIOD => 41.666000,
+      CLKIN1_PERIOD => 10.000000,
       CLKIN2_PERIOD => 0.000000,
-      CLKOUT0_DIVIDE_F => 62.375000,
+      CLKOUT0_DIVIDE_F => 41.875000,
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,
@@ -113,7 +113,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT6_PHASE => 0.000000,
       CLKOUT6_USE_FINE_PS => false,
       COMPENSATION => "ZHOLD",
-      DIVCLK_DIVIDE => 2,
+      DIVCLK_DIVIDE => 5,
       IS_CLKINSEL_INVERTED => '0',
       IS_PSEN_INVERTED => '0',
       IS_PSINCDEC_INVERTED => '0',
@@ -127,15 +127,15 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       STARTUP_WAIT => false
     )
         port map (
-      CLKFBIN => clkfbout_buf_clk_wiz_1,
-      CLKFBOUT => clkfbout_clk_wiz_1,
+      CLKFBIN => clkfbout_buf_clk_wiz_0,
+      CLKFBOUT => clkfbout_clk_wiz_0,
       CLKFBOUTB => NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED,
       CLKFBSTOPPED => NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED,
-      CLKIN1 => clk_in1_clk_wiz_1,
+      CLKIN1 => clk_in1_clk_wiz_0,
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,
-      CLKOUT0 => clk_12M_clk_wiz_1,
+      CLKOUT0 => clk_24M_clk_wiz_0,
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
       CLKOUT1 => NLW_mmcm_adv_inst_CLKOUT1_UNCONNECTED,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
@@ -187,24 +187,24 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity clk_wiz_1 is
+entity clk_wiz_0 is
   port (
     clk_in1 : in STD_LOGIC;
-    clk_12M : out STD_LOGIC;
+    clk_24M : out STD_LOGIC;
     reset : in STD_LOGIC;
     locked : out STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
-  attribute NotValidForBitStream of clk_wiz_1 : entity is true;
+  attribute NotValidForBitStream of clk_wiz_0 : entity is true;
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of clk_wiz_1 : entity is "clk_wiz_1,clk_wiz_v5_1,{component_name=clk_wiz_1,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=1,clkin1_period=41.666,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}";
-end clk_wiz_1;
+  attribute CORE_GENERATION_INFO of clk_wiz_0 : entity is "clk_wiz_0,clk_wiz_v5_1,{component_name=clk_wiz_0,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,enable_axi=0,feedback_source=FDBK_AUTO,PRIMITIVE=MMCM,num_out_clk=1,clkin1_period=10.0,clkin2_period=10.0,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,feedback_type=SINGLE,CLOCK_MGR_TYPE=NA,manual_override=false}";
+end clk_wiz_0;
 
-architecture STRUCTURE of clk_wiz_1 is
+architecture STRUCTURE of clk_wiz_0 is
 begin
-inst: entity work.clk_wiz_1_clk_wiz_1_clk_wiz
+inst: entity work.clk_wiz_0_clk_wiz_0_clk_wiz
      port map (
-      clk_12M => clk_12M,
+      clk_24M => clk_24M,
       clk_in1 => clk_in1,
       locked => locked,
       reset => reset

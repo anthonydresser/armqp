@@ -21,25 +21,22 @@
 
 
 module OV7670_interface(
-	input wclk,
     input [7:0] din,
     input vsync,
     input href,
     input pclk,
     input reset,
-	output reg [7:0] dout,
-	output reg [3:0] addrout,
-	output reg we
+	output [15:0] dout
     );
     
     // s0 = waiting on next frame
     // s1 = waiting on row
-    // s2 = reading
-    parameter s0 = 0, s1 = 1, s2 = 2, s3 = 3;
+    // s2 = reading 
+    parameter s0 = 0, s1 = 1, s2 = 2;
     
     reg [2:0] currentstate;
     reg [2:0] nextstate;
-	reg [7:0] datahold;
+    reg [15:0] douthold;
        
     always @(posedge pclk, posedge reset)
 	begin
@@ -51,48 +48,28 @@ module OV7670_interface(
     
     always @(posedge pclk)
 	begin
-        case(currentstate)
-            s2: begin
-				datahold <= din;
-                nextstate <= s2;
-                end
-       endcase
+	   if(currentstate == s2)
+	   begin
+	       douthold <= douthold << 8;
+	       douthold[7:0] <= din;
+       end
 	end
-            
+    
     always @(vsync)
-	begin
+    begin
         if(vsync == 1)
             nextstate <= s0;
         else
             nextstate <= s1;
-	end
-            
-    always @(href)
-	begin
-        if(href == 0)
-            nextstate <= s1;
-        else
-            nextstate <= s2;
-	end
+    end
     
-	always @(posedge wclk, posedge reset)
-	begin
-	   if(reset)
-	   begin
-	       we <= 0;
-	       dout <= 8'b0;
-	       addrout <= 4'b0;
-	   end
-	   else
-	   begin
-            if(currentstate == s2)
-            begin
-                we <= 1;
-                dout <= datahold;
-                addrout <= addrout + 1;
-            end
-            else
-                we <= 0;
-        end
-	end
+    always @(href)
+    begin
+        if(href == 1)
+            nextstate <= s2;
+        else
+            nextstate <= s1;
+    end
+    
+    assign dout = douthold;
 endmodule

@@ -1,6 +1,4 @@
-# file: clk_wiz_1.xdc
-# 
-# (c) Copyright 2008 - 2013 Xilinx, Inc. All rights reserved.
+# (c) Copyright 2012-2015 Xilinx, Inc. All rights reserved.
 # 
 # This file contains confidential and proprietary information
 # of Xilinx, Inc. and is protected under U.S. and
@@ -46,14 +44,18 @@
 # THIS COPYRIGHT NOTICE AND DISCLAIMER MUST BE RETAINED AS
 # PART OF THIS FILE AT ALL TIMES.
 # 
+# DO NOT MODIFY THIS FILE.
+# #########################################################
+#
+# This XDC is used only in OOC mode for synthesis, implementation
+#
+# #########################################################
 
-# Input clock periods. These duplicate the values entered for the
-# input clocks. You can use these to time your system. If required
-# commented constraints can be used in the top level xdc 
-#----------------------------------------------------------------
-# Connect to input port when clock capable pin is selected for input
-create_clock -period 41.666 [get_ports clk_in1]
-set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.41666
 
+create_clock -period 13.468 -name vid_io_in_clk [get_ports vid_io_in_clk]
+set_property HD.CLK_SRC BUFGCTRL_X0Y0 [get_ports vid_io_in_clk]
+
+create_clock -period 13.468 -name aclk [get_ports aclk]
+set_property HD.CLK_SRC BUFGCTRL_X0Y1 [get_ports aclk]
 
 
