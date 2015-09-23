@@ -40,7 +40,7 @@
 set origin_dir "[file dirname [info script]]"
 
 # Create project
-create_project armqp $origin_dir/armqp
+create_project armqp $origin_dir/armqp -force
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
