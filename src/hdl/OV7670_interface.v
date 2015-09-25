@@ -54,22 +54,16 @@ module OV7670_interface(
 	       douthold[7:0] <= din;
        end
 	end
-    
-    always @(vsync)
-    begin
-        if(vsync == 1)
-            nextstate <= s0;
-        else
-            nextstate <= s1;
-    end
-    
-    always @(href)
-    begin
-        if(href == 1)
-            nextstate <= s2;
-        else
-            nextstate <= s1;
-    end
+	
+	always @(posedge pclk)
+	begin
+	   if(vsync == 1)
+	       nextstate <= s0;
+       else if(href == 1)
+           nextstate <= s2;
+       else
+           nextstate <= s1;
+	end
     
     assign dout = douthold;
 endmodule
