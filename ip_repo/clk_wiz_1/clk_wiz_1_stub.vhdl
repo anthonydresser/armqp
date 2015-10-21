@@ -1,9 +1,10 @@
 -- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
--- Date        : Tue Sep 22 18:25:31 2015
--- Host        : Windows running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub c:/Users/Anthony/armqp/ip_repo/clk_wiz_1/clk_wiz_1_stub.vhdl
+-- Date        : Mon Sep 28 19:27:05 2015
+-- Host        : Lukas-laptop running 64-bit Service Pack 1  (build 7601)
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/Users/Lukas/Documents/MQP/ZedTests/new_hdmi/new_hdmi.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1_stub.vhdl
 -- Design      : clk_wiz_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1

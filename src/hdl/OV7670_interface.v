@@ -26,7 +26,7 @@ module OV7670_interface(
     input href,
     input pclk,
     input reset,
-	output [15:0] dout
+	output reg [7:0] dout
     );
     
     // s0 = waiting on next frame
@@ -36,7 +36,6 @@ module OV7670_interface(
     
     reg [2:0] currentstate;
     reg [2:0] nextstate;
-    reg [15:0] douthold;
        
     always @(posedge pclk, posedge reset)
 	begin
@@ -50,26 +49,24 @@ module OV7670_interface(
 	begin
 	   if(currentstate == s2)
 	   begin
-	       douthold <= douthold << 8;
-	       douthold[7:0] <= din;
+	       dout <= din;
        end
 	end
     
-    always @(vsync)
+    always @(vsync, href)
     begin
         if(vsync == 1)
             nextstate <= s0;
-        else
-            nextstate <= s1;
-    end
+//        else
+//            nextstate <= s1;
+//    end
     
-    always @(href)
-    begin
-        if(href == 1)
+//    always @(href)
+//    begin
+        else if(href == 1)
             nextstate <= s2;
         else
             nextstate <= s1;
     end
     
-    assign dout = douthold;
 endmodule

@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Webtalk v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Sep 03 16:31:50 2015
+# Process ID: 6040
+# Log file: C:/Users/Lukas/Documents/MQP/ZedTests/2014_1/avnet_zed_hdmi_core/ip_projects/webtalk.log
+# Journal file: C:/Users/Lukas/Documents/MQP/ZedTests/2014_1/avnet_zed_hdmi_core/ip_projects\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Lukas/Documents/MQP/ZedTests/2014_1/avnet_zed_hdmi_core/ip_projects/edit_zed_hdmi_out.hw/webtalk/labtool_webtalk.tcl -notrace
+
+    while executing
+"webtalk_transmit -clientid 109650399 -regid "211080808_0_0_662" -xml C:/Users/Lukas/Documents/MQP/ZedTests/2014_1/avnet_zed_hdmi_core/ip_projects/edit..."
+    (file "C:/Users/Lukas/Documents/MQP/ZedTests/2014_1/avnet_zed_hdmi_core/ip_projects/edit_zed_hdmi_out.hw/webtalk/labtool_webtalk.tcl" line 26)
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 03 16:31:54 2015...
