@@ -261,9 +261,9 @@ assign LED = vdin;
 //        .vtiming_in_hsync(vtd_hsync),
 //        .vtiming_in_vblank(vtd_vblank),
 //        .vtiming_in_vsync(vtd_vsync),
-        .zed_hdmi_iic_scl_io(zed_hdmi_iic_scl_i0),
+        .zed_hdmi_iic_scl_io(zed_hdmi_iic_scl_io),
 
-        .zed_hdmi_iic_sda_io(zed_hdmi_iic_sda_i0),
+        .zed_hdmi_iic_sda_io(zed_hdmi_iic_sda_io),
 
 //        .gen_clk_en(gen_en),
 //        .empty(empty_vidout),
