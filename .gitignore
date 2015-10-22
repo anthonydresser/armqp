@@ -1,3 +1,9 @@
 /armqp
 /.Xil
 *.jou
+*.o
+*.elf
+/src/RemoteSystemsTempFiles
+/src/.metadata
+*.d
+*.elf.size

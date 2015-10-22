@@ -1,0 +1,165 @@
+20:57:13 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+20:57:14 INFO  : Processing command line option -hwspec c:/Users/Lukas/Documents/MQP/armqp/armqp/armqp.sdk/top_level.hdf.
+20:57:15 INFO  : XSDB server has started successfully.
+20:58:09 INFO  : BSP Project P/standalone_bsp_0 has been successfully migrated.
+21:53:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:53:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447832" && level==0} -index 1' command is executed.
+21:54:00 INFO  : FPGA configured successfully with bitstream "C:/Users/Lukas/Documents/MQP/armqp/src/sdk/top_level_hw_platform_0/top_level.bit"
+21:54:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:54:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447832" && level==0} -index 1' command is executed.
+21:54:18 INFO  : 'fpga -state' command is executed.
+21:54:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:54:19 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0' command is executed.
+21:54:22 INFO  : Mermory regions for PS have been updated.
+21:54:22 INFO  : Sourcing of 'C:/Users/Lukas/Documents/MQP/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+21:54:23 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0' command is executed.
+21:54:24 INFO  : 'ps7_init' command is executed.
+21:54:24 INFO  : 'ps7_post_config' command is executed.
+21:54:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:54:25 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+21:54:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:54:25 INFO  : The application 'C:/Users/Lukas/Documents/MQP/armqp/src/sdk/hdmi_out_tutorial/Debug/hdmi_out_tutorial.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:54:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source C:/Users/Lukas/Documents/MQP/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+dow C:/Users/Lukas/Documents/MQP/armqp/src/sdk/hdmi_out_tutorial/Debug/hdmi_out_tutorial.elf
+----------------End of Script----------------
+
+21:54:25 INFO  : Memory regions updated for context APU
+21:54:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:54:25 INFO  : 'con' command is executed.
+21:54:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+con
+----------------End of Script----------------
+
+21:55:18 INFO  : Disconnected from the channel tcfchan#1.
+22:27:24 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+00:03:22 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+00:03:23 INFO  : Processing command line option -hwspec c:/Users/Lukas/Documents/MQP/armqp/armqp/armqp.sdk/top_level.hdf.
+00:03:24 INFO  : XSDB server has started successfully.
+00:03:24 INFO  : Checking for hwspec changes in the project top_level_hw_platform_0.
+00:03:26 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1445486400187,  Project:1445402167016
+00:03:26 INFO  : The hardware specification for project 'top_level_hw_platform_0' is different from c:/Users/Lukas/Documents/MQP/armqp/armqp/armqp.sdk/top_level.hdf.
+00:03:26 INFO  : Copied contents of c:/Users/Lukas/Documents/MQP/armqp/armqp/armqp.sdk/top_level.hdf into \top_level_hw_platform_0\system.hdf.
+00:03:31 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+00:03:35 INFO  : 
+00:03:36 INFO  : Updating hardware inferred compiler options for hdmi_out_tutorial.
+00:03:36 INFO  : Clearing existing target manager status.
+00:04:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:04:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447832" && level==0} -index 1' command is executed.
+00:04:24 INFO  : FPGA configured successfully with bitstream "C:/Users/Lukas/Documents/MQP/armqp/src/sdk/top_level_hw_platform_0/top_level.bit"
+00:04:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:04:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447832" && level==0} -index 1' command is executed.
+00:04:32 INFO  : 'fpga -state' command is executed.
+00:04:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:04:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0' command is executed.
+00:04:36 INFO  : Mermory regions for PS have been updated.
+00:04:36 INFO  : Sourcing of 'C:/Users/Lukas/Documents/MQP/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+00:04:37 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0' command is executed.
+00:04:37 INFO  : 'ps7_init' command is executed.
+00:04:38 INFO  : 'ps7_post_config' command is executed.
+00:04:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:04:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:04:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:04:39 INFO  : The application 'C:/Users/Lukas/Documents/MQP/armqp/src/sdk/hdmi_out_tutorial/Debug/hdmi_out_tutorial.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:04:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source C:/Users/Lukas/Documents/MQP/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+dow C:/Users/Lukas/Documents/MQP/armqp/src/sdk/hdmi_out_tutorial/Debug/hdmi_out_tutorial.elf
+----------------End of Script----------------
+
+00:04:39 INFO  : Memory regions updated for context APU
+00:04:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:04:39 INFO  : 'con' command is executed.
+00:04:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447832"} -index 0
+con
+----------------End of Script----------------
+
+00:04:50 INFO  : Disconnected from the channel tcfchan#1.
+00:07:17 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
