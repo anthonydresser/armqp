@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 6 resources" deleteContents="false" description="Delete 6 resources" element1="/hdmi_display_app/src/video_frame_buffer.c" element2="/hdmi_display_app/src/video_frame_buffer.h" element3="/hdmi_display_app/src/video_generator.c" element4="/hdmi_display_app/src/video_generator.h" element5="/hdmi_display_app/src/video_resolution.c" element6="/hdmi_display_app/src/video_resolution.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="6" stamp="1443674647464"/>
+</session>
