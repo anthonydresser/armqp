@@ -37,13 +37,13 @@
 set origin_dir [file dirname [info script]]
 
 # Create project
-create_project hdmi_dma $origin_dir/hdmi_dma
+create_project armqp $origin_dir/armqp
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
 
 # Set project properties
-set obj [get_projects hdmi_dma]
+set obj [get_projects armqp]
 set_property "board_part" "em.avnet.com:zed:part0:1.3" $obj
 set_property "default_lib" "xil_defaultlib" $obj
 set_property "simulator_language" "Mixed" $obj
@@ -136,4 +136,4 @@ set_property "steps.write_bitstream.args.verbose" "0" $obj
 current_run -implementation [get_runs impl_1]
 
 
-puts "INFO: Project created:hdmi_dma"
+puts "INFO: Project created:armqp"
