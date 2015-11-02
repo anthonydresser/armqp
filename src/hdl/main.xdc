@@ -9,50 +9,30 @@ set_property -dict {PACKAGE_PIN Y9 IOSTANDARD LVCMOS33} [get_ports clk]
 # ----------------------------------------------------------------------------
 set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS33} [get_ports reset]
 
-## ----------------------------------------------------------------------------
-## JA Pmod - Bank 13
-## ----------------------------------------------------------------------------
-#set_property -dict {PACKAGE_PIN AB11 IOSTANDARD LVCMOS33} [get_ports clk_24M]
-##set_property PACKAGE_PIN AA9  [get_ports {JA10}];  # "JA10"
-#set_property -dict {PACKAGE_PIN AB10 IOSTANDARD LVCMOS33} [get_ports vsync]
-## "JA3"
-#set_property -dict {PACKAGE_PIN AB9 IOSTANDARD LVCMOS33} [get_ports sioc]  
-#set_property -dict {PACKAGE_PIN AA8 IOSTANDARD LVCMOS33} [get_ports pclk]
-# #temp until cables are fixed
-#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk];   
-##set_property PACKAGE_PIN Y11 [get_ports {JA7}];  # "JA7"
-#set_property -dict {PACKAGE_PIN AA11 IOSTANDARD LVCMOS33} [get_ports href]
-## "JA9"
-#set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33}  [get_ports siod]  
-
 # ----------------------------------------------------------------------------
 # JA Pmod - Bank 13
 # ----------------------------------------------------------------------------
-set_property -dict {PACKAGE_PIN Y11 IOSTANDARD LVCMOS33} [get_ports vdin[7]]
-set_property -dict {PACKAGE_PIN AA8 IOSTANDARD LVCMOS33}  [get_ports vdin[5]];  # "JA10"
-set_property -dict {PACKAGE_PIN AA11 IOSTANDARD LVCMOS33} [get_ports pclk]
-# "JA3"
-set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33} [get_ports vsync]  
-set_property -dict {PACKAGE_PIN AA9 IOSTANDARD LVCMOS33} [get_ports sioc]
- #temp until cables are fixed
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk];   
-set_property -dict {PACKAGE_PIN AB11 IOSTANDARD LVCMOS33} [get_ports {reset_out}]; 
-set_property -dict {PACKAGE_PIN AB10 IOSTANDARD LVCMOS33} [get_ports vdin[1]]
-# "JA9"
-set_property -dict {PACKAGE_PIN AB9 IOSTANDARD LVCMOS33}  [get_ports vdin[3]]  
-
+set_property -dict {PACKAGE_PIN Y11 IOSTANDARD LVCMOS33} [get_ports reset_out]
+set_property -dict {PACKAGE_PIN AA8 IOSTANDARD LVCMOS33}  [get_ports href]
+set_property -dict {PACKAGE_PIN AA11 IOSTANDARD LVCMOS33} [get_ports siod]
+set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33} [get_ports pwdn]  
+set_property -dict {PACKAGE_PIN AA9 IOSTANDARD LVCMOS33} [get_ports pclk] 
+set_property -dict {PACKAGE_PIN AB11 IOSTANDARD LVCMOS33} [get_ports sioc]
+set_property -dict {PACKAGE_PIN AB10 IOSTANDARD LVCMOS33} [get_ports vsync]
+set_property -dict {PACKAGE_PIN AB9 IOSTANDARD LVCMOS33}  [get_ports xclk]  
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk];
 
 # ----------------------------------------------------------------------------
 # JB Pmod - Bank 13
 # ----------------------------------------------------------------------------
-set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33} [get_ports {pwdn}]
-set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports {siod}]
-set_property -dict {PACKAGE_PIN W11 IOSTANDARD LVCMOS33} [get_ports {vdin[0]}]
-set_property -dict {PACKAGE_PIN V10 IOSTANDARD LVCMOS33} [get_ports {vdin[2]}]
-set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33} [get_ports {vdin[4]}]
-set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports {vdin[6]}]
-set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports {xclk}]
-set_property -dict {PACKAGE_PIN V9 IOSTANDARD LVCMOS33} [get_ports {href}]
+set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33} [get_ports {vdin[0]}]
+set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports {vdin[2]}]
+set_property -dict {PACKAGE_PIN W11 IOSTANDARD LVCMOS33} [get_ports {vdin[4]}]
+set_property -dict {PACKAGE_PIN V10 IOSTANDARD LVCMOS33} [get_ports {vdin[6]}]
+set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33} [get_ports {vdin[7]}]
+set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports {vdin[5]}]
+set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports {vdin[3]}]
+set_property -dict {PACKAGE_PIN V9 IOSTANDARD LVCMOS33} [get_ports {vdin[1]}]
 
 
 # ----------------------------------------------------------------------------
@@ -68,14 +48,6 @@ set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS25 } [get_ports { LED[6]
 set_property -dict { PACKAGE_PIN U14   IOSTANDARD LVCMOS25 } [get_ports { LED[7] }]; #IO_L18P_T2_A12_D28_14 Sch=led[7]
 
 
-#---------------------------------------------------------------------------------
-# From HDMI Block
-#--------------------------------------------------------------------------------
-
-########################
-# Physical Constraints #
-########################
-
 #
 # ZedBoard HDMI I2C Controller
 #
@@ -90,36 +62,6 @@ set_property IOSTANDARD LVCMOS25 [get_ports zed_hdmi_iic_sda_io]
 set_property SLEW SLOW [get_ports zed_hdmi_iic_sda_io]
 set_property DRIVE 8 [get_ports zed_hdmi_iic_sda_io]
 
-###########################################################################
-# Testing
-#
-#set_property PACKAGE_PIN U14 [get_ports wr_error]
-#set_property IOSTANDARD LVCMOS25 [get_ports wr_error]
-#set_property PULLDOWN true [get_ports wr_error]
-
-#set_property PACKAGE_PIN U19 [get_ports locked]
-#set_property IOSTANDARD LVCMOS25 [get_ports locked]
-#set_property PULLDOWN true [get_ports locked]
-
-#set_property PACKAGE_PIN W22 [get_ports gen_en]
-#set_property IOSTANDARD LVCMOS25 [get_ports gen_en]
-#set_property PULLDOWN true [get_ports gen_en]
-
-#set_property PACKAGE_PIN V22 [get_ports Test]
-#set_property IOSTANDARD LVCMOS25 [get_ports Test]
-#set_property PULLDOWN true [get_ports Test]
-
-#set_property PACKAGE_PIN T22 [get_ports full]
-#set_property IOSTANDARD LVCMOS25 [get_ports full]
-#set_property PULLDOWN true [get_ports full]
-
-#set_property PACKAGE_PIN U22 [get_ports empty_led]
-#set_property IOSTANDARD LVCMOS25 [get_ports empty_led]
-#set_property PULLDOWN true [get_ports empty_led]
-
-#set_property PACKAGE_PIN T21 [get_ports empty_vidout]
-#set_property IOSTANDARD LVCMOS25 [get_ports empty_vidout]
-#set_property PULLDOWN true [get_ports empty_vidout]
 #
 # ZedBoard HDMI Output
 #
@@ -202,7 +144,7 @@ set_property IOSTANDARD LVCMOS25 [get_ports hdmio_io_spdif]
 ####################
 
 # Rename auto-generated clocks from MMCM
-create_generated_clock -name hdmio_clk [get_pins wrapper/hdmi_out_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
+create_generated_clock -name hdmio_clk [get_pins wrapper/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
 create_clock -name cam_clk -period 41.6667 [get_ports pclk];
 
 ################

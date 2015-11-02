@@ -116,7 +116,7 @@ module top_level(
 	//TODO FIFO logic
 	//assign empty_led = empty_fifo;
 //	assign LED = pixel[7:0];
-assign LED = vdin;
+//assign LED = vdin;
 	
   clk_wiz_0 clk_gen
    (
@@ -219,8 +219,7 @@ assign LED = vdin;
 //    );
 
 //HDMI
-    hdmi_out_wrapper wrapper(
-        .ACLK(aclk),
+    design_1_wrapper wrapper(
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
@@ -242,8 +241,6 @@ assign LED = vdin;
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .clk(hdmi_clk),
-        .det_clken(vcc),
         .hdmio_io_clk(hdmio_io_clk),
         .hdmio_io_data(hdmio_io_data),
         .hdmio_io_de(hdmio_io_de),
@@ -262,14 +259,12 @@ assign LED = vdin;
 //        .vtiming_in_vblank(vtd_vblank),
 //        .vtiming_in_vsync(vtd_vsync),
         .zed_hdmi_iic_scl_io(zed_hdmi_iic_scl_io),
-
         .zed_hdmi_iic_sda_io(zed_hdmi_iic_sda_io),
-
 //        .gen_clk_en(gen_en),
 //        .empty(empty_vidout),
 //        .wr_error(wr_error),
-        .clk_in(clk_100M),
-        .rawData(fifo_out));
+        .rawData(fifo_out),
+        .LEDS(LED));
 
         
 endmodule

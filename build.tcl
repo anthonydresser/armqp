@@ -255,7 +255,7 @@ puts "INFO: Project created:armqp"
 
 
 # Create block design
- source $origin_dir/src/bd/hdmi_out.tcl
+ source $origin_dir/src/bd/hdmi_dma.tcl
 
  # Generate the wrapper
  set design_name [get_bd_designs]
