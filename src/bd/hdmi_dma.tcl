@@ -188,6 +188,10 @@ proc create_root_design { parentCell } {
   set util_vector_logic_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_1 ]
   set_property -dict [ list CONFIG.C_OPERATION {not} CONFIG.C_SIZE {1}  ] $util_vector_logic_1
 
+  # Create instance: util_vector_logic_2, and set properties
+  set util_vector_logic_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_2 ]
+  set_property -dict [ list CONFIG.C_OPERATION {not} CONFIG.C_SIZE {1}  ] $util_vector_logic_2
+
   # Create instance: v_axi4s_vid_out_0, and set properties
   set v_axi4s_vid_out_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:3.0 v_axi4s_vid_out_0 ]
   set_property -dict [ list CONFIG.C_S_AXIS_VIDEO_DATA_WIDTH {8} CONFIG.C_S_AXIS_VIDEO_FORMAT {0} CONFIG.C_S_AXIS_VIDEO_MAX_TDATASMPLS_PER_CLK {1} CONFIG.HYSTERESIS_LEVEL {16} CONFIG.RAM_ADDR_BITS {10} CONFIG.VTG_MASTER_SLAVE {1}  ] $v_axi4s_vid_out_0
@@ -233,6 +237,10 @@ CONFIG.enable_detection {false}  ] $v_tc_1
   # Create instance: vcc, and set properties
   set vcc [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 vcc ]
 
+  # Create instance: vcc1, and set properties
+  set vcc1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 vcc1 ]
+  set_property -dict [ list CONFIG.CONST_VAL {3} CONFIG.CONST_WIDTH {2}  ] $vcc1
+
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
   set_property -dict [ list CONFIG.IN0_WIDTH {1} CONFIG.IN1_WIDTH {1} CONFIG.IN2_WIDTH {1} CONFIG.NUM_PORTS {8}  ] $xlconcat_0
@@ -259,12 +267,11 @@ CONFIG.enable_detection {false}  ] $v_tc_1
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M03_AXI [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI] [get_bd_intf_pins v_tpg_0/ctrl]
   connect_bd_intf_net -intf_net v_axi4s_vid_out_0_vid_io_out [get_bd_intf_pins v_axi4s_vid_out_0/vid_io_out] [get_bd_intf_pins zed_hdmi_out_0/VID_IO_IN]
   connect_bd_intf_net -intf_net v_tc_0_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in] [get_bd_intf_pins v_tc_0/vtiming_out]
-  connect_bd_intf_net -intf_net v_tpg_0_video_out [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM] [get_bd_intf_pins v_tpg_0/video_out]
-  connect_bd_intf_net -intf_net v_vid_in_axi4s_0_video_out [get_bd_intf_pins v_tpg_0/video_in] [get_bd_intf_pins v_vid_in_axi4s_0/video_out]
   connect_bd_intf_net -intf_net zed_hdmi_iic_0_IIC [get_bd_intf_ports zed_hdmi_iic] [get_bd_intf_pins zed_hdmi_iic_0/IIC]
   connect_bd_intf_net -intf_net zed_hdmi_out_0_IO_HDMIO [get_bd_intf_ports hdmio_io] [get_bd_intf_pins zed_hdmi_out_0/IO_HDMIO]
 
   # Create port connections
+  connect_bd_net -net axi_vdma_0_s_axis_s2mm_tready [get_bd_pins axi_vdma_0/s_axis_s2mm_tready] [get_bd_pins v_vid_in_axi4s_0/m_axis_video_tready] [get_bd_pins xlconcat_0/In5]
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk] [get_bd_pins v_tc_1/clk] [get_bd_pins v_tpg_0/aclk] [get_bd_pins v_vid_in_axi4s_0/aclk] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_clk] [get_bd_pins zed_hdmi_out_0/clk]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins xlconcat_0/In0]
   connect_bd_net -net gnd_dout [get_bd_pins gnd/dout] [get_bd_pins v_axi4s_vid_out_0/fid] [get_bd_pins v_axi4s_vid_out_0/rst] [get_bd_pins v_axi4s_vid_out_0/vtg_field_id] [get_bd_pins v_vid_in_axi4s_0/rst] [get_bd_pins v_vid_in_axi4s_0/vid_field_id] [get_bd_pins zed_hdmi_out_0/audio_spdif] [get_bd_pins zed_hdmi_out_0/reset]
@@ -275,6 +282,7 @@ CONFIG.enable_detection {false}  ] $v_tc_1
   connect_bd_net -net rst_processing_system7_0_76M_interconnect_aresetn [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon_1/ARESETN] [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_76M/interconnect_aresetn]
   connect_bd_net -net rst_processing_system7_0_76M_peripheral_aresetn [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon_1/M00_ARESETN] [get_bd_pins axi_mem_intercon_1/S00_ARESETN] [get_bd_pins axi_vdma_0/axi_resetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M03_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_76M/peripheral_aresetn] [get_bd_pins v_tc_0/s_axi_aresetn] [get_bd_pins v_tpg_0/s_axi_aresetn] [get_bd_pins zed_hdmi_iic_0/s_axi_aresetn]
   connect_bd_net -net util_vector_logic_1_Res [get_bd_pins util_vector_logic_1/Res] [get_bd_pins xlconcat_0/In1]
+  connect_bd_net -net util_vector_logic_2_Res [get_bd_pins util_vector_logic_2/Res] [get_bd_pins xlconcat_0/In3]
   connect_bd_net -net v_axi4s_vid_out_0_locked [get_bd_pins v_axi4s_vid_out_0/locked] [get_bd_pins xlconcat_0/In2]
   connect_bd_net -net v_axi4s_vid_out_0_vtg_ce [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
   connect_bd_net -net v_tc_1_active_video_out [get_bd_pins v_tc_1/active_video_out] [get_bd_pins v_vid_in_axi4s_0/vid_active_video]
@@ -283,6 +291,12 @@ CONFIG.enable_detection {false}  ] $v_tc_1
   connect_bd_net -net v_tc_1_vblank_out [get_bd_pins v_tc_1/vblank_out] [get_bd_pins v_vid_in_axi4s_0/vid_vblank]
   connect_bd_net -net v_tc_1_vsync_out [get_bd_pins v_tc_1/vsync_out] [get_bd_pins v_vid_in_axi4s_0/vid_vsync]
   connect_bd_net -net v_vid_in_axi4s_0_empty [get_bd_pins util_vector_logic_1/Op1] [get_bd_pins v_vid_in_axi4s_0/empty]
+  connect_bd_net -net v_vid_in_axi4s_0_m_axis_video_tdata [get_bd_pins axi_vdma_0/s_axis_s2mm_tdata] [get_bd_pins v_vid_in_axi4s_0/m_axis_video_tdata]
+  connect_bd_net -net v_vid_in_axi4s_0_m_axis_video_tlast [get_bd_pins axi_vdma_0/s_axis_s2mm_tlast] [get_bd_pins v_vid_in_axi4s_0/m_axis_video_tlast] [get_bd_pins xlconcat_0/In6]
+  connect_bd_net -net v_vid_in_axi4s_0_m_axis_video_tuser [get_bd_pins axi_vdma_0/s_axis_s2mm_tuser] [get_bd_pins v_vid_in_axi4s_0/m_axis_video_tuser] [get_bd_pins xlconcat_0/In7]
+  connect_bd_net -net v_vid_in_axi4s_0_m_axis_video_tvalid [get_bd_pins axi_vdma_0/s_axis_s2mm_tvalid] [get_bd_pins v_vid_in_axi4s_0/m_axis_video_tvalid] [get_bd_pins xlconcat_0/In4]
+  connect_bd_net -net v_vid_in_axi4s_0_wr_error [get_bd_pins util_vector_logic_2/Op1] [get_bd_pins v_vid_in_axi4s_0/wr_error]
+  connect_bd_net -net vcc1_dout [get_bd_pins axi_vdma_0/s_axis_s2mm_tkeep] [get_bd_pins vcc1/dout]
   connect_bd_net -net vcc_dout [get_bd_pins v_axi4s_vid_out_0/aclken] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce] [get_bd_pins v_tc_0/clken] [get_bd_pins v_tc_0/fsync_in] [get_bd_pins v_tc_0/resetn] [get_bd_pins v_tc_0/s_axi_aclken] [get_bd_pins v_tc_1/clken] [get_bd_pins v_tc_1/gen_clken] [get_bd_pins v_tc_1/resetn] [get_bd_pins v_tpg_0/aclken] [get_bd_pins v_tpg_0/aresetn] [get_bd_pins v_tpg_0/s_axi_aclken] [get_bd_pins v_vid_in_axi4s_0/aclken] [get_bd_pins v_vid_in_axi4s_0/aresetn] [get_bd_pins v_vid_in_axi4s_0/axis_enable] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_ce] [get_bd_pins vcc/dout]
   connect_bd_net -net xlconcat_0_dout [get_bd_ports LEDS] [get_bd_pins xlconcat_0/dout]
 
