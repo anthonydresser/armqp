@@ -62,7 +62,13 @@ int main()
     demo.uBaseAddr_IIC_HdmiOut = XPAR_ZED_HDMI_IIC_0_BASEADDR;
     demo.uDeviceId_VTC_HdmioGenerator = XPAR_V_TC_0_DEVICE_ID;
     demo.uDeviceId_VDMA_HdmiDisplay = XPAR_AXI_VDMA_0_DEVICE_ID;
+    demo.uDeviceId_TPG_VMDA_IN = XPAR_V_TPG_VMDA_IN_DEVICE_ID;
+    demo.uBaseAddr_TPG_VMDA_IN = XPAR_V_TPG_VMDA_IN_BASEADDR;
+    demo.uDeviceId_TPG_VMDA_OUT = XPAR_V_TPG_VMDA_OUT_DEVICE_ID;
+	demo.uBaseAddr_TPG_VMDA_OUT = XPAR_V_TPG_VMDA_OUT_BASEADDR;
     demo.uBaseAddr_MEM_HdmiDisplay = XPAR_DDR_MEM_BASEADDR + 0x10000000;
+    demo.uDeviceId_gpio_video_out = XPAR_AXI_GPIO_0_DEVICE_ID;
+    demo.uBaseAddr_gpio_video_out = XPAR_AXI_GPIO_0_BASEADDR;
     demo.uNumFrames_HdmiDisplay = XPAR_AXIVDMA_0_NUM_FSTORES;
     zed_hdmi_display_init( &demo );
 

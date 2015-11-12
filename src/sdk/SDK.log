@@ -1082,3 +1082,129 @@ con
 
 22:38:38 INFO  : Disconnected from the channel tcfchan#6.
 22:38:39 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:53:48 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+14:53:50 INFO  : XSDB server has started successfully.
+14:53:50 INFO  : Processing command line option -hwspec D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+14:53:51 INFO  : Checking for hwspec changes in the project top_level_hw_platform_0.
+14:53:54 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1446666620713,  Project:1446598879371
+14:53:54 INFO  : The hardware specification for project 'top_level_hw_platform_0' is different from D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+14:53:54 INFO  : Copied contents of D:/vivadoprojects/armqp/src/sdk/top_level.hdf into \top_level_hw_platform_0\system.hdf.
+14:54:25 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:54:29 INFO  : 
+14:54:30 INFO  : Updating hardware inferred compiler options for hdmi_display.
+14:54:30 INFO  : Clearing existing target manager status.
+14:54:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:54:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+14:54:54 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+14:55:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:55:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+14:55:02 INFO  : 'fpga -state' command is executed.
+14:55:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:55:02 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+14:55:06 INFO  : Mermory regions for PS have been updated.
+14:55:06 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+14:55:07 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+14:55:07 INFO  : 'ps7_init' command is executed.
+14:55:07 INFO  : 'ps7_post_config' command is executed.
+14:55:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:55:08 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:55:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:55:08 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:55:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1136721920 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+14:55:08 INFO  : Memory regions updated for context APU
+14:55:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:55:09 INFO  : 'con' command is executed.
+14:55:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:03:57 INFO  : Disconnected from the channel tcfchan#1.
+15:03:57 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+15:13:56 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+15:13:58 INFO  : XSDB server has started successfully.
+15:13:59 INFO  : Processing command line option -hwspec D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+15:14:00 INFO  : Checking for hwspec changes in the project top_level_hw_platform_0.
+15:14:02 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1447012050599,  Project:1446666620713
+15:14:02 INFO  : The hardware specification for project 'top_level_hw_platform_0' is different from D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+15:14:02 INFO  : Copied contents of D:/vivadoprojects/armqp/src/sdk/top_level.hdf into \top_level_hw_platform_0\system.hdf.
+15:14:37 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:14:41 INFO  : 
+15:14:42 INFO  : Updating hardware inferred compiler options for hdmi_display.
+15:14:42 INFO  : Clearing existing target manager status.
+15:23:25 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:39:23 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+17:39:25 INFO  : XSDB server has started successfully.
+17:39:25 INFO  : Processing command line option -hwspec D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+17:39:26 INFO  : Checking for hwspec changes in the project top_level_hw_platform_0.
+17:39:29 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1447022315849,  Project:1447012050599
+17:39:29 INFO  : The hardware specification for project 'top_level_hw_platform_0' is different from D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+17:39:29 INFO  : Copied contents of D:/vivadoprojects/armqp/src/sdk/top_level.hdf into \top_level_hw_platform_0\system.hdf.
+17:40:01 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:40:05 INFO  : 
+17:40:06 INFO  : Updating hardware inferred compiler options for hdmi_display.
+17:40:06 INFO  : Clearing existing target manager status.
+17:40:06 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+17:40:07 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+17:52:06 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:47:15 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+22:47:17 INFO  : XSDB server has started successfully.
+22:47:22 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1447299390133,  Project:1447022315849
+22:47:22 INFO  : Project top_level_hw_platform_0's source hardware specification located at D:/vivadoprojects/armqp/src/sdk/top_level.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+22:47:26 INFO  : Copied contents of D:/vivadoprojects/armqp/src/sdk/top_level.hdf into \top_level_hw_platform_0\system.hdf.
+22:47:32 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+22:47:36 INFO  : 
+22:47:37 INFO  : Updating hardware inferred compiler options for hdmi_display.
+22:47:37 INFO  : Clearing existing target manager status.
+23:05:27 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

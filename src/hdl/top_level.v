@@ -67,7 +67,8 @@ module top_level(
       output locked,
       inout zed_hdmi_iic_scl_io,
       inout zed_hdmi_iic_sda_io,
-      output [7:0]LED
+      output [7:0]LED,
+      output [7:0]PMOD_Debug
       
 //      output Test,
 //      output empty_led,
@@ -220,6 +221,7 @@ module top_level(
 
 //HDMI
     design_1_wrapper wrapper(
+        //PS Stuff
         .DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
         .DDR_cas_n(DDR_cas_n),
@@ -241,30 +243,34 @@ module top_level(
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
+        
+        //HDMI Output
         .hdmio_io_clk(hdmio_io_clk),
         .hdmio_io_data(hdmio_io_data),
         .hdmio_io_de(hdmio_io_de),
         .hdmio_io_hsync(hdmio_io_hsync),
         .hdmio_io_spdif(hdmio_io_spdif),
         .hdmio_io_vsync(hdmio_io_vsync),
-//        .locked(locked),
-//        .video_in_tdata(m_axis_video_tdata),
-//        .video_in_tlast(m_axis_video_tlast),
-//        .video_in_tready(m_axis_video_tready),
-//        .video_in_tuser(m_axis_video_tuser),
-//        .video_in_tvalid(m_axis_video_tvalid),
-//        .vtiming_in_active_video(vtd_active_video),
-//        .vtiming_in_hblank(vtd_hblank),
-//        .vtiming_in_hsync(vtd_hsync),
-//        .vtiming_in_vblank(vtd_vblank),
-//        .vtiming_in_vsync(vtd_vsync),
         .zed_hdmi_iic_scl_io(zed_hdmi_iic_scl_io),
         .zed_hdmi_iic_sda_io(zed_hdmi_iic_sda_io),
+        
+        //Video Input
+        .vid_io_in_active_video(~(href_out||vsync_out)),
+        .vid_io_in_clk(clk_12M),
+        .vid_io_in_data(fifo_out),
+        .vid_io_in_field(1'b0),
+        .vid_io_in_hblank(~href_out),
+        .vid_io_in_hsync(~href_out),
+        .vid_io_in_vblank(vsync_out),
+        .vid_io_in_vsync(vsync_out),
+        
+
 //        .gen_clk_en(gen_en),
 //        .empty(empty_vidout),
 //        .wr_error(wr_error),
-        .rawData(fifo_out),
-        .LEDS(LED));
+//        .rawData(fifo_out),
+        .LEDS(LED),
+        .PMOD_Debug(PMOD_Debug));
 
         
 endmodule

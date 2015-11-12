@@ -9,6 +9,8 @@ set_property -dict {PACKAGE_PIN Y9 IOSTANDARD LVCMOS33} [get_ports clk]
 # ----------------------------------------------------------------------------
 set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS33} [get_ports reset]
 
+
+
 # ----------------------------------------------------------------------------
 # JA Pmod - Bank 13
 # ----------------------------------------------------------------------------
@@ -34,6 +36,17 @@ set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports {vdin[3]}]
 set_property -dict {PACKAGE_PIN V9 IOSTANDARD LVCMOS33} [get_ports {vdin[5]}]
 set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports {vdin[7]}]
 
+# ----------------------------------------------------------------------------
+# JC Pmod - Bank 13
+# ---------------------------------------------------------------------------- 
+set_property -dict {PACKAGE_PIN AB6 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[1]}];  # "JC1_N"
+set_property -dict {PACKAGE_PIN AB7 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[0]}];  # "JC1_P"
+set_property -dict {PACKAGE_PIN AA4 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[3]}];  # "JC2_N"
+set_property -dict {PACKAGE_PIN Y4  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[2]}];  # "JC2_P"
+set_property -dict {PACKAGE_PIN T6  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[5]}];  # "JC3_N"
+set_property -dict {PACKAGE_PIN R6  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[4]}];  # "JC3_P"
+set_property -dict {PACKAGE_PIN U4  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[7]}];  # "JC4_N"
+set_property -dict {PACKAGE_PIN T4  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[6]}];  # "JC4_P"
 
 # ----------------------------------------------------------------------------
 # User LEDs - Bank 33

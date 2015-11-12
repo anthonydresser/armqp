@@ -58,6 +58,8 @@
 
 #include "xvtc.h"
 #include "xaxivdma.h"
+#include "xtpg.h"
+#include "xgpio.h"
 
 #include "video_resolution.h"
 #include "video_generator.h"
@@ -72,23 +74,43 @@ struct struct_zed_hdmi_display_t
    Xuint32 uBaseAddr_IIC_HdmiOut;
    Xuint32 uDeviceId_VTC_HdmioGenerator;
    Xuint32 uDeviceId_VDMA_HdmiDisplay;
-   Xuint32 uBaseAddr_MEM_HdmiDisplay;  // address of FB in memory
-   Xuint32 uNumFrames_HdmiDisplay;
+   Xuint32 uBaseAddr_TPG_VMDA_IN;
+   Xuint32 uDeviceId_TPG_VMDA_IN;
+   Xuint32 uBaseAddr_TPG_VMDA_OUT;
+   Xuint32 uDeviceId_TPG_VMDA_OUT;
+   Xuint32 uDeviceId_gpio_video_out;
+   Xuint32 uBaseAddr_gpio_video_out;
 
    zed_iic_t hdmi_out_iic;
 
    XVtc vtc_hdmio_generator;
-
-   XAxiVdma vdma_hdmi;
-   XAxiVdma_DmaSetup vdmacfg_hdmi_read;
-   XAxiVdma_DmaSetup vdmacfg_hdmi_write;
-
    Xuint32 bVerbose;
 
    // HDMI Output settings
    Xuint32 hdmio_width;
    Xuint32 hdmio_height;
    Xuint32 hdmio_resolution;
+
+   //DMA Settings
+   Xuint32 dma_width;
+   Xuint32 dma_height;
+   Xuint32 dma_resolution;
+
+   XAxiVdma vdma_hdmi;
+   XAxiVdma_DmaSetup vdmacfg_hdmi_read;
+   XAxiVdma_DmaSetup vdmacfg_hdmi_write;
+   Xuint32 uBaseAddr_MEM_HdmiDisplay;  // address of FB in memory
+   Xuint32 uNumFrames_HdmiDisplay;
+
+   //TPG settings
+   XTpg tpg_instance_vmda_in;
+   XTpg_Config * tpg_config_vdma_in;
+   XTpg tpg_instance_vmda_out;
+   XTpg_Config * tpg_config_vdma_out;
+
+  //AXI GPIO
+  XGpio gpio_video_out_instance;
+  XGpio_Config gpio_video_out_config;
 
 };
 typedef struct struct_zed_hdmi_display_t zed_hdmi_display_t;
