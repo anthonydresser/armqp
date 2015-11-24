@@ -1208,3 +1208,1993 @@ con
 22:47:37 INFO  : Updating hardware inferred compiler options for hdmi_display.
 22:47:37 INFO  : Clearing existing target manager status.
 23:05:27 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+23:20:36 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+23:20:37 INFO  : XSDB server has started successfully.
+23:33:15 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1447302791584,  Project:1447299390133
+23:33:15 INFO  : Project top_level_hw_platform_0's source hardware specification located at D:/vivadoprojects/armqp/src/sdk/top_level.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+23:33:17 INFO  : Copied contents of D:/vivadoprojects/armqp/src/sdk/top_level.hdf into \top_level_hw_platform_0\system.hdf.
+23:33:23 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+23:33:26 INFO  : 
+23:33:27 INFO  : Updating hardware inferred compiler options for hdmi_display.
+23:33:27 INFO  : Clearing existing target manager status.
+23:36:52 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+23:32:26 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+23:32:29 INFO  : XSDB server has started successfully.
+23:34:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:34:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:34:49 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+23:34:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:34:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:34:58 INFO  : 'fpga -state' command is executed.
+23:34:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:34:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:35:02 INFO  : Mermory regions for PS have been updated.
+23:35:02 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+23:35:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:35:03 INFO  : 'ps7_init' command is executed.
+23:35:03 INFO  : 'ps7_post_config' command is executed.
+23:35:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:35:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:35:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:35:04 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:35:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+23:35:04 INFO  : Memory regions updated for context APU
+23:35:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:35:05 INFO  : 'con' command is executed.
+23:35:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+23:35:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:35:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:35:31 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+23:35:37 INFO  : Disconnected from the channel tcfchan#1.
+23:35:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:35:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:35:38 INFO  : 'fpga -state' command is executed.
+23:35:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:35:38 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:35:42 INFO  : Mermory regions for PS have been updated.
+23:35:42 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+23:35:42 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:35:43 INFO  : 'ps7_init' command is executed.
+23:35:43 INFO  : 'ps7_post_config' command is executed.
+23:35:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:35:43 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:35:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:35:44 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:35:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+23:35:44 INFO  : Memory regions updated for context APU
+23:35:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:35:44 INFO  : 'con' command is executed.
+23:35:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+23:37:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:37:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:37:32 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+23:37:45 INFO  : Disconnected from the channel tcfchan#2.
+23:37:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:37:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:37:46 INFO  : 'fpga -state' command is executed.
+23:37:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:37:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:37:50 INFO  : Mermory regions for PS have been updated.
+23:37:50 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+23:37:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:37:51 INFO  : 'ps7_init' command is executed.
+23:37:52 INFO  : 'ps7_post_config' command is executed.
+23:37:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:37:52 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:37:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:37:53 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:37:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+23:37:53 INFO  : Memory regions updated for context APU
+23:37:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:37:53 INFO  : 'con' command is executed.
+23:37:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+23:39:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:39:18 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+23:39:20 INFO  : Disconnected from the channel tcfchan#3.
+23:39:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:39:21 INFO  : 'fpga -state' command is executed.
+23:39:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:39:25 INFO  : Mermory regions for PS have been updated.
+23:39:25 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+23:39:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:39:27 INFO  : 'ps7_init' command is executed.
+23:39:27 INFO  : 'ps7_post_config' command is executed.
+23:39:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:39:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:28 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:39:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+23:39:28 INFO  : Memory regions updated for context APU
+23:39:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:28 INFO  : 'con' command is executed.
+23:39:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+23:39:43 INFO  : Disconnected from the channel tcfchan#4.
+23:39:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:39:43 INFO  : 'fpga -state' command is executed.
+23:39:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:39:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:39:47 INFO  : Mermory regions for PS have been updated.
+23:39:47 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+23:39:48 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:39:48 INFO  : 'ps7_init' command is executed.
+23:39:48 INFO  : 'ps7_post_config' command is executed.
+23:39:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:49 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:39:49 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:50 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:39:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+23:39:50 INFO  : Memory regions updated for context APU
+23:39:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:39:50 INFO  : 'con' command is executed.
+23:39:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+23:40:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:40:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:40:07 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+23:40:12 INFO  : Disconnected from the channel tcfchan#5.
+23:40:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:40:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+23:40:13 INFO  : 'fpga -state' command is executed.
+23:40:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:40:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:40:17 INFO  : Mermory regions for PS have been updated.
+23:40:17 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+23:40:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+23:40:18 INFO  : 'ps7_init' command is executed.
+23:40:18 INFO  : 'ps7_post_config' command is executed.
+23:40:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:19 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+23:40:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:19 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+23:40:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+23:40:19 INFO  : Memory regions updated for context APU
+23:40:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+23:40:19 INFO  : 'con' command is executed.
+23:40:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+23:42:11 INFO  : Disconnected from the channel tcfchan#6.
+23:42:12 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+00:06:03 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+00:06:04 INFO  : XSDB server has started successfully.
+00:06:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:06:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+00:06:12 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+00:06:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:06:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+00:06:25 INFO  : 'fpga -state' command is executed.
+00:06:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+00:06:25 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+00:06:30 INFO  : Mermory regions for PS have been updated.
+00:06:30 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+00:06:30 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+00:06:30 INFO  : 'ps7_init' command is executed.
+00:06:30 INFO  : 'ps7_post_config' command is executed.
+00:06:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:06:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+00:06:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:06:31 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+00:06:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+00:06:32 INFO  : Memory regions updated for context APU
+00:06:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+00:06:32 INFO  : 'con' command is executed.
+00:06:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+00:08:32 INFO  : Disconnected from the channel tcfchan#1.
+00:08:32 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:48:27 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+10:48:30 INFO  : XSDB server has started successfully.
+10:48:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:48:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+10:48:47 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+10:48:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:48:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+10:48:56 INFO  : 'fpga -state' command is executed.
+10:48:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:48:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+10:49:01 INFO  : Mermory regions for PS have been updated.
+10:49:01 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+10:49:01 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+10:49:01 INFO  : 'ps7_init' command is executed.
+10:49:02 INFO  : 'ps7_post_config' command is executed.
+10:49:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:49:02 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:49:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:49:03 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:49:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+10:49:03 INFO  : Memory regions updated for context APU
+10:49:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:49:03 INFO  : 'con' command is executed.
+10:49:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+11:24:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:24:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+11:24:23 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+11:24:26 INFO  : Disconnected from the channel tcfchan#1.
+11:24:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:24:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+11:24:27 INFO  : 'fpga -state' command is executed.
+11:24:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:24:27 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+11:24:31 INFO  : Mermory regions for PS have been updated.
+11:24:31 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+11:24:31 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+11:24:32 INFO  : 'ps7_init' command is executed.
+11:24:32 INFO  : 'ps7_post_config' command is executed.
+11:24:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:32 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:24:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:33 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:24:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+11:24:33 INFO  : Memory regions updated for context APU
+11:24:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:33 INFO  : 'con' command is executed.
+11:24:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+11:24:38 INFO  : Disconnected from the channel tcfchan#2.
+11:24:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:24:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+11:24:39 INFO  : 'fpga -state' command is executed.
+11:24:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:24:39 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+11:24:43 INFO  : Mermory regions for PS have been updated.
+11:24:43 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+11:24:43 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+11:24:44 INFO  : 'ps7_init' command is executed.
+11:24:44 INFO  : 'ps7_post_config' command is executed.
+11:24:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:44 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:24:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:45 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:24:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+11:24:45 INFO  : Memory regions updated for context APU
+11:24:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:24:45 INFO  : 'con' command is executed.
+11:24:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+11:24:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:25:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+11:25:02 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+11:25:14 INFO  : Disconnected from the channel tcfchan#3.
+11:25:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:25:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+11:25:14 INFO  : 'fpga -state' command is executed.
+11:25:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:25:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+11:25:18 INFO  : Mermory regions for PS have been updated.
+11:25:19 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+11:25:19 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+11:25:20 INFO  : 'ps7_init' command is executed.
+11:25:20 INFO  : 'ps7_post_config' command is executed.
+11:25:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:25:20 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+11:25:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:25:21 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:25:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+11:25:21 INFO  : Memory regions updated for context APU
+11:25:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:25:21 INFO  : 'con' command is executed.
+11:25:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+13:04:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:04:25 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+13:04:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:04:32 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+13:04:41 INFO  : Disconnected from the channel tcfchan#4.
+13:04:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:04:47 INFO  : 'fpga -state' command is executed.
+13:04:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:47 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+13:04:51 INFO  : Mermory regions for PS have been updated.
+13:04:51 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+13:04:51 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+13:04:51 INFO  : 'ps7_init' command is executed.
+13:04:51 INFO  : 'ps7_post_config' command is executed.
+13:04:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:52 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:04:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:53 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:04:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+13:04:53 INFO  : Memory regions updated for context APU
+13:04:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:53 INFO  : 'con' command is executed.
+13:04:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+13:05:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:05:03 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+13:05:07 INFO  : Disconnected from the channel tcfchan#5.
+13:05:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:05:07 INFO  : 'fpga -state' command is executed.
+13:05:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+13:05:11 INFO  : Mermory regions for PS have been updated.
+13:05:11 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+13:05:12 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+13:05:12 INFO  : 'ps7_init' command is executed.
+13:05:12 INFO  : 'ps7_post_config' command is executed.
+13:05:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:13 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:05:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:13 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:05:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+13:05:13 INFO  : Memory regions updated for context APU
+13:05:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:14 INFO  : 'con' command is executed.
+13:05:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+13:05:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:05:28 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+13:05:31 INFO  : Disconnected from the channel tcfchan#6.
+13:05:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:05:32 INFO  : 'fpga -state' command is executed.
+13:05:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:05:32 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+13:05:36 INFO  : Mermory regions for PS have been updated.
+13:05:36 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+13:05:36 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+13:05:37 INFO  : 'ps7_init' command is executed.
+13:05:37 INFO  : 'ps7_post_config' command is executed.
+13:05:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:05:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:38 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:05:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+13:05:38 INFO  : Memory regions updated for context APU
+13:05:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:05:38 INFO  : 'con' command is executed.
+13:05:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+13:35:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:35:13 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+13:35:18 INFO  : Disconnected from the channel tcfchan#7.
+13:35:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+13:35:18 INFO  : 'fpga -state' command is executed.
+13:35:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:35:19 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+13:35:23 INFO  : Mermory regions for PS have been updated.
+13:35:23 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+13:35:23 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+13:35:23 INFO  : 'ps7_init' command is executed.
+13:35:24 INFO  : 'ps7_post_config' command is executed.
+13:35:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:24 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:35:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:25 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:35:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+13:35:25 INFO  : Memory regions updated for context APU
+13:35:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:35:25 INFO  : 'con' command is executed.
+13:35:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+14:23:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:23:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+14:23:51 INFO  : FPGA configured successfully with bitstream "C:/Users/Andrew/Desktop/top_level.bit"
+14:23:56 INFO  : Disconnected from the channel tcfchan#8.
+14:23:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:23:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+14:23:56 INFO  : 'fpga -state' command is executed.
+14:23:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:23:57 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+14:24:00 INFO  : Mermory regions for PS have been updated.
+14:24:00 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+14:24:01 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+14:24:01 INFO  : 'ps7_init' command is executed.
+14:24:01 INFO  : 'ps7_post_config' command is executed.
+14:24:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:02 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:24:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:02 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:24:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+14:24:02 INFO  : Memory regions updated for context APU
+14:24:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:24:02 INFO  : 'con' command is executed.
+14:24:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:12:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:12:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:12:37 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:12:43 INFO  : Disconnected from the channel tcfchan#9.
+15:12:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:12:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:12:49 INFO  : 'fpga -state' command is executed.
+15:12:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:12:49 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:12:53 INFO  : Mermory regions for PS have been updated.
+15:12:53 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:12:54 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:12:54 INFO  : 'ps7_init' command is executed.
+15:12:54 INFO  : 'ps7_post_config' command is executed.
+15:12:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:12:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:12:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:12:55 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:12:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:12:55 INFO  : Memory regions updated for context APU
+15:12:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:12:55 INFO  : 'con' command is executed.
+15:12:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:13:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:13:04 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:13:07 INFO  : Disconnected from the channel tcfchan#10.
+15:13:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:13:13 INFO  : 'fpga -state' command is executed.
+15:13:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:13:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:13:17 INFO  : Mermory regions for PS have been updated.
+15:13:17 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:13:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:13:18 INFO  : 'ps7_init' command is executed.
+15:13:18 INFO  : 'ps7_post_config' command is executed.
+15:13:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:18 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:13:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:19 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:13:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:13:19 INFO  : Memory regions updated for context APU
+15:13:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:13:19 INFO  : 'con' command is executed.
+15:13:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:25:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:25:44 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:25:47 INFO  : Disconnected from the channel tcfchan#11.
+15:25:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:25:48 INFO  : 'fpga -state' command is executed.
+15:25:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:48 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:25:52 INFO  : Mermory regions for PS have been updated.
+15:25:52 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:25:52 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:25:53 INFO  : 'ps7_init' command is executed.
+15:25:53 INFO  : 'ps7_post_config' command is executed.
+15:25:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:25:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:54 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:25:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:25:54 INFO  : Memory regions updated for context APU
+15:25:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:54 INFO  : 'con' command is executed.
+15:25:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:26:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:26:10 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:26:16 INFO  : Disconnected from the channel tcfchan#12.
+15:26:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:26:17 INFO  : 'fpga -state' command is executed.
+15:26:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:17 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:26:21 INFO  : Mermory regions for PS have been updated.
+15:26:21 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:26:21 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:26:22 INFO  : 'ps7_init' command is executed.
+15:26:22 INFO  : 'ps7_post_config' command is executed.
+15:26:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:23 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:26:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:23 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:26:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:26:23 INFO  : Memory regions updated for context APU
+15:26:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:23 INFO  : 'con' command is executed.
+15:26:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:28:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:28:37 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:28:40 INFO  : Disconnected from the channel tcfchan#13.
+15:28:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:28:40 INFO  : 'fpga -state' command is executed.
+15:28:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:40 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:28:44 INFO  : Mermory regions for PS have been updated.
+15:28:44 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:28:44 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:28:45 INFO  : 'ps7_init' command is executed.
+15:28:45 INFO  : 'ps7_post_config' command is executed.
+15:28:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:45 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:28:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:46 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:28:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:28:46 INFO  : Memory regions updated for context APU
+15:28:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:46 INFO  : 'con' command is executed.
+15:28:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:28:50 INFO  : Disconnected from the channel tcfchan#14.
+15:28:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:28:50 INFO  : 'fpga -state' command is executed.
+15:28:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:50 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:28:54 INFO  : Mermory regions for PS have been updated.
+15:28:54 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:28:55 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:28:55 INFO  : 'ps7_init' command is executed.
+15:28:55 INFO  : 'ps7_post_config' command is executed.
+15:28:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:56 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:28:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:56 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:28:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:28:56 INFO  : Memory regions updated for context APU
+15:28:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:57 INFO  : 'con' command is executed.
+15:28:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:29:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:29:13 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:29:19 INFO  : Disconnected from the channel tcfchan#15.
+15:29:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:29:20 INFO  : 'fpga -state' command is executed.
+15:29:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:20 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:29:24 INFO  : Mermory regions for PS have been updated.
+15:29:24 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:29:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:29:25 INFO  : 'ps7_init' command is executed.
+15:29:25 INFO  : 'ps7_post_config' command is executed.
+15:29:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:25 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:29:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:26 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:29:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:29:26 INFO  : Memory regions updated for context APU
+15:29:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:26 INFO  : 'con' command is executed.
+15:29:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:30:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:30:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:30:17 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:30:21 INFO  : Disconnected from the channel tcfchan#16.
+15:30:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:30:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:30:21 INFO  : 'fpga -state' command is executed.
+15:30:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:30:22 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:30:26 INFO  : Mermory regions for PS have been updated.
+15:30:26 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:30:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:30:26 INFO  : 'ps7_init' command is executed.
+15:30:26 INFO  : 'ps7_post_config' command is executed.
+15:30:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:30:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:30:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:30:27 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:30:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:30:27 INFO  : Memory regions updated for context APU
+15:30:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:30:28 INFO  : 'con' command is executed.
+15:30:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:31:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:31:17 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:31:21 INFO  : Disconnected from the channel tcfchan#17.
+15:31:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:31:28 INFO  : 'fpga -state' command is executed.
+15:31:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:28 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:31:32 INFO  : Mermory regions for PS have been updated.
+15:31:32 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:31:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:31:33 INFO  : 'ps7_init' command is executed.
+15:31:33 INFO  : 'ps7_post_config' command is executed.
+15:31:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:31:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:31:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:31:34 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:31:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:31:34 INFO  : Memory regions updated for context APU
+15:31:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:31:34 INFO  : 'con' command is executed.
+15:31:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:32:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:32:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:32:17 INFO  : FPGA configured successfully with bitstream "D:/vivadoprojects/armqp/armqp/armqp.runs/impl_1/top_level.bit"
+15:32:22 INFO  : Disconnected from the channel tcfchan#18.
+15:32:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:32:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248447864" && level==0} -index 1' command is executed.
+15:32:22 INFO  : 'fpga -state' command is executed.
+15:32:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:32:22 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:32:26 INFO  : Mermory regions for PS have been updated.
+15:32:26 INFO  : Sourcing of 'D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl' is done.
+15:32:26 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0' command is executed.
+15:32:27 INFO  : 'ps7_init' command is executed.
+15:32:27 INFO  : 'ps7_post_config' command is executed.
+15:32:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:32:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:32:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:32:28 INFO  : The application 'D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:32:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+memmap -addr 1124073472 -size 65536 -flags 3
+memmap -addr 4160782336 -size 4096 -flags 3
+memmap -addr 4160786432 -size 4096 -flags 3
+memmap -addr 4160790528 -size 4096 -flags 3
+memmap -addr 4160794624 -size 4096 -flags 3
+memmap -addr 4169138176 -size 1048576 -flags 3
+memmap -addr 1048576 -size 535822336 -flags 3
+memmap -addr 4160774144 -size 4096 -flags 3
+memmap -addr 4160778240 -size 256 -flags 3
+memmap -addr 4160765952 -size 4096 -flags 3
+memmap -addr 4160761856 -size 4096 -flags 3
+memmap -addr 3758141440 -size 4096 -flags 3
+memmap -addr 4176478720 -size 256 -flags 3
+memmap -addr 3758137344 -size 4096 -flags 3
+memmap -addr 4170186752 -size 1048576 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 3760193536 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4160798720 -size 4096 -flags 3
+memmap -addr 4176486400 -size 4096 -flags 3
+memmap -addr 4169732096 -size 4096 -flags 3
+memmap -addr 3758149632 -size 4096 -flags 3
+memmap -addr 4227858432 -size 16777216 -flags 3
+memmap -addr 0 -size 196608 -flags 3
+memmap -addr 4294901760 -size 65024 -flags 3
+memmap -addr 4176478208 -size 253 -flags 3
+memmap -addr 4176482304 -size 4096 -flags 3
+memmap -addr 4176479744 -size 32 -flags 3
+memmap -addr 4176479776 -size 224 -flags 3
+memmap -addr 3759144960 -size 4096 -flags 3
+memmap -addr 4160749568 -size 4096 -flags 3
+memmap -addr 4160753664 -size 4096 -flags 3
+memmap -addr 3758100480 -size 4096 -flags 3
+memmap -addr 3758104576 -size 4096 -flags 3
+memmap -addr 4160778496 -size 33 -flags 3
+memmap -addr 1136656384 -size 65536 -flags 3
+memmap -addr 1096810496 -size 65536 -flags 3
+source D:/vivadoprojects/armqp/src/sdk/top_level_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+dow D:/vivadoprojects/armqp/src/sdk/hdmi_display/Debug/hdmi_display.elf
+----------------End of Script----------------
+
+15:32:28 INFO  : Memory regions updated for context APU
+15:32:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:32:28 INFO  : 'con' command is executed.
+15:32:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248447864"} -index 0
+con
+----------------End of Script----------------
+
+15:37:55 INFO  : Disconnected from the channel tcfchan#19.
+15:37:56 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

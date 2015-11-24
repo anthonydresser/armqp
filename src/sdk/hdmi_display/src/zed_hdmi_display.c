@@ -51,7 +51,7 @@
 #include <stdio.h>
 
 #include "zed_hdmi_display.h"
-#include "xtpg.h"
+
 
 #define ADV7511_ADDR   0x72
 #define CARRIER_HDMI_OUT_CONFIG_LEN  (40)
@@ -208,30 +208,6 @@ int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
 	vgen_init( &(pDemo->vtc_hdmio_generator), pDemo->uDeviceId_VTC_HdmioGenerator );
 	vgen_config( &(pDemo->vtc_hdmio_generator), pDemo->hdmio_resolution, 2 );
 
-	//Configure TPGs
-	//Configure TPG VDMA In
-	pDemo->tpg_config_vdma_in = XTpg_LookupConfig (pDemo->uDeviceId_TPG_VMDA_IN);
-	ret = XTpg_CfgInitialize (&(pDemo->tpg_instance_vmda_in), pDemo->tpg_config_vdma_in, pDemo->uBaseAddr_TPG_VMDA_IN);
-	print_sucess(ret, "tpg vdma in");
-
-	XTpg_SetActiveSize(&(pDemo->tpg_instance_vmda_in), 640, 480);
-	XTpg_SetBackground(&(pDemo->tpg_instance_vmda_in), XTPG_COLOR_BARS);
-	XTpg_Setup(&(pDemo->tpg_instance_vmda_in));
-	XTpg_Enable(&(pDemo->tpg_instance_vmda_in));
-
-	//Configure TPG VDMA Out
-	pDemo->tpg_config_vdma_out = XTpg_LookupConfig (pDemo->uDeviceId_TPG_VMDA_OUT);
-	ret = XTpg_CfgInitialize (&(pDemo->tpg_instance_vmda_out), pDemo->tpg_config_vdma_out, pDemo->uBaseAddr_TPG_VMDA_OUT);
-	print_sucess(ret, "tpg vdma out");
-
-	XTpg_SetActiveSize(&(pDemo->tpg_instance_vmda_out), 640, 480);
-	XTpg_SetBackground(&(pDemo->tpg_instance_vmda_out), XTPG_PASS_THROUGH);
-	XTpg_Setup(&(pDemo->tpg_instance_vmda_out));
-	XTpg_Enable(&(pDemo->tpg_instance_vmda_out));
-
-	//GPIO Debugging Initialize
-	XGpio_Initialize(&(pDemo->gpio_video_out_instance), pDemo->uDeviceId_gpio_video_out);
-
 	xil_printf( "\n\rLaunching DMA Activity\n\r" );
 	vfb_rx_start( &(pDemo->vdma_hdmi) );
 	vfb_tx_start( &(pDemo->vdma_hdmi) );
@@ -245,7 +221,6 @@ int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
 	//4-5: DMA ouput patterns
 	while (1)
 	{
-		u16 x,y;
 		xil_printf("Please type debug char:");
 		ret=inbyte();
 		xil_printf("%c\n\r",ret);
@@ -253,51 +228,11 @@ int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
 		case 'd' : //Dump/Error Check
 			vfb_dump_registers( &(pDemo->vdma_hdmi) );
 			vfb_check_errors( &(pDemo->vdma_hdmi), 1);
-
-			XTpg_GetActiveSize(&(pDemo->tpg_instance_vmda_in), &x, &y);
-			xil_printf("DMA In TPG:\n\r%dx%d\n\r", x,y);
-			x=XTpg_GetBackground(&(pDemo->tpg_instance_vmda_in));
-			xil_printf("Pattern %x\n\r", x);
-
-			XTpg_GetActiveSize(&(pDemo->tpg_instance_vmda_out), &x, &y);
-			xil_printf("DMA Out TPG:\n\r%dx%d\n\r", x,y);
-			x=XTpg_GetBackground(&(pDemo->tpg_instance_vmda_out));
-			xil_printf("Pattern %x\n\r", x);
 			break;
 		case 'i'://Resend I2C HDMI Config
 			xil_printf("Reinitializing Monitor Link\n\r");
 			init_hdmi_iic(pDemo);
 			break;
-		case 'o'://Reset the Output VTC and Video Output Core
-			xil_printf("Resetting the Output VTC and Video Output Core\n\r");
-			//XVtc_Reset(&(pDemo->vtc_hdmio_generator));
-			XGpio_DiscreteWrite(&(pDemo->gpio_video_out_instance), 1, 1);
-			sleep(1);
-			XGpio_DiscreteWrite(&(pDemo->gpio_video_out_instance), 1, 0);
-			break;
-		case '1'://VDMA input TPG to Ramp
-			xil_printf("VDMA Input Set to RAMP\n\r");
-			XTpg_SetBackground(&(pDemo->tpg_instance_vmda_in), XTPG_T_RAMP);
-			XTpg_SetMotionSpeed(&(pDemo->tpg_instance_vmda_in), 128);
-			XTpg_EnableMotion(&(pDemo->tpg_instance_vmda_in));
-			break;
-		case '2'://VDMA input TPG to Pass Thru
-			xil_printf("VDMA Input Set to Pass Thru\n\r");
-			XTpg_SetBackground(&(pDemo->tpg_instance_vmda_in), XTPG_PASS_THROUGH);
-			break;
-		case '3'://VDMA input TPG to Color Bars
-			xil_printf("VDMA Input Set to Color Bars\n\r");
-			XTpg_SetBackground(&(pDemo->tpg_instance_vmda_in), XTPG_COLOR_BARS);
-			break;
-		case '4'://VDMA output TPG to Color Bars
-			xil_printf("VDMA Output Set to Color Bars\n\r");
-			XTpg_SetBackground(&(pDemo->tpg_instance_vmda_out), XTPG_COLOR_BARS);
-			break;
-		case '5'://VDMA output TPG to Pass Thru
-			xil_printf("VDMA Output Set to Pass Thru\n\r");
-			XTpg_SetBackground(&(pDemo->tpg_instance_vmda_out), XTPG_PASS_THROUGH);
-			break;
-
 		default:
 			xil_printf("%c isn't a debug char, dummy!\n\r", ret);
 			break;
@@ -319,13 +254,12 @@ int init_hdmi_iic(zed_hdmi_display_t *pDemo){
 
 	xil_printf( "HDMI Output Initialization ...\n\r" );
 	{
-		Xuint8 num_bytes;
 		int i;
 
 		for ( i = 0; i < CARRIER_HDMI_OUT_CONFIG_LEN; i++ )
 		{
 			//xil_printf( "[ZedBoard HDMI] IIC Write - Device = 0x%02X, Address = 0x%02X, Data = 0x%02X\n\r", carrier_hdmi_out_config[i][0]<<1, carrier_hdmi_out_config[i][1], carrier_hdmi_out_config[i][2] );
-			num_bytes = pDemo->hdmi_out_iic.fpIicWrite( &(pDemo->hdmi_out_iic), carrier_hdmi_out_config[i][0], carrier_hdmi_out_config[i][1], &(carrier_hdmi_out_config[i][2]), 1 );
+			pDemo->hdmi_out_iic.fpIicWrite( &(pDemo->hdmi_out_iic), carrier_hdmi_out_config[i][0], carrier_hdmi_out_config[i][1], &(carrier_hdmi_out_config[i][2]), 1 );
 		}
 	}
 	xil_printf( "HDMI Output Initialization Success\n\r" );

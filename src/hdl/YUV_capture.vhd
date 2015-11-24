@@ -38,18 +38,18 @@ entity YUV_capture is
         vsync   :   in  std_logic;
         href    :   in  std_logic;
         reset   :   in  std_logic;
-        pixel   :   out std_logic_vector(23 downto 0);
+        pixel   :   out std_logic_vector(15 downto 0);
         we  :   out std_logic);
 end YUV_capture;
 
 architecture Behavioral of YUV_capture is
     TYPE    state_type  IS  (s0, s1, s2, s3);
     signal  state, next_state   :   state_type;
-    signal  cr  :   std_logic_vector(7 downto 0)    :=  (others => '0');
-    signal  cb  :   std_logic_vector(7 downto 0)    :=  (others => '0');
+    --signal  cr  :   std_logic_vector(7 downto 0)    :=  (others => '0');
+    signal  c  :   std_logic_vector(7 downto 0)    :=  (others => '0');
     signal  y   :   std_logic_vector(7 downto 0)    :=  (others => '0');
 begin
-    pixel <= (y & cr & cb);
+    pixel <= (y & c);
    
 --  output logic --
     process(pclk)
@@ -57,14 +57,14 @@ begin
         if rising_edge(pclk) then
             case state is
                 when s0   =>
-                    cb   <=  din;
+                    c   <=  din;
                     we  <=  '0';
                 when s1   =>
                     y   <=  din;
-                    we  <=  '0';
-                when s2   =>
-                    cr  <=  din;
                     we  <=  '1';
+                when s2   =>
+                    c  <=  din;
+                    we  <=  '0';
                 when s3   =>
                     y   <=  din;
                     we  <=  '1';

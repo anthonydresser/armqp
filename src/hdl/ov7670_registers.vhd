@@ -38,7 +38,7 @@ begin
 				when x"01" => sreg <= x"1280"; -- COM7   Reset
 				when x"02" => sreg <= x"1200"; -- COM7   Size & RGB output
 				when x"03" => sreg <= x"1100"; -- CLKRC  Prescaler - Fin/(1+1)
-				when x"04" => sreg <= x"0C00"; -- COM3   Lots of stuff, enable scaling, all others off
+				when x"04" => sreg <= x"0C04"; -- COM3   Turn on Test Pattern -AW
 				when x"05" => sreg <= x"3E00"; -- COM14  PCLK scaling off
 				
    			when x"06" => sreg <= x"8C00"; -- RGB444 Set RGB format

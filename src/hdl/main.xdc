@@ -164,7 +164,7 @@ create_clock -name cam_clk -period 41.6667 [get_ports pclk];
 # Clock Groups #
 ################
 
-set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group [get_clocks clk_12M_clk_wiz_0] -group [get_clocks hdmio_clk] -group [get_clocks clk_50M_clk_wiz_0]
-#set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group {hdmio_clk  clk_12M_clk_wiz_0} -group [get_clocks clk_50M_clk_wiz_0]
+set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group [get_clocks hdmio_clk] -group [get_clocks clk_50M_clk_wiz_0]
+#set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group {hdmio_clk} -group [get_clocks clk_50M_clk_wiz_0]
 
 

@@ -11,7 +11,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity ov7670_controller is
     Port ( clk   : in    STD_LOGIC;	--50MHz
 		   resend :in    STD_LOGIC; --button
-		   config_finished : out std_logic;
+		   --config_finished : out std_logic;
            sioc  : out   STD_LOGIC;
            siod  : inout STD_LOGIC;
            reset : out   STD_LOGIC;
@@ -52,7 +52,7 @@ architecture Behavioral of ov7670_controller is
 
 	constant camera_address : std_logic_vector(7 downto 0) := x"42"; -- 42"; -- Device write ID - see top of page 11 of data sheet
 begin
-   config_finished <= finished;
+   --config_finished <= finished;
 	
 	send <= not finished;
 	Inst_i2c_sender: i2c_sender PORT MAP(
