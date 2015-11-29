@@ -38,7 +38,7 @@ begin
 				when x"01" => sreg <= x"1280"; -- COM7   Reset
 				when x"02" => sreg <= x"1200"; -- COM7   Size & RGB output
 				when x"03" => sreg <= x"1100"; -- CLKRC  Prescaler - Fin/(1+1)
-				when x"04" => sreg <= x"0C04"; -- COM3   Turn on Test Pattern -AW
+				when x"04" => sreg <= x"0C00"; -- COM3   Turn on Test Pattern 0C04 -AW
 				when x"05" => sreg <= x"3E00"; -- COM14  PCLK scaling off
 				
    			when x"06" => sreg <= x"8C00"; -- RGB444 Set RGB format
@@ -53,7 +53,7 @@ begin
 				when x"0F" => sreg <= x"535e"; -- MTX5  - colour conversion matrix
 				when x"10" => sreg <= x"5480"; -- MTX6  - colour conversion matrix
 				when x"11" => sreg <= x"589e"; -- MTXS  - Matrix sign and auto contrast
-				when x"12" => sreg <= x"3dc0"; -- COM13 - Turn on GAMMA and UV Auto adjust
+				when x"12" => sreg <= x"3dc1"; -- COM13 - Turn on GAMMA and UV Auto adjust
 				when x"13" => sreg <= x"1100"; -- CLKRC  Prescaler - Fin/(1+1)
 				
 				when x"14" => sreg <= x"1711"; -- HSTART HREF start (high 8 bits)
@@ -64,8 +64,8 @@ begin
 				when x"18" => sreg <= x"1A7b"; -- VSTOP  VSYNC stop (high 8 bits) 
 				when x"19" => sreg <= x"030a"; -- VREF   VSYNC low two bits
 			
---				when x"10" => sreg <= x"703a"; -- SCALING_XSC
---				when x"11" => sreg <= x"7135"; -- SCALING_YSC
+--          when x"1A" => sreg <= x"707a"; -- SCALING_XSC
+--				when x"1B" => sreg <= x"7135"; -- SCALING_YSC
 --				when x"12" => sreg <= x"7200"; -- SCALING_DCWCTR  -- zzz was 11 
 --				when x"13" => sreg <= x"7300"; -- SCALING_PCLK_DIV
 --				when x"14" => sreg <= x"a200"; -- SCALING_PCLK_DELAY  must match COM14

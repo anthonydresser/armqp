@@ -27,6 +27,7 @@ module top_level(
 	input vsync,
 	input href,
 	input reset,
+   input [7:0] sw,
 	inout siod,
 	output sioc,
 	output xclk,
@@ -65,7 +66,7 @@ module top_level(
    inout zed_hdmi_iic_scl_io,
    inout zed_hdmi_iic_sda_io,
    output [7:0]LED,
-   output [7:0]PMOD_Debug
+   output [15:0]PMOD_Debug
  );
 	
 	wire vid_io_in_ce, clk_12M;
@@ -129,11 +130,12 @@ module top_level(
       .vsync(vsync),
       .href(href),
       .pclk(pclk),
+      .sw(sw),
       .pixel(pixel),
       .we (fifo_write)    //Output
    );
     
-   assign PMOD_Debug = {pixel[5], ~href, vsync, pclk, PMOD_Debug_BD[3:0]};
+   assign PMOD_Debug = pixel; //{pixel[5], ~href, vsync, pclk, PMOD_Debug_BD[3:0]};
    edgeDetect edgeDetectorInstance(~href, reset, pclk&&fifo_write, href_n_edge);
     
    //Block Design
@@ -172,9 +174,9 @@ module top_level(
       .zed_hdmi_iic_sda_io(zed_hdmi_iic_sda_io),
 
       //Video Input
-      .vid_io_in_active_video(~href),
-      .vid_io_in_clk(fifo_write),
-      .vid_io_in_data(pixel),
+      .vid_io_in_active_video(href),
+      .vid_io_in_clk(pclk),
+      .vid_io_in_data({pixel[7:0],  pixel[15:8]}),
       .vid_io_in_field(1'b0),
       .vid_io_in_hblank(~href),
       .vid_io_in_hsync(href_n_edge),

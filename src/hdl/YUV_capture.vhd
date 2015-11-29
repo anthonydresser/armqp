@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -38,6 +39,7 @@ entity YUV_capture is
         vsync   :   in  std_logic;
         href    :   in  std_logic;
         reset   :   in  std_logic;
+        sw      :   in std_logic_vector(7 downto 0);
         pixel   :   out std_logic_vector(15 downto 0);
         we  :   out std_logic);
 end YUV_capture;
@@ -49,7 +51,7 @@ architecture Behavioral of YUV_capture is
     signal  c  :   std_logic_vector(7 downto 0)    :=  (others => '0');
     signal  y   :   std_logic_vector(7 downto 0)    :=  (others => '0');
 begin
-    pixel <= (y & c);
+    pixel <= (c & y);
    
 --  output logic --
     process(pclk)
@@ -57,13 +59,13 @@ begin
         if rising_edge(pclk) then
             case state is
                 when s0   =>
-                    c   <=  din;
+                    c   <=  std_logic_vector(unsigned(din)+unsigned(sw));
                     we  <=  '0';
                 when s1   =>
                     y   <=  din;
                     we  <=  '1';
                 when s2   =>
-                    c  <=  din;
+                    c   <=  std_logic_vector(unsigned(din)+unsigned(sw));
                     we  <=  '0';
                 when s3   =>
                     y   <=  din;
