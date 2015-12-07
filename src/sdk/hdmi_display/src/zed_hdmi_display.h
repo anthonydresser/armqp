@@ -71,7 +71,8 @@ struct struct_zed_hdmi_display_t
    // IP base addresses
    Xuint32 uBaseAddr_IIC_HdmiOut;
    Xuint32 uDeviceId_VTC_HdmioGenerator;
-   Xuint32 uDeviceId_VDMA_HdmiDisplay;
+   Xuint32 uDeviceId_VDMA_Left;
+   Xuint32 uDeviceId_VDMA_Right;
 
    zed_iic_t hdmi_out_iic;
 
@@ -88,10 +89,18 @@ struct struct_zed_hdmi_display_t
    Xuint32 dma_height;
    Xuint32 dma_resolution;
 
-   XAxiVdma vdma_hdmi;
-   XAxiVdma_DmaSetup vdmacfg_hdmi_read;
-   XAxiVdma_DmaSetup vdmacfg_hdmi_write;
-   Xuint32 uBaseAddr_MEM_HdmiDisplay;  // address of FB in memory
+   XAxiVdma vdma_left;
+   XAxiVdma_DmaSetup vdmacfg_left_read;
+   XAxiVdma_DmaSetup vdmacfg_left_write;
+   Xuint32 uBaseAddr_MEM_LeftIn;
+   Xuint32 uBaseAddr_MEM_LeftOut;
+
+   XAxiVdma vdma_right;
+   XAxiVdma_DmaSetup vdmacfg_right_read;
+   XAxiVdma_DmaSetup vdmacfg_right_write;
+   Xuint32 uBaseAddr_MEM_RightIn;
+   Xuint32 uBaseAddr_MEM_RightOut;
+
    Xuint32 uNumFrames_HdmiDisplay;
 
 

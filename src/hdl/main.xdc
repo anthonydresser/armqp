@@ -21,83 +21,81 @@ set_property -dict {PACKAGE_PIN H18 IOSTANDARD LVCMOS33} [get_ports sw[5]];  # "
 set_property -dict {PACKAGE_PIN H17 IOSTANDARD LVCMOS33} [get_ports sw[6]];  # "SW6"
 set_property -dict {PACKAGE_PIN M15 IOSTANDARD LVCMOS33} [get_ports sw[7]];  # "SW7"
 
-# ----------------------------------------------------------------------------
-# JA Pmod - Bank 13
-# ----------------------------------------------------------------------------
-set_property -dict {PACKAGE_PIN Y11 IOSTANDARD LVCMOS33} [get_ports vdin[7]]
-set_property -dict {PACKAGE_PIN AA8 IOSTANDARD LVCMOS33}  [get_ports vdin[5]];  # "JA10"
-set_property -dict {PACKAGE_PIN AA11 IOSTANDARD LVCMOS33} [get_ports pclk]
-# "JA3"
-set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33} [get_ports vsync]  
-set_property -dict {PACKAGE_PIN AA9 IOSTANDARD LVCMOS33} [get_ports sioc]
- #temp until cables are fixed
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk];   
-set_property -dict {PACKAGE_PIN AB11 IOSTANDARD LVCMOS33} [get_ports {reset_out}]; 
-set_property -dict {PACKAGE_PIN AB10 IOSTANDARD LVCMOS33} [get_ports vdin[1]]
-# "JA9"
-set_property -dict {PACKAGE_PIN AB9 IOSTANDARD LVCMOS33}  [get_ports vdin[3]]  
-
-
-# ----------------------------------------------------------------------------
-# JB Pmod - Bank 13
-# ----------------------------------------------------------------------------
-set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33} [get_ports {pwdn}]
-set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports {siod}]
-set_property -dict {PACKAGE_PIN W11 IOSTANDARD LVCMOS33} [get_ports {vdin[0]}]
-set_property -dict {PACKAGE_PIN V10 IOSTANDARD LVCMOS33} [get_ports {vdin[2]}]
-set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33} [get_ports {vdin[4]}]
-set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports {vdin[6]}]
-set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports {xclk}]
-set_property -dict {PACKAGE_PIN V9 IOSTANDARD LVCMOS33} [get_ports {href}]
 
 # ----------------------------------------------------------------------------
 # JA Pmod - Bank 13
 # ----------------------------------------------------------------------------
-#set_property -dict {PACKAGE_PIN Y11 IOSTANDARD LVCMOS33} [get_ports reset_out]
-#set_property -dict {PACKAGE_PIN AA11 IOSTANDARD LVCMOS33} [get_ports href]
-#set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33} [get_ports siod]  
-#set_property -dict {PACKAGE_PIN AA9 IOSTANDARD LVCMOS33} [get_ports pwdn] 
-#set_property -dict {PACKAGE_PIN AB11 IOSTANDARD LVCMOS33} [get_ports xclk]
-#set_property -dict {PACKAGE_PIN AB10 IOSTANDARD LVCMOS33} [get_ports vsync]
-#set_property -dict {PACKAGE_PIN AB9 IOSTANDARD LVCMOS33}  [get_ports sioc]
-#set_property -dict {PACKAGE_PIN AA8 IOSTANDARD LVCMOS33}  [get_ports pclk]  
-#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk];
+set_property -dict {PACKAGE_PIN Y11 IOSTANDARD LVCMOS33} [get_ports reset_out_Left]
+set_property -dict {PACKAGE_PIN AA11 IOSTANDARD LVCMOS33} [get_ports href_Left]
+set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33} [get_ports siod_Left]  
+set_property -dict {PACKAGE_PIN AA9 IOSTANDARD LVCMOS33} [get_ports pwdn_Left] 
+set_property -dict {PACKAGE_PIN AB11 IOSTANDARD LVCMOS33} [get_ports xclk_Left]
+set_property -dict {PACKAGE_PIN AB10 IOSTANDARD LVCMOS33} [get_ports vsync_Left]
+set_property -dict {PACKAGE_PIN AB9 IOSTANDARD LVCMOS33}  [get_ports sioc_Left]
+set_property -dict {PACKAGE_PIN AA8 IOSTANDARD LVCMOS33}  [get_ports pclk_Left]  
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk_Left];
 
 # ----------------------------------------------------------------------------
 # JB Pmod - Bank 13
 # ----------------------------------------------------------------------------
-#set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33} [get_ports {vdin[0]}]
-#set_property -dict {PACKAGE_PIN W11 IOSTANDARD LVCMOS33} [get_ports {vdin[2]}]
-#set_property -dict {PACKAGE_PIN V10 IOSTANDARD LVCMOS33} [get_ports {vdin[4]}]
-#set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33} [get_ports {vdin[6]}]
-#set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports {vdin[1]}]
-#set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports {vdin[3]}]
-#set_property -dict {PACKAGE_PIN V9 IOSTANDARD LVCMOS33} [get_ports {vdin[5]}]
-#set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports {vdin[7]}]
+set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[0]}]
+set_property -dict {PACKAGE_PIN W11 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[2]}]
+set_property -dict {PACKAGE_PIN V10 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[4]}]
+set_property -dict {PACKAGE_PIN W8 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[6]}]
+set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[1]}]
+set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[3]}]
+set_property -dict {PACKAGE_PIN V9 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[5]}]
+set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[7]}]
+
+## ----------------------------------------------------------------------------
+## JC Pmod - Bank 13
+## ---------------------------------------------------------------------------- 
+#set_property -dict {PACKAGE_PIN AB6 IOSTANDARD LVCMOS33} [get_ports href_Right];  # 1
+#set_property -dict {PACKAGE_PIN AB7 IOSTANDARD LVCMOS33} [get_ports reset_out_Right];  # 0
+#set_property -dict {PACKAGE_PIN AA4 IOSTANDARD LVCMOS33} [get_ports pwdn_Right];  # 3
+#set_property -dict {PACKAGE_PIN Y4  IOSTANDARD LVCMOS33} [get_ports siod_Right];  # 2
+#set_property -dict {PACKAGE_PIN T6  IOSTANDARD LVCMOS33} [get_ports vsync_Right];  # 5
+#set_property -dict {PACKAGE_PIN R6  IOSTANDARD LVCMOS33} [get_ports xclk_Right];  # 4
+#set_property -dict {PACKAGE_PIN U4  IOSTANDARD LVCMOS33} [get_ports pclk_Right];  # 7
+#set_property -dict {PACKAGE_PIN T4  IOSTANDARD LVCMOS33} [get_ports sioc_Right];  # 6
+#set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk_Right];
+
+## ----------------------------------------------------------------------------
+## JD Pmod - Bank 13
+## ---------------------------------------------------------------------------- 
+#set_property -dict {PACKAGE_PIN W7 IOSTANDARD LVCMOS33} [get_ports {vdin_Right[1]}];  # 1
+#set_property -dict {PACKAGE_PIN V7 IOSTANDARD LVCMOS33} [get_ports {vdin_Right[0]}];  # 0
+#set_property -dict {PACKAGE_PIN V4 IOSTANDARD LVCMOS33} [get_ports {vdin_Right[3]}];  # 3
+#set_property -dict {PACKAGE_PIN V5 IOSTANDARD LVCMOS33} [get_ports {vdin_Right[2]}];  # 2
+#set_property -dict {PACKAGE_PIN W5 IOSTANDARD LVCMOS33} [get_ports {vdin_Right[5]}];  # 5
+#set_property -dict {PACKAGE_PIN W6 IOSTANDARD LVCMOS33} [get_ports {vdin_Right[4]}];  # 4
+#set_property -dict {PACKAGE_PIN U5 IOSTANDARD LVCMOS33} [get_ports {vdin_Right[7]}];  # 7
+#set_property -dict {PACKAGE_PIN U6 IOSTANDARD LVCMOS33} [get_ports {vdin_Right[6]}];  # 6
 
 # ----------------------------------------------------------------------------
 # JC Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
-set_property -dict {PACKAGE_PIN AB6 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[1]}];  # "JC1_N"
-set_property -dict {PACKAGE_PIN AB7 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[0]}];  # "JC1_P"
-set_property -dict {PACKAGE_PIN AA4 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[3]}];  # "JC2_N"
-set_property -dict {PACKAGE_PIN Y4  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[2]}];  # "JC2_P"
-set_property -dict {PACKAGE_PIN T6  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[5]}];  # "JC3_N"
-set_property -dict {PACKAGE_PIN R6  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[4]}];  # "JC3_P"
-set_property -dict {PACKAGE_PIN U4  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[7]}];  # "JC4_N"
-set_property -dict {PACKAGE_PIN T4  IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[6]}];  # "JC4_P"
+set_property -dict {PACKAGE_PIN AB6 IOSTANDARD LVCMOS33} [get_ports pmod_out[9]];  # 1
+set_property -dict {PACKAGE_PIN AB7 IOSTANDARD LVCMOS33} [get_ports pmod_out[8]];  # 0
+set_property -dict {PACKAGE_PIN AA4 IOSTANDARD LVCMOS33} [get_ports pmod_out[11]];  # 3
+set_property -dict {PACKAGE_PIN Y4  IOSTANDARD LVCMOS33} [get_ports pmod_out[10]];  # 2
+set_property -dict {PACKAGE_PIN T6  IOSTANDARD LVCMOS33} [get_ports pmod_out[13]];  # 5
+set_property -dict {PACKAGE_PIN R6  IOSTANDARD LVCMOS33} [get_ports pmod_out[12]];  # 4
+set_property -dict {PACKAGE_PIN U4  IOSTANDARD LVCMOS33} [get_ports pmod_out[15]];  # 7
+set_property -dict {PACKAGE_PIN T4  IOSTANDARD LVCMOS33} [get_ports pmod_out[14]];  # 6
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pclk_Right];
 
 # ----------------------------------------------------------------------------
-# JA Pmod - Bank 13
+# JD Pmod - Bank 13
 # ---------------------------------------------------------------------------- 
-set_property -dict {PACKAGE_PIN W7 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[9]}];  # "JD1_N"
-set_property -dict {PACKAGE_PIN V7 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[8]}];  # "JD1_P"
-set_property -dict {PACKAGE_PIN V4 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[11]}];  # "JD2_N"
-set_property -dict {PACKAGE_PIN V5 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[10]}];  # "JD2_P"
-set_property -dict {PACKAGE_PIN W5 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[13]}];  # "JD3_N"
-set_property -dict {PACKAGE_PIN W6 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[12]}];  # "JD3_P"
-set_property -dict {PACKAGE_PIN U5 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[15]}];  # "JD4_N"
-set_property -dict {PACKAGE_PIN U6 IOSTANDARD LVCMOS33} [get_ports {PMOD_Debug[14]}];  # "JD4_P"
+set_property -dict {PACKAGE_PIN W7 IOSTANDARD LVCMOS33} [get_ports {pmod_out[1]}];  # 1
+set_property -dict {PACKAGE_PIN V7 IOSTANDARD LVCMOS33} [get_ports {pmod_out[0]}];  # 0
+set_property -dict {PACKAGE_PIN V4 IOSTANDARD LVCMOS33} [get_ports {pmod_out[3]}];  # 3
+set_property -dict {PACKAGE_PIN V5 IOSTANDARD LVCMOS33} [get_ports {pmod_out[2]}];  # 2
+set_property -dict {PACKAGE_PIN W5 IOSTANDARD LVCMOS33} [get_ports {pmod_out[5]}];  # 5
+set_property -dict {PACKAGE_PIN W6 IOSTANDARD LVCMOS33} [get_ports {pmod_out[4]}];  # 4
+set_property -dict {PACKAGE_PIN U5 IOSTANDARD LVCMOS33} [get_ports {pmod_out[7]}];  # 7
+set_property -dict {PACKAGE_PIN U6 IOSTANDARD LVCMOS33} [get_ports {pmod_out[6]}];  # 6
 
 # ----------------------------------------------------------------------------
 # User LEDs - Bank 33
@@ -207,15 +205,17 @@ set_property IOSTANDARD LVCMOS25 [get_ports hdmio_io_spdif]
 # Generated Clocks #
 ####################
 
+#This is no longer necessary since there is a separate constraints file for the out of context run
 # Rename auto-generated clocks from MMCM
-create_generated_clock -name hdmio_clk [get_pins wrapper/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
-create_clock -name cam_clk -period 41.6667 [get_ports pclk];
+#create_generated_clock -name hdmio_clk [get_pins wrapper/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
+
+create_clock -name cam_clk_Left -period 41.6667 [get_ports pclk_Left];
+create_clock -name cam_clk_Right -period 41.6667 [get_ports pclk_Right];
 
 ################
 # Clock Groups #
 ################
 
-set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group [get_clocks hdmio_clk] -group [get_clocks clk_50M_clk_wiz_0]
-#set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group {hdmio_clk} -group [get_clocks clk_50M_clk_wiz_0]
+set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group [get_clocks clk_50M_clk_wiz_0]
 
 

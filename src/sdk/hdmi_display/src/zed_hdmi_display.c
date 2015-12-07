@@ -175,33 +175,62 @@ int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
 	pDemo->dma_width  = 640;
 	pDemo->dma_height = 480;
 
-	// Initialize Output Side of AXI VDMA
-	xil_printf( "Video DMA (Output Side) Initialization ...\n\r" );
+	// Initialize Left Output Side of AXI VDMA
+	xil_printf( "Video Left DMA (Output Side) Initialization ...\n\r" );
 	vfb_common_init(
-			pDemo->uDeviceId_VDMA_HdmiDisplay,     // uDeviceId
-			&(pDemo->vdma_hdmi)                    // pAxiVdma
+			pDemo->uDeviceId_VDMA_Left,     // uDeviceId
+			&(pDemo->vdma_left)                    // pAxiVdma
 	);
 	vfb_tx_init(
-			&(pDemo->vdma_hdmi),                   // pAxiVdma
-			&(pDemo->vdmacfg_hdmi_read),           // pReadCfg
+			&(pDemo->vdma_left),                   // pAxiVdma
+			&(pDemo->vdmacfg_left_read),           // pReadCfg
 			pDemo->dma_resolution,               // uVideoResolution
 			pDemo->dma_resolution,               // uStorageResolution
-			pDemo->uBaseAddr_MEM_HdmiDisplay,      // uMemAddr
+			pDemo->uBaseAddr_MEM_LeftIn,      // uMemAddr
 			pDemo->uNumFrames_HdmiDisplay          // uNumFrames
 	);
-	xil_printf( "Video DMA (Output Side) Initialization Success\n\r" );
+	xil_printf( "Video Left DMA (Output Side) Initialization Success\n\r" );
 
-	//Initialize Input Side of AXI VDMA
-	xil_printf( "Video DMA (Input Side) Initialization ...\n\r" );
+	//Initialize Left Input Side of AXI VDMA
+	xil_printf( "Video Left DMA (Input Side) Initialization ...\n\r" );
 	vfb_rx_init(
-				&(pDemo->vdma_hdmi),                   // pAxiVdma
-				&(pDemo->vdmacfg_hdmi_write),           // pWriteCfg
+				&(pDemo->vdma_left),                   // pAxiVdma
+				&(pDemo->vdmacfg_left_write),           // pWriteCfg
 				pDemo->dma_resolution,               // uVideoResolution
 				pDemo->dma_resolution,               // uStorageResolution
-				pDemo->uBaseAddr_MEM_HdmiDisplay,      // uMemAddr
+				pDemo->uBaseAddr_MEM_LeftIn,      // uMemAddr
 				pDemo->uNumFrames_HdmiDisplay          // uNumFrames
 		);
-	xil_printf( "Video DMA (Input Side) Initialization Success\n\r" );
+	xil_printf( "Video Left DMA (Input Side) Initialization Success\n\r" );
+
+
+	// Initialize Right Output Side of AXI VDMA
+	xil_printf( "Video Right DMA (Output Side) Initialization ...\n\r" );
+	vfb_common_init(
+			pDemo->uDeviceId_VDMA_Right,     // uDeviceId
+			&(pDemo->vdma_right)                    // pAxiVdma
+	);
+	vfb_tx_init(
+			&(pDemo->vdma_right),                   // pAxiVdma
+			&(pDemo->vdmacfg_right_read),           // pReadCfg
+			pDemo->dma_resolution,               // uVideoResolution
+			pDemo->dma_resolution,               // uStorageResolution
+			pDemo->uBaseAddr_MEM_RightIn,      // uMemAddr
+			pDemo->uNumFrames_HdmiDisplay          // uNumFrames
+	);
+	xil_printf( "Video Right DMA (Output Side) Initialization Success\n\r" );
+
+	//Initialize Right Input Side of AXI VDMA
+	xil_printf( "Video Right DMA (Input Side) Initialization ...\n\r" );
+	vfb_rx_init(
+				&(pDemo->vdma_right),                   // pAxiVdma
+				&(pDemo->vdmacfg_right_write),           // pWriteCfg
+				pDemo->dma_resolution,               // uVideoResolution
+				pDemo->dma_resolution,               // uStorageResolution
+				pDemo->uBaseAddr_MEM_RightIn,      // uMemAddr
+				pDemo->uNumFrames_HdmiDisplay          // uNumFrames
+		);
+	xil_printf( "Video Right DMA (Input Side) Initialization Success\n\r" );
 
 	// Configure VTC on output data path
 	xil_printf( "Video Timing Controller (generator) Initialization ...\n\r" );
@@ -209,9 +238,13 @@ int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
 	vgen_config( &(pDemo->vtc_hdmio_generator), pDemo->hdmio_resolution, 2 );
 
 	xil_printf( "\n\rLaunching DMA Activity\n\r" );
-	vfb_rx_start( &(pDemo->vdma_hdmi) );
-	vfb_tx_start( &(pDemo->vdma_hdmi) );
-	vfb_dump_registers( &(pDemo->vdma_hdmi) );
+	vfb_rx_start( &(pDemo->vdma_left) );
+	vfb_tx_start( &(pDemo->vdma_left) );
+	vfb_dump_registers( &(pDemo->vdma_left) );
+
+	vfb_rx_start( &(pDemo->vdma_right) );
+	vfb_tx_start( &(pDemo->vdma_right) );
+	vfb_dump_registers( &(pDemo->vdma_right) );
 
 
 	//Debugging stuff:
@@ -226,8 +259,10 @@ int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
 		xil_printf("%c\n\r",ret);
 		switch (ret){
 		case 'd' : //Dump/Error Check
-			vfb_dump_registers( &(pDemo->vdma_hdmi) );
-			vfb_check_errors( &(pDemo->vdma_hdmi), 1);
+			vfb_dump_registers( &(pDemo->vdma_left) );
+			vfb_check_errors( &(pDemo->vdma_left), 1);
+			vfb_dump_registers( &(pDemo->vdma_right) );
+			vfb_check_errors( &(pDemo->vdma_right), 1);
 			break;
 		case 'i'://Resend I2C HDMI Config
 			xil_printf("Reinitializing Monitor Link\n\r");

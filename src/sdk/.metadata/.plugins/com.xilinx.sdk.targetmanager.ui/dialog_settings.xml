@@ -3,7 +3,7 @@
 	<item value="Local" key="top_level_hw_platform_0-target"/>
 	<item value="false" key="top_level_hw_platform_0-partial_bit"/>
 	<item value="top_level_hw_platform_0" key="programfpga.hwplatform"/>
-	<item value="D:\vivadoprojects\armqp\armqp\armqp.runs\impl_1\top_level.bit" key="top_level_hw_platform_0-bitFile"/>
+	<item value="C:\Users\Andrew\Desktop\top_level.bit" key="top_level_hw_platform_0-bitFile"/>
 	<item value="" key="top_level_hw_platform_0-bmmFile"/>
 	<item value="Auto Detect" key="top_level_hw_platform_0-device"/>
 </section>

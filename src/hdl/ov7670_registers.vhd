@@ -38,13 +38,13 @@ begin
 				when x"01" => sreg <= x"1280"; -- COM7   Reset
 				when x"02" => sreg <= x"1200"; -- COM7   Size & RGB output
 				when x"03" => sreg <= x"1100"; -- CLKRC  Prescaler - Fin/(1+1)
-				when x"04" => sreg <= x"0C00"; -- COM3   Turn on Test Pattern 0C04 -AW
+				when x"04" => sreg <= x"0C00"; -- COM3   Turn on Test Pattern
 				when x"05" => sreg <= x"3E00"; -- COM14  PCLK scaling off
 				
    			when x"06" => sreg <= x"8C00"; -- RGB444 Set RGB format
    			when x"07" => sreg <= x"0400"; -- COM1   no CCIR601
- 				when x"08" => sreg <= x"4010"; -- COM15  Full 0-255 output, RGB 565
-				when x"09" => sreg <= x"3a04"; -- TSLB   Set UV ordering,  do not auto-reset window
+ 				when x"08" => sreg <= x"40C0"; -- COM15  Full 0-255 output, RGB 565
+				when x"09" => sreg <= x"3a14"; -- TSLB   Set UV ordering,  do not auto-reset window
 				when x"0A" => sreg <= x"1438"; -- COM9  - AGC Celling
 				when x"0B" => sreg <= x"4f80"; -- MTX1  - colour conversion matrix
 				when x"0C" => sreg <= x"5080"; -- MTX2  - colour conversion matrix
@@ -52,8 +52,8 @@ begin
 				when x"0E" => sreg <= x"5222"; -- MTX4  - colour conversion matrix
 				when x"0F" => sreg <= x"535e"; -- MTX5  - colour conversion matrix
 				when x"10" => sreg <= x"5480"; -- MTX6  - colour conversion matrix
-				when x"11" => sreg <= x"589e"; -- MTXS  - Matrix sign and auto contrast
-				when x"12" => sreg <= x"3dc1"; -- COM13 - Turn on GAMMA and UV Auto adjust
+				when x"11" => sreg <= x"581e"; -- MTXS  - Matrix sign and auto contrast
+				when x"12" => sreg <= x"3d88"; -- COM13 - Turn on GAMMA and UV Auto adjust
 				when x"13" => sreg <= x"1100"; -- CLKRC  Prescaler - Fin/(1+1)
 				
 				when x"14" => sreg <= x"1711"; -- HSTART HREF start (high 8 bits)
