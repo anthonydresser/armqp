@@ -154,6 +154,7 @@ proc create_root_design { parentCell } {
   # Create ports
   set LEDS [ create_bd_port -dir O -from 7 -to 0 LEDS ]
   set PMOD_Debug [ create_bd_port -dir O -from 7 -to 0 PMOD_Debug ]
+  set clk_PS_50M [ create_bd_port -dir O -type clk clk_PS_50M ]
   set vid_io_in_clk_left [ create_bd_port -dir I -type clk vid_io_in_clk_left ]
   set_property -dict [ list CONFIG.CLK_DOMAIN {/clk_wiz_0_clk_out1} CONFIG.FREQ_HZ {148500000} CONFIG.PHASE {0.0}  ] $vid_io_in_clk_left
   set vid_io_in_clk_right [ create_bd_port -dir I -type clk vid_io_in_clk_right ]
@@ -177,10 +178,10 @@ proc create_root_design { parentCell } {
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.1 clk_wiz_0 ]
-  set_property -dict [ list CONFIG.CLKOUT1_JITTER {217.614} CONFIG.CLKOUT1_PHASE_ERROR {245.344} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {148.5} CONFIG.CLKOUT2_JITTER {516.473} CONFIG.CLKOUT2_PHASE_ERROR {473.931} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {25.2} CONFIG.CLKOUT2_USED {false} CONFIG.MMCM_CLKFBOUT_MULT_F {37.125} CONFIG.MMCM_CLKOUT0_DIVIDE_F {6.250} CONFIG.MMCM_CLKOUT1_DIVIDE {1} CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.NUM_OUT_CLKS {1} CONFIG.USE_LOCKED {true} CONFIG.USE_RESET {false}  ] $clk_wiz_0
+  set_property -dict [ list CONFIG.CLKOUT1_JITTER {134.463} CONFIG.CLKOUT1_PHASE_ERROR {124.502} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {148.5} CONFIG.CLKOUT2_JITTER {167.927} CONFIG.CLKOUT2_PHASE_ERROR {124.502} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {50} CONFIG.CLKOUT2_USED {true} CONFIG.MMCM_CLKFBOUT_MULT_F {6.500} CONFIG.MMCM_CLKOUT0_DIVIDE_F {4.375} CONFIG.MMCM_CLKOUT1_DIVIDE {13} CONFIG.MMCM_DIVCLK_DIVIDE {1} CONFIG.NUM_OUT_CLKS {2} CONFIG.USE_LOCKED {true} CONFIG.USE_RESET {false}  ] $clk_wiz_0
 
-  # Create instance: combineStreams_0, and set properties
-  set combineStreams_0 [ create_bd_cell -type ip -vlnv armqp:combineStreams:combineStreams:1.0 combineStreams_0 ]
+  # Create instance: combineStreams_1, and set properties
+  set combineStreams_1 [ create_bd_cell -type ip -vlnv armqp:combineVertical:combineStreams:1.0 combineStreams_1 ]
 
   # Create instance: gnd, and set properties
   set gnd [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 gnd ]
@@ -188,20 +189,20 @@ proc create_root_design { parentCell } {
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
-  set_property -dict [ list CONFIG.PCW_EN_CLK1_PORT {1} CONFIG.PCW_EN_CLK2_PORT {1} CONFIG.PCW_EN_RST1_PORT {1} CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC {IO PLL} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {155} CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {90} CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_USE_S_AXI_HP0 {1} CONFIG.PCW_USE_S_AXI_HP2 {1} CONFIG.preset {ZedBoard}  ] $processing_system7_0
+  set_property -dict [ list CONFIG.PCW_EN_CLK1_PORT {0} CONFIG.PCW_EN_CLK2_PORT {0} CONFIG.PCW_EN_RST1_PORT {1} CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC {IO PLL} CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {90} CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {100} CONFIG.PCW_USE_S_AXI_HP0 {1} CONFIG.PCW_USE_S_AXI_HP2 {1} CONFIG.preset {ZedBoard}  ] $processing_system7_0
 
   # Create instance: processing_system7_0_axi_periph, and set properties
   set processing_system7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 processing_system7_0_axi_periph ]
   set_property -dict [ list CONFIG.NUM_MI {4}  ] $processing_system7_0_axi_periph
 
+  # Create instance: rotatedUpscale_0, and set properties
+  set rotatedUpscale_0 [ create_bd_cell -type ip -vlnv armqp:rotatedUpscale:rotatedUpscale:0.2 rotatedUpscale_0 ]
+
+  # Create instance: rotatedUpscale_1, and set properties
+  set rotatedUpscale_1 [ create_bd_cell -type ip -vlnv armqp:rotatedUpscale:rotatedUpscale:0.2 rotatedUpscale_1 ]
+
   # Create instance: rst_processing_system7_0_76M, and set properties
   set rst_processing_system7_0_76M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_processing_system7_0_76M ]
-
-  # Create instance: simpleUpscale_0, and set properties
-  set simpleUpscale_0 [ create_bd_cell -type ip -vlnv armqp:upscale_half:simpleUpscale:1.0 simpleUpscale_0 ]
-
-  # Create instance: simpleUpscale_1, and set properties
-  set simpleUpscale_1 [ create_bd_cell -type ip -vlnv armqp:upscale_half:simpleUpscale:1.0 simpleUpscale_1 ]
 
   # Create instance: util_vector_logic_1, and set properties
   set util_vector_logic_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:util_vector_logic:2.0 util_vector_logic_1 ]
@@ -225,17 +226,17 @@ proc create_root_design { parentCell } {
 
   # Create instance: v_tc_0, and set properties
   set v_tc_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_0 ]
-  set_property -dict [ list CONFIG.GEN_F0_VBLANK_HEND {1920} \
-CONFIG.GEN_F0_VBLANK_HSTART {1920} CONFIG.GEN_F0_VFRAME_SIZE {1125} \
-CONFIG.GEN_F0_VSYNC_HEND {1920} CONFIG.GEN_F0_VSYNC_HSTART {1920} \
-CONFIG.GEN_F0_VSYNC_VEND {1088} CONFIG.GEN_F0_VSYNC_VSTART {1083} \
+  set_property -dict [ list CONFIG.GEN_F0_VBLANK_HEND {1080} \
+CONFIG.GEN_F0_VBLANK_HSTART {1080} CONFIG.GEN_F0_VFRAME_SIZE {1933} \
+CONFIG.GEN_F0_VSYNC_HEND {1080} CONFIG.GEN_F0_VSYNC_HSTART {1080} \
+CONFIG.GEN_F0_VSYNC_VEND {1927} CONFIG.GEN_F0_VSYNC_VSTART {1921} \
 CONFIG.GEN_F1_VBLANK_HEND {1920} CONFIG.GEN_F1_VBLANK_HSTART {1920} \
 CONFIG.GEN_F1_VFRAME_SIZE {1125} CONFIG.GEN_F1_VSYNC_HEND {1920} \
 CONFIG.GEN_F1_VSYNC_HSTART {1920} CONFIG.GEN_F1_VSYNC_VEND {1088} \
-CONFIG.GEN_F1_VSYNC_VSTART {1083} CONFIG.GEN_HACTIVE_SIZE {1920} \
-CONFIG.GEN_HFRAME_SIZE {2200} CONFIG.GEN_HSYNC_END {2052} \
-CONFIG.GEN_HSYNC_START {2008} CONFIG.GEN_VACTIVE_SIZE {1080} \
-CONFIG.HAS_AXI4_LITE {true} CONFIG.VIDEO_MODE {1080p} \
+CONFIG.GEN_F1_VSYNC_VSTART {1083} CONFIG.GEN_HACTIVE_SIZE {1080} \
+CONFIG.GEN_HFRAME_SIZE {1138} CONFIG.GEN_HSYNC_END {1123} \
+CONFIG.GEN_HSYNC_START {1113} CONFIG.GEN_VACTIVE_SIZE {1920} \
+CONFIG.HAS_AXI4_LITE {true} CONFIG.VIDEO_MODE {Custom} \
 CONFIG.enable_detection {false}  ] $v_tc_0
 
   # Create instance: v_vid_in_axi4s_0, and set properties
@@ -271,13 +272,13 @@ CONFIG.enable_detection {false}  ] $v_tc_0
   # Create interface connections
   connect_bd_intf_net -intf_net axi_mem_intercon_1_M00_AXI [get_bd_intf_pins axi_mem_intercon_1/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP2]
   connect_bd_intf_net -intf_net axi_mem_intercon_M00_AXI [get_bd_intf_pins axi_mem_intercon/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
-  connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins simpleUpscale_1/videoIn]
+  connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins rotatedUpscale_0/vidInput]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_MM2S [get_bd_intf_pins axi_mem_intercon/S00_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_S2MM [get_bd_intf_pins axi_mem_intercon_1/S00_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM]
-  connect_bd_intf_net -intf_net axi_vdma_1_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_1/M_AXIS_MM2S] [get_bd_intf_pins simpleUpscale_0/videoIn]
+  connect_bd_intf_net -intf_net axi_vdma_1_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_1/M_AXIS_MM2S] [get_bd_intf_pins rotatedUpscale_1/vidInput]
   connect_bd_intf_net -intf_net axi_vdma_1_M_AXI_MM2S [get_bd_intf_pins axi_mem_intercon/S01_AXI] [get_bd_intf_pins axi_vdma_1/M_AXI_MM2S]
   connect_bd_intf_net -intf_net axi_vdma_1_M_AXI_S2MM [get_bd_intf_pins axi_mem_intercon_1/S01_AXI] [get_bd_intf_pins axi_vdma_1/M_AXI_S2MM]
-  connect_bd_intf_net -intf_net combineStreams_0_C [get_bd_intf_pins combineStreams_0/C] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+  connect_bd_intf_net -intf_net combineStreams_1_C [get_bd_intf_pins combineStreams_1/C] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins processing_system7_0_axi_periph/S00_AXI]
@@ -285,8 +286,8 @@ CONFIG.enable_detection {false}  ] $v_tc_0
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M01_AXI [get_bd_intf_pins processing_system7_0_axi_periph/M01_AXI] [get_bd_intf_pins v_tc_0/ctrl]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_vdma_0/S_AXI_LITE] [get_bd_intf_pins processing_system7_0_axi_periph/M02_AXI]
   connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M03_AXI [get_bd_intf_pins axi_vdma_1/S_AXI_LITE] [get_bd_intf_pins processing_system7_0_axi_periph/M03_AXI]
-  connect_bd_intf_net -intf_net simpleUpscale_0_videoOut [get_bd_intf_pins combineStreams_0/A] [get_bd_intf_pins simpleUpscale_0/videoOut]
-  connect_bd_intf_net -intf_net simpleUpscale_1_videoOut [get_bd_intf_pins combineStreams_0/B] [get_bd_intf_pins simpleUpscale_1/videoOut]
+  connect_bd_intf_net -intf_net rotatedUpscale_0_vidOutput [get_bd_intf_pins combineStreams_1/B] [get_bd_intf_pins rotatedUpscale_0/vidOutput]
+  connect_bd_intf_net -intf_net rotatedUpscale_1_vidOutput [get_bd_intf_pins combineStreams_1/A] [get_bd_intf_pins rotatedUpscale_1/vidOutput]
   connect_bd_intf_net -intf_net v_axi4s_vid_out_0_vid_io_out [get_bd_intf_pins v_axi4s_vid_out_0/vid_io_out] [get_bd_intf_pins zed_hdmi_out_0/VID_IO_IN]
   connect_bd_intf_net -intf_net v_tc_0_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in] [get_bd_intf_pins v_tc_0/vtiming_out]
   connect_bd_intf_net -intf_net v_vid_in_axi4s_0_video_out [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM] [get_bd_intf_pins v_vid_in_axi4s_0/video_out]
@@ -297,11 +298,11 @@ CONFIG.enable_detection {false}  ] $v_tc_0
   connect_bd_intf_net -intf_net zed_hdmi_out_0_IO_HDMIO [get_bd_intf_ports hdmio_io] [get_bd_intf_pins zed_hdmi_out_0/IO_HDMIO]
 
   # Create port connections
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_1/s_axis_s2mm_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins combineStreams_0/ap_clk] [get_bd_pins simpleUpscale_0/ap_clk] [get_bd_pins simpleUpscale_1/ap_clk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk] [get_bd_pins v_vid_in_axi4s_0/aclk] [get_bd_pins v_vid_in_axi4s_1/aclk] [get_bd_pins zed_hdmi_out_0/clk]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins axi_mem_intercon_1/ACLK] [get_bd_pins axi_mem_intercon_1/M00_ACLK] [get_bd_pins axi_mem_intercon_1/S00_ACLK] [get_bd_pins axi_mem_intercon_1/S01_ACLK] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_1/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_1/s_axi_lite_aclk] [get_bd_pins axi_vdma_1/s_axis_s2mm_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins combineStreams_1/ap_clk] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP2_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/M03_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rotatedUpscale_0/ap_clk] [get_bd_pins rotatedUpscale_1/ap_clk] [get_bd_pins rst_processing_system7_0_76M/slowest_sync_clk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk] [get_bd_pins v_tc_0/s_axi_aclk] [get_bd_pins v_vid_in_axi4s_0/aclk] [get_bd_pins v_vid_in_axi4s_1/aclk] [get_bd_pins zed_hdmi_iic_0/s_axi_aclk] [get_bd_pins zed_hdmi_out_0/clk]
+  connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_ports clk_PS_50M] [get_bd_pins clk_wiz_0/clk_out2]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net gnd_dout [get_bd_pins gnd/dout] [get_bd_pins v_axi4s_vid_out_0/fid] [get_bd_pins v_axi4s_vid_out_0/vtg_field_id] [get_bd_pins v_vid_in_axi4s_0/rst] [get_bd_pins v_vid_in_axi4s_1/rst] [get_bd_pins zed_hdmi_out_0/audio_spdif] [get_bd_pins zed_hdmi_out_0/reset]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_mem_intercon/ACLK] [get_bd_pins axi_mem_intercon/M00_ACLK] [get_bd_pins axi_mem_intercon/S00_ACLK] [get_bd_pins axi_mem_intercon/S01_ACLK] [get_bd_pins axi_mem_intercon_1/ACLK] [get_bd_pins axi_mem_intercon_1/M00_ACLK] [get_bd_pins axi_mem_intercon_1/S00_ACLK] [get_bd_pins axi_mem_intercon_1/S01_ACLK] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins axi_vdma_1/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_1/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_1/s_axi_lite_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins processing_system7_0/S_AXI_HP2_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/M02_ACLK] [get_bd_pins processing_system7_0_axi_periph/M03_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_76M/slowest_sync_clk] [get_bd_pins v_tc_0/s_axi_aclk] [get_bd_pins zed_hdmi_iic_0/s_axi_aclk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK2 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK2]
+  connect_bd_net -net gnd_dout [get_bd_pins gnd/dout] [get_bd_pins v_axi4s_vid_out_0/fid] [get_bd_pins v_axi4s_vid_out_0/rst] [get_bd_pins v_axi4s_vid_out_0/vtg_field_id] [get_bd_pins v_vid_in_axi4s_0/rst] [get_bd_pins v_vid_in_axi4s_1/rst] [get_bd_pins zed_hdmi_out_0/audio_spdif] [get_bd_pins zed_hdmi_out_0/reset]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_76M/ext_reset_in]
   connect_bd_net -net rst_processing_system7_0_76M_interconnect_aresetn [get_bd_pins axi_mem_intercon/ARESETN] [get_bd_pins axi_mem_intercon_1/ARESETN] [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_76M/interconnect_aresetn]
   connect_bd_net -net rst_processing_system7_0_76M_peripheral_aresetn [get_bd_pins axi_mem_intercon/M00_ARESETN] [get_bd_pins axi_mem_intercon/S00_ARESETN] [get_bd_pins axi_mem_intercon/S01_ARESETN] [get_bd_pins axi_mem_intercon_1/M00_ARESETN] [get_bd_pins axi_mem_intercon_1/S00_ARESETN] [get_bd_pins axi_mem_intercon_1/S01_ARESETN] [get_bd_pins axi_vdma_0/axi_resetn] [get_bd_pins axi_vdma_1/axi_resetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M02_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M03_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_76M/peripheral_aresetn] [get_bd_pins v_tc_0/s_axi_aresetn] [get_bd_pins zed_hdmi_iic_0/s_axi_aresetn]
@@ -316,7 +317,7 @@ CONFIG.enable_detection {false}  ] $v_tc_0
   connect_bd_net -net v_vid_in_axi4s_1_empty [get_bd_pins util_vector_logic_4/Op1] [get_bd_pins v_vid_in_axi4s_1/empty]
   connect_bd_net -net v_vid_in_axi4s_1_wr_error [get_bd_pins util_vector_logic_3/Op1] [get_bd_pins v_vid_in_axi4s_1/wr_error]
   connect_bd_net -net vcc1_dout [get_bd_pins axi_vdma_0/s_axis_s2mm_tkeep] [get_bd_pins axi_vdma_1/s_axis_s2mm_tkeep] [get_bd_pins vcc1/dout]
-  connect_bd_net -net vcc_dout [get_bd_pins combineStreams_0/ap_rst_n] [get_bd_pins simpleUpscale_0/ap_rst_n] [get_bd_pins simpleUpscale_1/ap_rst_n] [get_bd_pins v_axi4s_vid_out_0/aclken] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce] [get_bd_pins v_tc_0/clken] [get_bd_pins v_tc_0/fsync_in] [get_bd_pins v_tc_0/s_axi_aclken] [get_bd_pins v_vid_in_axi4s_0/aclken] [get_bd_pins v_vid_in_axi4s_0/aresetn] [get_bd_pins v_vid_in_axi4s_0/axis_enable] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_ce] [get_bd_pins v_vid_in_axi4s_1/aclken] [get_bd_pins v_vid_in_axi4s_1/aresetn] [get_bd_pins v_vid_in_axi4s_1/axis_enable] [get_bd_pins v_vid_in_axi4s_1/vid_io_in_ce] [get_bd_pins vcc/dout]
+  connect_bd_net -net vcc_dout [get_bd_pins combineStreams_1/ap_rst_n] [get_bd_pins rotatedUpscale_0/ap_rst_n] [get_bd_pins rotatedUpscale_1/ap_rst_n] [get_bd_pins v_axi4s_vid_out_0/aclken] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_ce] [get_bd_pins v_tc_0/clken] [get_bd_pins v_tc_0/fsync_in] [get_bd_pins v_tc_0/resetn] [get_bd_pins v_tc_0/s_axi_aclken] [get_bd_pins v_vid_in_axi4s_0/aclken] [get_bd_pins v_vid_in_axi4s_0/aresetn] [get_bd_pins v_vid_in_axi4s_0/axis_enable] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_ce] [get_bd_pins v_vid_in_axi4s_1/aclken] [get_bd_pins v_vid_in_axi4s_1/aresetn] [get_bd_pins v_vid_in_axi4s_1/axis_enable] [get_bd_pins v_vid_in_axi4s_1/vid_io_in_ce] [get_bd_pins vcc/dout]
   connect_bd_net -net vid_io_in_clk_1 [get_bd_ports vid_io_in_clk_left] [get_bd_pins v_vid_in_axi4s_0/vid_io_in_clk]
   connect_bd_net -net vid_io_in_clk_2 [get_bd_ports vid_io_in_clk_right] [get_bd_pins v_vid_in_axi4s_1/vid_io_in_clk]
   connect_bd_net -net xlconcat_0_dout [get_bd_ports LEDS] [get_bd_pins xlconcat_0/dout]

@@ -60,7 +60,8 @@
 #define VIDEO_RESOLUTION_SXGA      6
 #define VIDEO_RESOLUTION_1080P     7
 #define VIDEO_RESOLUTION_UXGA      8
-#define NUM_VIDEO_RESOLUTIONS      9
+#define VIDEO_RESOLUTION_1920P     9
+#define NUM_VIDEO_RESOLUTIONS      10
 
 struct struct_vres_timing_t
 {

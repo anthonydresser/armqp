@@ -4436,3 +4436,7 @@ con
 12:11:51 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
 12:11:53 WARN  : Linker script will not be updated automatically. Users need to update it manually.
 13:19:02 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+20:02:24 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+20:02:26 INFO  : XSDB server has started successfully.
+21:43:12 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+21:43:13 INFO  : XSDB server has started successfully.

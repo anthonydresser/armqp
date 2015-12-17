@@ -53,6 +53,11 @@ if {[string equal [get_filesets -quiet sources_1] ""]} {
 # Set IP repository paths
 set obj [get_filesets sources_1]
 set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/avnet_zed_hdmi_core"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_combineVertical_combineStreams_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_upscale_oculus1stream_simpleUpscale_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_rotatedUpscale_rotatedUpscale_0_2"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_combineStreams_combineStreams_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_upscale_half_simpleUpscale_1_0"]" $obj
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
@@ -66,6 +71,7 @@ set files [list \
  "[file normalize "$origin_dir/src/hdl/debounce.vhd"]"\
  "[file normalize "$origin_dir/src/hdl/YUV_capture.vhd"]"\
  "[file normalize "$origin_dir/src/hdl/top_level.v"]"\
+ "[file normalize "$origin_dir/src/hdl/edgeDetect.v"]"\
  "[file normalize "$origin_dir/ip_repo/zed_hdmi_out_0/zed_hdmi_out_0.xci"]"\
  "[file normalize "$origin_dir/src/hdl/OV7670_interface.v"]"\
  "[file normalize "$origin_dir/ip_repo/clk_wiz_0/clk_wiz_0.upgrade_log"]"\
@@ -130,6 +136,11 @@ set_property "top" "top_level" $obj
 # Set IP repository paths
 #set obj [get_filesets fifo_generator_0]
 set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/avnet_zed_hdmi_core"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_combineVertical_combineStreams_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_upscale_oculus1stream_simpleUpscale_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_rotatedUpscale_rotatedUpscale_0_2"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_combineStreams_combineStreams_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_upscale_half_simpleUpscale_1_0"]" $obj
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
@@ -156,6 +167,11 @@ if { ![get_property "is_locked" $file_obj] } {
 # Set IP repository paths
 #set obj [get_filesets clk_wiz_0]
 set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/avnet_zed_hdmi_core"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_combineVertical_combineStreams_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_upscale_oculus1stream_simpleUpscale_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_rotatedUpscale_rotatedUpscale_0_2"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_combineStreams_combineStreams_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_upscale_half_simpleUpscale_1_0"]" $obj
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild
@@ -182,6 +198,11 @@ if { ![get_property "is_locked" $file_obj] } {
 # Set IP repository paths
 #set obj [get_filesets v_vid_in_axi4s_0]
 set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/avnet_zed_hdmi_core"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_combineVertical_combineStreams_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_upscale_oculus1stream_simpleUpscale_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_rotatedUpscale_rotatedUpscale_0_2"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_combineStreams_combineStreams_1_0"]" $obj
+set_property "ip_repo_paths" "[file normalize "$origin_dir/ip_repo/armqp_upscale_half_simpleUpscale_1_0"]" $obj
 
 # Rebuild user ip_repo's index before adding any source files
 update_ip_catalog -rebuild

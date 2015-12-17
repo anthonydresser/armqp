@@ -166,9 +166,9 @@ int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
 	init_hdmi_iic(pDemo);
 
 	// Set HDMI output to 1080P60 resolution
-	pDemo->hdmio_resolution = VIDEO_RESOLUTION_1080P;
-	pDemo->hdmio_width  = 1920;
-	pDemo->hdmio_height = 1080;
+	pDemo->hdmio_resolution = VIDEO_RESOLUTION_1920P;
+	pDemo->hdmio_width  = 1080;
+	pDemo->hdmio_height = 1920;
 
 	// Set VDMA to VGA 640x480p resolution
 	pDemo->dma_resolution = VIDEO_RESOLUTION_VGA;

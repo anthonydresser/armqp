@@ -22,94 +22,92 @@
 
 module top_level(
 	//Basic I/O
-	input clk,
-   input reset,
-   input [7:0] sw,
-   output [7:0]LED,
-   //output [15:0]PMOD_Debug,//Warning: Not connected in XDC!!!
+    input clk,
+    input reset,
+    input [7:0] sw,
+    output [7:0]LED,
    
-   //Left Camera I/O
-   input [7:0] vdin_Left,
-	input pclk_Left,
-	input vsync_Left,
-	input href_Left,
-	inout siod_Left,
-	output sioc_Left,
-	output xclk_Left,
-	output reset_out_Left,
-	output pwdn_Left,
-   
-	//Debugging Port
-	output [15:0] pmod_out,
+    //Left Camera I/O
+    input [7:0] vdin_Left,
+    input pclk_Left,
+    input vsync_Left,
+    input href_Left,
+    inout siod_Left,
+    output sioc_Left,
+    output xclk_Left,
+    output reset_out_Left,
+    output pwdn_Left,
+    
+    //Debugging Port
+    //output [15:0] pmod_out,
 	
    //Right Camera I/O
-   //input [7:0] vdin_Right,
-	//input pclk_Right,
-	//input vsync_Right,
-	//input href_Right,
-	//inout siod_Right,
-	//output sioc_Right,
-	//output xclk_Right,
-	//output reset_out_Right,
-	//output pwdn_Right,
+    input [7:0] vdin_Right,
+	input pclk_Right,
+	input vsync_Right,
+	input href_Right,
+	inout siod_Right,
+	output sioc_Right,
+	output xclk_Right,
+	output reset_out_Right,
+	output pwdn_Right,
 	
 	//PS Stuff
-   inout [14:0]DDR_addr,
-   inout [2:0]DDR_ba,
-   inout DDR_cas_n,
-   inout DDR_ck_n,
-   inout DDR_ck_p,
-   inout DDR_cke,
-   inout DDR_cs_n,
-   inout [3:0]DDR_dm,
-   inout [31:0]DDR_dq,
-   inout [3:0]DDR_dqs_n,
-   inout [3:0]DDR_dqs_p,
-   inout DDR_odt,
-   inout DDR_ras_n,
-   inout DDR_reset_n,
-   inout DDR_we_n,
-   inout FIXED_IO_ddr_vrn,
-   inout FIXED_IO_ddr_vrp,
-   inout [53:0]FIXED_IO_mio,
-   inout FIXED_IO_ps_clk,
-   inout FIXED_IO_ps_porb,
-   inout FIXED_IO_ps_srstb,
+    inout [14:0]DDR_addr,
+    inout [2:0]DDR_ba,
+    inout DDR_cas_n,
+    inout DDR_ck_n,
+    inout DDR_ck_p,
+    inout DDR_cke,
+    inout DDR_cs_n,
+    inout [3:0]DDR_dm,
+    inout [31:0]DDR_dq,
+    inout [3:0]DDR_dqs_n,
+    inout [3:0]DDR_dqs_p,
+    inout DDR_odt,
+    inout DDR_ras_n,
+    inout DDR_reset_n,
+    inout DDR_we_n,
+    inout FIXED_IO_ddr_vrn,
+    inout FIXED_IO_ddr_vrp,
+    inout [53:0]FIXED_IO_mio,
+    inout FIXED_IO_ps_clk,
+    inout FIXED_IO_ps_porb,
+    inout FIXED_IO_ps_srstb,
 
-   //HDMI Stuff
-   output hdmio_io_clk,
-   output [15:0]hdmio_io_data,
-   output hdmio_io_de,
-   output hdmio_io_hsync,
-   output hdmio_io_spdif,
-   output hdmio_io_vsync,
-   inout zed_hdmi_iic_scl_io,
-   inout zed_hdmi_iic_sda_io
+    //HDMI Stuff
+    output hdmio_io_clk,
+    output [15:0]hdmio_io_data,
+    output hdmio_io_de,
+    output hdmio_io_hsync,
+    output hdmio_io_spdif,
+    output hdmio_io_vsync,
+    inout zed_hdmi_iic_scl_io,
+    inout zed_hdmi_iic_sda_io
  );
 	
    //Video Module Interconnects
 	wire [15:0] pixel_Left;
-   wire [15:0] pixel_Right;
+    wire [15:0] pixel_Right;
 	wire chrominance_ready_Left, chrominance_ready_Right;
 	wire href_n_edge_Left, href_n_edge_Right;
    
    //Other Interconnects
-   wire clk_24;
-	wire clk_100M;
 	wire clk_50M;
 	wire button_db;
-	
+	wire pclk_Left_Half;
+	wire pclk_Right_Half;
 	wire [7:0] PMOD_Debug_BD;
 	
-	assign pmod_out = pixel_Left;
+	//assign pmod_out = pixel_Left;
 	
-  clk_wiz_0 clk_gen(
-      .clk_in(clk),
-      .clk_24M(clk_24),
-      .clk_100M(clk_100M),
-      .clk_50M(clk_50M),
-      .reset(button_db)
-   );  
+   
+   clk_wiz_1 clk_Left
+    (pclk_Left, pclk_Left_Half);
+    
+   clk_wiz_1 clk_Right
+    (pclk_Right, pclk_Right_Half);
+        
 
    debounce db1(
       clk_50M,
@@ -127,15 +125,15 @@ module top_level(
       .pwdn(pwdn_Left)
    );
    
-//      ov7670_controller cont_Right(
-//      .clk(clk_50M),
-//      .resend(button_db),
-//      .sioc(sioc_Right),
-//      .siod(siod_Right),
-//      .reset(reset_out_Right),
-//      .xclk(xclk_Right),
-//      .pwdn(pwdn_Right)
-//   );
+   ov7670_controller cont_Right(
+      .clk(clk_50M),
+      .resend(button_db),
+      .sioc(sioc_Right),
+      .siod(siod_Right),
+      .reset(reset_out_Right),
+      .xclk(xclk_Right),
+      .pwdn(pwdn_Right)
+   );
     
    YUV_capture capture_Left (
       .din(vdin_Left),
@@ -147,22 +145,25 @@ module top_level(
       .we (chrominance_ready_Left)
    );
    
-//   YUV_capture capture_Right (
-//      .din(vdin_Right),
-//      .vsync(vsync_Right),
-//      .href(href_Right),
-//      .pclk(pclk_Right),
-//      .sw(sw),
-//      .pixel(pixel_Right),
-//      .we (chrominance_ready_Right)
-//   );
+   YUV_capture capture_Right (
+      .din(vdin_Right),
+      .vsync(vsync_Right),
+      .href(href_Right),
+      .pclk(pclk_Right),
+      .sw(sw),
+      .pixel(pixel_Right),
+      .we (chrominance_ready_Right)
+   );
     
    //assign PMOD_Debug = pixel_Left; //{pixel[5], ~href, vsync, pclk, PMOD_Debug_BD[3:0]};
-   edgeDetect edgeDetectorLeft(~href_Left, reset, pclk_Left&&chrominance_ready_Left, href_n_edge_Left);
-   //edgeDetect edgeDetectorRight(~href_Right, reset, pclk_Right&&chrominance_ready_Right, href_n_edge_Right);
+   edgeDetect edgeDetectorLeft(~href_Left, reset, pclk_Left_Half&&chrominance_ready_Left, href_n_edge_Left);
+   edgeDetect edgeDetectorRight(~href_Right, reset, pclk_Right_Half&&chrominance_ready_Right, href_n_edge_Right);
    
    //Block Design
    design_1_wrapper wrapper(
+      //Design Clock
+      .clk_PS_50M(clk_50M),
+      
       //PS Stuff
       .DDR_addr(DDR_addr),
       .DDR_ba(DDR_ba),
@@ -198,23 +199,23 @@ module top_level(
 
       //Video Input Left
       .vid_io_in_left_active_video(href_Left),
-      .vid_io_in_clk_left(pclk_Left),
-      .vid_io_in_left_data({pixel_Left[7:0],  pixel_Left[15:8]}),
+      .vid_io_in_clk_left(pclk_Left_Half),
+      .vid_io_in_left_data({8'd127,  pixel_Left[15:8]}),
       .vid_io_in_left_field(1'b0),
       .vid_io_in_left_hblank(~href_Left),
       .vid_io_in_left_hsync(href_n_edge_Left),
       .vid_io_in_left_vblank(vsync_Left),
       .vid_io_in_left_vsync(vsync_Left),
       
-            //Video Input Left
-//      .vid_io_in_right_active_video(href_Right),
-//      .vid_io_in_clk_right(pclk_Right),
-//      .vid_io_in_right_data({pixel_Right[7:0],  pixel_Right[15:8]}),
-//      .vid_io_in_right_field(1'b0),
-//      .vid_io_in_right_hblank(~href_Right),
-//      .vid_io_in_right_hsync(href_n_edge_Right),
-//      .vid_io_in_right_vblank(vsync_Right),
-//      .vid_io_in_right_vsync(vsync_Right),
+      //Video Input Right
+      .vid_io_in_right_active_video(href_Right),
+      .vid_io_in_clk_right(pclk_Right_Half),
+      .vid_io_in_right_data({8'd127,  pixel_Right[15:8]}),
+      .vid_io_in_right_field(1'b0),
+      .vid_io_in_right_hblank(~href_Right),
+      .vid_io_in_right_hsync(href_n_edge_Right),
+      .vid_io_in_right_vblank(vsync_Right),
+      .vid_io_in_right_vsync(vsync_Right),
 
       //Debugging
       .LEDS(LED),
