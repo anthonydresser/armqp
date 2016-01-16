@@ -93,7 +93,7 @@ extern unsigned long  * ps7_peripherals_init_data;
 #define APU_FREQ  666666687
 #define DDR_FREQ  533333374
 #define DCI_FREQ  10158731
-#define QSPI_FREQ  187500000
+#define QSPI_FREQ  200000000
 #define SMC_FREQ  10000000
 #define ENET0_FREQ  125000000
 #define ENET1_FREQ  10000000
@@ -106,10 +106,10 @@ extern unsigned long  * ps7_peripherals_init_data;
 #define WDT_FREQ  111111115
 #define TTC_FREQ  50000000
 #define CAN_FREQ  10000000
-#define PCAP_FREQ  187500000
+#define PCAP_FREQ  200000000
 #define TPIU_FREQ  200000000
-#define FPGA0_FREQ  150000000
-#define FPGA1_FREQ  88235298
+#define FPGA0_FREQ  100000000
+#define FPGA1_FREQ  90909088
 #define FPGA2_FREQ  100000000
 #define FPGA3_FREQ  50000000
 
