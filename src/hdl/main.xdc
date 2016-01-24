@@ -47,6 +47,7 @@ set_property -dict {PACKAGE_PIN W10 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[3
 set_property -dict {PACKAGE_PIN V9 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[5]}]
 set_property -dict {PACKAGE_PIN V8 IOSTANDARD LVCMOS33} [get_ports {vdin_Left[7]}]
 
+#Type 1
 ## ----------------------------------------------------------------------------
 ## JC Pmod - Bank 13
 ## ---------------------------------------------------------------------------- 
@@ -208,13 +209,15 @@ set_property IOSTANDARD LVCMOS25 [get_ports hdmio_io_spdif]
 # Rename auto-generated clocks from MMCM
 #create_generated_clock -name hdmio_clk [get_pins wrapper/design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
 
-create_clock -name cam_clk_Left -period 41.6667 [get_ports pclk_Left];
-create_clock -name cam_clk_Right -period 41.6667 [get_ports pclk_Right];
+#create_clock -name cam_clk_Left -period 41.6667 [get_ports pclk_Left];
+#create_clock -name cam_clk_Right -period 41.6667 [get_ports pclk_Right];
 
 ################
 # Clock Groups #
 ################
 
-set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group [get_clocks clk_50M_clk_wiz_0]
+#set_clock_groups -asynchronous -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] -group [get_clocks clk_50M_clk_wiz_0]
+set_clock_groups -asynchronous -group [get_clocks clk_fpga_0]
+
 
 

@@ -4454,3 +4454,17 @@ con
 19:07:48 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
 19:07:49 WARN  : Linker script will not be updated automatically. Users need to update it manually.
 19:08:22 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+17:22:47 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+17:22:49 INFO  : XSDB server has started successfully.
+17:22:50 INFO  : Processing command line option -hwspec D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+17:22:51 INFO  : Checking for hwspec changes in the project top_level_hw_platform_0.
+17:22:54 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1453674146948,  Project:1452902828508
+17:22:54 INFO  : The hardware specification for project 'top_level_hw_platform_0' is different from D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+17:22:54 INFO  : Copied contents of D:/vivadoprojects/armqp/src/sdk/top_level.hdf into \top_level_hw_platform_0\system.hdf.
+17:23:00 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:23:04 INFO  : 
+17:23:05 INFO  : Updating hardware inferred compiler options for hdmi_display.
+17:23:05 INFO  : Clearing existing target manager status.
+17:23:05 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+17:23:06 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+17:25:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
