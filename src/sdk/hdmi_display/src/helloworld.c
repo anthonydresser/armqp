@@ -70,6 +70,5 @@ int main()
     project.uNumFrames_HdmiDisplay = XPAR_AXIVDMA_0_NUM_FSTORES;
     zed_hdmi_display_init( &project );
 
-
     return 0;
 }

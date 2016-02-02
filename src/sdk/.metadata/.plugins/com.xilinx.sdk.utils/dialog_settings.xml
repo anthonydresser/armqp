@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="C:\Users\Andrew\Desktop" key="program_fpga_view_bit_bmm_browse_key"/>
-	<item value="C:\Users\Andrew\Desktop" key="last_stored_selection"/>
+	<item value="C:\Users\Anthony\Downloads" key="debug_bit_tcl_folder_selection"/>
+	<item value="C:\Users\Anthony\Downloads" key="program_fpga_view_bit_bmm_browse_key"/>
+	<item value="C:\Users\Anthony\Downloads" key="last_stored_selection"/>
+	<item value="C:\Users\Anthony\Downloads" key="tcl_debug_files_selection"/>
 </section>

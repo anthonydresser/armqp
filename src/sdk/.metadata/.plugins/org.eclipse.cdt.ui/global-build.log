@@ -622,3 +622,2049 @@ arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
   56844	   1960	  28272	  87076	  15424	hdmi_display.elf
 'Finished building: hdmi_display.elf.size'
 ' '
+17:51:02 **** Auto Build of project hdmi_display_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/iic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/iic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/iic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iic"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+17:51:22 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/helloworld.c:51:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/helloworld.c:51:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/helloworld.c:51:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/video_frame_buffer.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_frame_buffer.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_frame_buffer.d" -MT"src/video_frame_buffer.d" -o "src/video_frame_buffer.o" "../src/video_frame_buffer.c"
+In file included from ../src/video_frame_buffer.c:54:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_frame_buffer.c:54:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+../src/video_frame_buffer.c: In function 'vfb_rx_init':
+../src/video_frame_buffer.c:92:4: warning: implicit declaration of function 'vfb_rx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_rx_setup(pAxiVdma,pWriteCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:102:4: warning: implicit declaration of function 'vfb_rx_start' [-Wimplicit-function-declaration]
+    Status = vfb_rx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:89:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:88:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:87:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+../src/video_frame_buffer.c: In function 'vfb_tx_init':
+../src/video_frame_buffer.c:119:4: warning: implicit declaration of function 'vfb_tx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_tx_setup(pAxiVdma,pReadCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:129:4: warning: implicit declaration of function 'vfb_tx_start' [-Wimplicit-function-declaration]
+    Status = vfb_tx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:116:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:115:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:114:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+'Finished building: ../src/video_frame_buffer.c'
+' '
+'Building file: ../src/video_generator.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_generator.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_generator.d" -MT"src/video_generator.d" -o "src/video_generator.o" "../src/video_generator.c"
+../src/video_generator.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:47:0:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:48:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_generator.c:48:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_generator.c'
+' '
+'Building file: ../src/video_resolution.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_resolution.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_resolution.d" -MT"src/video_resolution.d" -o "src/video_resolution.o" "../src/video_resolution.c"
+../src/video_resolution.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.c:49:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_resolution.c:49:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_resolution.c'
+' '
+'Building file: ../src/vtc.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vtc.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/vtc.d" -MT"src/vtc.d" -o "src/vtc.o" "../src/vtc.c"
+'Finished building: ../src/vtc.c'
+' '
+'Building file: ../src/zed_hdmi_display.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_hdmi_display.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_hdmi_display.d" -MT"src/zed_hdmi_display.d" -o "src/zed_hdmi_display.o" "../src/zed_hdmi_display.c"
+../src/zed_hdmi_display.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.c:53:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/zed_hdmi_display.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/zed_hdmi_display.c'
+' '
+'Building file: ../src/zed_iic_axi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_iic_axi.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_iic_axi.d" -MT"src/zed_iic_axi.d" -o "src/zed_iic_axi.o" "../src/zed_iic_axi.c"
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_iic_axi.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/zed_iic_axi.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56844	   1960	  28272	  87076	  15424	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+17:51:49 **** Build of project hdmi_display_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/iic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/iic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/iic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iic"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+17:52:06 **** Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/helloworld.c:51:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/helloworld.c:51:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/helloworld.c:51:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/video_frame_buffer.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_frame_buffer.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_frame_buffer.d" -MT"src/video_frame_buffer.d" -o "src/video_frame_buffer.o" "../src/video_frame_buffer.c"
+In file included from ../src/video_frame_buffer.c:54:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_frame_buffer.c:54:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+../src/video_frame_buffer.c: In function 'vfb_rx_init':
+../src/video_frame_buffer.c:92:4: warning: implicit declaration of function 'vfb_rx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_rx_setup(pAxiVdma,pWriteCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:102:4: warning: implicit declaration of function 'vfb_rx_start' [-Wimplicit-function-declaration]
+    Status = vfb_rx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:89:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:88:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:87:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+../src/video_frame_buffer.c: In function 'vfb_tx_init':
+../src/video_frame_buffer.c:119:4: warning: implicit declaration of function 'vfb_tx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_tx_setup(pAxiVdma,pReadCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:129:4: warning: implicit declaration of function 'vfb_tx_start' [-Wimplicit-function-declaration]
+    Status = vfb_tx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:116:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:115:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:114:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+'Finished building: ../src/video_frame_buffer.c'
+' '
+'Building file: ../src/video_generator.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_generator.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_generator.d" -MT"src/video_generator.d" -o "src/video_generator.o" "../src/video_generator.c"
+../src/video_generator.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:47:0:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:48:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_generator.c:48:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_generator.c'
+' '
+'Building file: ../src/video_resolution.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_resolution.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_resolution.d" -MT"src/video_resolution.d" -o "src/video_resolution.o" "../src/video_resolution.c"
+../src/video_resolution.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.c:49:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_resolution.c:49:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_resolution.c'
+' '
+'Building file: ../src/zed_hdmi_display.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_hdmi_display.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_hdmi_display.d" -MT"src/zed_hdmi_display.d" -o "src/zed_hdmi_display.o" "../src/zed_hdmi_display.c"
+../src/zed_hdmi_display.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.c:53:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/zed_hdmi_display.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/zed_hdmi_display.c'
+' '
+'Building file: ../src/zed_iic_axi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_iic_axi.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_iic_axi.d" -MT"src/zed_iic_axi.d" -o "src/zed_iic_axi.o" "../src/zed_iic_axi.c"
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_iic_axi.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/zed_iic_axi.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56844	   1960	  28272	  87076	  15424	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+17:53:39 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+17:54:59 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+17:58:48 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+17:59:22 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+16:44:24 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+16:45:25 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+17:06:50 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+17:07:34 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+17:38:52 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+18:40:23 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+19:18:52 **** Auto Build of project hdmi_display_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/iic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/iic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/iic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iic"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+19:19:07 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/helloworld.c:51:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/helloworld.c:51:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/helloworld.c:51:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/video_frame_buffer.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_frame_buffer.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_frame_buffer.d" -MT"src/video_frame_buffer.d" -o "src/video_frame_buffer.o" "../src/video_frame_buffer.c"
+In file included from ../src/video_frame_buffer.c:54:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_frame_buffer.c:54:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+../src/video_frame_buffer.c: In function 'vfb_rx_init':
+../src/video_frame_buffer.c:92:4: warning: implicit declaration of function 'vfb_rx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_rx_setup(pAxiVdma,pWriteCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:102:4: warning: implicit declaration of function 'vfb_rx_start' [-Wimplicit-function-declaration]
+    Status = vfb_rx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:89:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:88:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:87:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+../src/video_frame_buffer.c: In function 'vfb_tx_init':
+../src/video_frame_buffer.c:119:4: warning: implicit declaration of function 'vfb_tx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_tx_setup(pAxiVdma,pReadCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:129:4: warning: implicit declaration of function 'vfb_tx_start' [-Wimplicit-function-declaration]
+    Status = vfb_tx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:116:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:115:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:114:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+'Finished building: ../src/video_frame_buffer.c'
+' '
+'Building file: ../src/video_generator.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_generator.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_generator.d" -MT"src/video_generator.d" -o "src/video_generator.o" "../src/video_generator.c"
+../src/video_generator.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:47:0:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:48:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_generator.c:48:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_generator.c'
+' '
+'Building file: ../src/video_resolution.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_resolution.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_resolution.d" -MT"src/video_resolution.d" -o "src/video_resolution.o" "../src/video_resolution.c"
+../src/video_resolution.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.c:49:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_resolution.c:49:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_resolution.c'
+' '
+'Building file: ../src/zed_hdmi_display.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_hdmi_display.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_hdmi_display.d" -MT"src/zed_hdmi_display.d" -o "src/zed_hdmi_display.o" "../src/zed_hdmi_display.c"
+../src/zed_hdmi_display.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.c:53:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/zed_hdmi_display.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/zed_hdmi_display.c'
+' '
+'Building file: ../src/zed_iic_axi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_iic_axi.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_iic_axi.d" -MT"src/zed_iic_axi.d" -o "src/zed_iic_axi.o" "../src/zed_iic_axi.c"
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_iic_axi.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/zed_iic_axi.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56844	   1960	  28272	  87076	  15424	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+19:19:21 **** Clean-only build of configuration Debug for project hdmi_display ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o  ./src/helloworld.d ./src/platform.d ./src/video_frame_buffer.d ./src/video_generator.d ./src/video_resolution.d ./src/vtc.d ./src/zed_hdmi_display.d ./src/zed_iic_axi.d  hdmi_display.elf.size  hdmi_display.elf
+' '
+19:19:21 **** Clean-only build of project hdmi_display_bsp ****
+make -k clean 
+rm -f ps7_cortexa9_0/lib/libxil.a
+19:19:21 **** Build of project hdmi_display_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axivdma_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/iic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/iic_v3_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_4/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/vtc_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_0/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/axivdma_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axivdma"
+arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_3/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_3/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/emacps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling emacps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_0/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling gpiops"
+"Running Make libs in ps7_cortexa9_0/libsrc/iic_v3_1/src"
+make -C ps7_cortexa9_0/libsrc/iic_v3_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling iic"
+"Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_2/src"
+make -C ps7_cortexa9_0/libsrc/qspips_v3_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling qspips"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_4/src"
+make -C ps7_cortexa9_0/libsrc/sdps_v2_4/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling sdps"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v5_1/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v5_1/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/ttcps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/ttcps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling ttcps"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_0/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling usbps"
+"Running Make libs in ps7_cortexa9_0/libsrc/vtc_v7_0/src"
+make -C ps7_cortexa9_0/libsrc/vtc_v7_0/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling video timing controller"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling xadcps"
+'Finished building libraries'
+19:19:35 **** Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/helloworld.c:51:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/helloworld.c:51:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/helloworld.c:51:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/video_frame_buffer.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_frame_buffer.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_frame_buffer.d" -MT"src/video_frame_buffer.d" -o "src/video_frame_buffer.o" "../src/video_frame_buffer.c"
+In file included from ../src/video_frame_buffer.c:54:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_frame_buffer.c:54:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+../src/video_frame_buffer.c: In function 'vfb_rx_init':
+../src/video_frame_buffer.c:92:4: warning: implicit declaration of function 'vfb_rx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_rx_setup(pAxiVdma,pWriteCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:102:4: warning: implicit declaration of function 'vfb_rx_start' [-Wimplicit-function-declaration]
+    Status = vfb_rx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:89:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:88:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:87:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+../src/video_frame_buffer.c: In function 'vfb_tx_init':
+../src/video_frame_buffer.c:119:4: warning: implicit declaration of function 'vfb_tx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_tx_setup(pAxiVdma,pReadCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:129:4: warning: implicit declaration of function 'vfb_tx_start' [-Wimplicit-function-declaration]
+    Status = vfb_tx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:116:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:115:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:114:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+'Finished building: ../src/video_frame_buffer.c'
+' '
+'Building file: ../src/video_generator.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_generator.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_generator.d" -MT"src/video_generator.d" -o "src/video_generator.o" "../src/video_generator.c"
+../src/video_generator.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:47:0:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:48:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_generator.c:48:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_generator.c'
+' '
+'Building file: ../src/video_resolution.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_resolution.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_resolution.d" -MT"src/video_resolution.d" -o "src/video_resolution.o" "../src/video_resolution.c"
+../src/video_resolution.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.c:49:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_resolution.c:49:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_resolution.c'
+' '
+'Building file: ../src/vtc.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vtc.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/vtc.d" -MT"src/vtc.d" -o "src/vtc.o" "../src/vtc.c"
+'Finished building: ../src/vtc.c'
+' '
+'Building file: ../src/zed_hdmi_display.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_hdmi_display.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_hdmi_display.d" -MT"src/zed_hdmi_display.d" -o "src/zed_hdmi_display.o" "../src/zed_hdmi_display.c"
+../src/zed_hdmi_display.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.c:53:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/zed_hdmi_display.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/zed_hdmi_display.c'
+' '
+'Building file: ../src/zed_iic_axi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_iic_axi.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_iic_axi.d" -MT"src/zed_iic_axi.d" -o "src/zed_iic_axi.o" "../src/zed_iic_axi.c"
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_iic_axi.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/zed_iic_axi.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56844	   1960	  28272	  87076	  15424	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+19:20:18 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+19:20:24 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+15:06:12 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+15:07:18 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+15:07:24 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+15:29:25 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c:10:25: fatal error: xaxicdma_hw.h: No such file or directory
+ #include "xaxicdma_hw.h"
+                         ^
+compilation terminated.
+make: *** [src/median_filter.o] Error 1
+15:29:53 **** Clean-only build of configuration Debug for project hdmi_display ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o  ./src/helloworld.d ./src/median_filter.d ./src/platform.d ./src/video_frame_buffer.d ./src/video_generator.d ./src/video_resolution.d ./src/vtc.d ./src/zed_hdmi_display.d ./src/zed_iic_axi.d  hdmi_display.elf.size  hdmi_display.elf
+' '
+15:29:53 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/helloworld.c:51:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/helloworld.c:51:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/helloworld.c:51:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/video_frame_buffer.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_frame_buffer.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_frame_buffer.d" -MT"src/video_frame_buffer.d" -o "src/video_frame_buffer.o" "../src/video_frame_buffer.c"
+In file included from ../src/video_frame_buffer.c:54:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_frame_buffer.c:54:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+../src/video_frame_buffer.c: In function 'vfb_rx_init':
+../src/video_frame_buffer.c:92:4: warning: implicit declaration of function 'vfb_rx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_rx_setup(pAxiVdma,pWriteCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:102:4: warning: implicit declaration of function 'vfb_rx_start' [-Wimplicit-function-declaration]
+    Status = vfb_rx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:89:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:88:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:87:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+../src/video_frame_buffer.c: In function 'vfb_tx_init':
+../src/video_frame_buffer.c:119:4: warning: implicit declaration of function 'vfb_tx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_tx_setup(pAxiVdma,pReadCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:129:4: warning: implicit declaration of function 'vfb_tx_start' [-Wimplicit-function-declaration]
+    Status = vfb_tx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:116:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:115:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:114:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+'Finished building: ../src/video_frame_buffer.c'
+' '
+'Building file: ../src/video_generator.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_generator.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_generator.d" -MT"src/video_generator.d" -o "src/video_generator.o" "../src/video_generator.c"
+../src/video_generator.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:47:0:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:48:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_generator.c:48:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_generator.c'
+' '
+'Building file: ../src/video_resolution.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_resolution.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_resolution.d" -MT"src/video_resolution.d" -o "src/video_resolution.o" "../src/video_resolution.c"
+../src/video_resolution.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.c:49:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_resolution.c:49:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_resolution.c'
+' '
+'Building file: ../src/vtc.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vtc.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/vtc.d" -MT"src/vtc.d" -o "src/vtc.o" "../src/vtc.c"
+'Finished building: ../src/vtc.c'
+' '
+'Building file: ../src/zed_hdmi_display.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_hdmi_display.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_hdmi_display.d" -MT"src/zed_hdmi_display.d" -o "src/zed_hdmi_display.o" "../src/zed_hdmi_display.c"
+../src/zed_hdmi_display.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.c:53:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/zed_hdmi_display.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/zed_hdmi_display.c'
+' '
+'Building file: ../src/zed_iic_axi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_iic_axi.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_iic_axi.d" -MT"src/zed_iic_axi.d" -o "src/zed_iic_axi.o" "../src/zed_iic_axi.c"
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_iic_axi.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/zed_iic_axi.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56844	   1960	  28272	  87076	  15424	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+15:29:56 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+15:45:24 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:43:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:43:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65576	   3032	  28352	  96960	  17ac0	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+15:47:45 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:43:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:43:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65576	   3032	  28352	  96960	  17ac0	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+15:48:16 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:43:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:43:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65576	   3032	  28352	  96960	  17ac0	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:00:43 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/video_frame_buffer.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_frame_buffer.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_frame_buffer.d" -MT"src/video_frame_buffer.d" -o "src/video_frame_buffer.o" "../src/video_frame_buffer.c"
+In file included from ../src/video_frame_buffer.c:54:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_frame_buffer.c:54:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+../src/video_frame_buffer.c: In function 'vfb_rx_init':
+../src/video_frame_buffer.c:92:4: warning: implicit declaration of function 'vfb_rx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_rx_setup(pAxiVdma,pWriteCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:102:4: warning: implicit declaration of function 'vfb_rx_start' [-Wimplicit-function-declaration]
+    Status = vfb_rx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:89:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:88:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:87:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+../src/video_frame_buffer.c: In function 'vfb_tx_init':
+../src/video_frame_buffer.c:119:4: warning: implicit declaration of function 'vfb_tx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_tx_setup(pAxiVdma,pReadCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:129:4: warning: implicit declaration of function 'vfb_tx_start' [-Wimplicit-function-declaration]
+    Status = vfb_tx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:116:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:115:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:114:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+'Finished building: ../src/video_frame_buffer.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65576	   3032	  28352	  96960	  17ac0	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:04:44 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+16:04:53 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+16:06:03 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:44:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:44:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65576	   3032	  28368	  96976	  17ad0	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:06:07 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:44:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:44:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65576	   3032	  28368	  96976	  17ad0	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:06:20 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:44:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:44:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65640	   3032	  28368	  97040	  17b10	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:06:29 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:44:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:44:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65640	   3032	  28368	  97040	  17b10	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:06:36 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:44:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:44:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65640	   3032	  28368	  97040	  17b10	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:06:41 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:44:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:44:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65640	   3032	  28368	  97040	  17b10	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:07:16 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+16:12:40 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/helloworld.c:51:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/helloworld.c:51:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/helloworld.c:51:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  65640	   3032	  28368	  97040	  17b10	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:13:31 **** Build of configuration Debug for project median_filter ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: median_filter.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "median_filter.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: median_filter.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size median_filter.elf  |tee "median_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  22888	   1152	  22564	  46604	   b60c	median_filter.elf
+'Finished building: median_filter.elf.size'
+' '
+16:13:44 **** Auto Build of configuration Debug for project median_filter ****
+make all 
+make: Nothing to be done for `all'.
+16:13:58 **** Auto Build of configuration Debug for project median_filter ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:57:5: warning: implicit declaration of function 'median_filter' [-Wimplicit-function-declaration]
+     median_filter();
+     ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/median_filter.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/median_filter.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/median_filter.d" -MT"src/median_filter.d" -o "src/median_filter.o" "../src/median_filter.c"
+../src/median_filter.c: In function 'median_filter':
+../src/median_filter.c:44:5: warning: implicit declaration of function 'malloc' [-Wimplicit-function-declaration]
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+     ^
+../src/median_filter.c:44:33: warning: incompatible implicit declaration of built-in function 'malloc'
+     unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+                                 ^
+'Finished building: ../src/median_filter.c'
+' '
+'Building target: median_filter.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "median_filter.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: median_filter.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size median_filter.elf  |tee "median_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31664	   2224	  22676	  56564	   dcf4	median_filter.elf
+'Finished building: median_filter.elf.size'
+' '
+16:14:45 **** Incremental Build of configuration Debug for project median_filter ****
+make all 
+make: Nothing to be done for `all'.
+16:14:45 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+16:15:31 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+16:15:32 **** Incremental Build of configuration Debug for project median_filter ****
+make all 
+make: Nothing to be done for `all'.
+16:16:01 **** Incremental Build of configuration Debug for project median_filter ****
+make all 
+make: Nothing to be done for `all'.
+16:16:02 **** Incremental Build of configuration Debug for project hdmi_display ****
+make all 
+make: Nothing to be done for `all'.
+16:23:20 **** Clean-only build of configuration Debug for project hdmi_display ****
+make clean 
+rm -rf  ./src/helloworld.o ./src/median_filter.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o  ./src/helloworld.d ./src/median_filter.d ./src/platform.d ./src/video_frame_buffer.d ./src/video_generator.d ./src/video_resolution.d ./src/vtc.d ./src/zed_hdmi_display.d ./src/zed_iic_axi.d  hdmi_display.elf.size  hdmi_display.elf
+' '
+16:23:20 **** Auto Build of configuration Debug for project hdmi_display ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:51:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/helloworld.c:51:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/helloworld.c:51:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/helloworld.c:51:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.d" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/video_frame_buffer.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_frame_buffer.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_frame_buffer.d" -MT"src/video_frame_buffer.d" -o "src/video_frame_buffer.o" "../src/video_frame_buffer.c"
+In file included from ../src/video_frame_buffer.c:54:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_frame_buffer.c:54:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+../src/video_frame_buffer.c: In function 'vfb_rx_init':
+../src/video_frame_buffer.c:92:4: warning: implicit declaration of function 'vfb_rx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_rx_setup(pAxiVdma,pWriteCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:102:4: warning: implicit declaration of function 'vfb_rx_start' [-Wimplicit-function-declaration]
+    Status = vfb_rx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:89:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:88:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:87:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+../src/video_frame_buffer.c: In function 'vfb_tx_init':
+../src/video_frame_buffer.c:119:4: warning: implicit declaration of function 'vfb_tx_setup' [-Wimplicit-function-declaration]
+    Status = vfb_tx_setup(pAxiVdma,pReadCfg,uVideoResolution,uStorageResolution,uMemAddr,uNumFrames);
+    ^
+../src/video_frame_buffer.c:129:4: warning: implicit declaration of function 'vfb_tx_start' [-Wimplicit-function-declaration]
+    Status = vfb_tx_start(pAxiVdma);
+    ^
+../src/video_frame_buffer.c:116:8: warning: unused variable 'uDMACR' [-Wunused-variable]
+    u32 uDMACR;
+        ^
+../src/video_frame_buffer.c:115:8: warning: unused variable 'uBaseAddr' [-Wunused-variable]
+    u32 uBaseAddr;
+        ^
+../src/video_frame_buffer.c:114:26: warning: unused variable 'FrameCfg' [-Wunused-variable]
+    XAxiVdma_FrameCounter FrameCfg;
+                          ^
+'Finished building: ../src/video_frame_buffer.c'
+' '
+'Building file: ../src/video_generator.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_generator.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_generator.d" -MT"src/video_generator.d" -o "src/video_generator.o" "../src/video_generator.c"
+../src/video_generator.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:47:0:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_generator.c:48:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_generator.c:48:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_generator.c'
+' '
+'Building file: ../src/video_resolution.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/video_resolution.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/video_resolution.d" -MT"src/video_resolution.d" -o "src/video_resolution.o" "../src/video_resolution.c"
+../src/video_resolution.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.c:49:0:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/video_resolution.h:51:0,
+                 from ../src/video_resolution.c:49:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/video_resolution.c'
+' '
+'Building file: ../src/vtc.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vtc.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/vtc.d" -MT"src/vtc.d" -o "src/vtc.o" "../src/vtc.c"
+'Finished building: ../src/vtc.c'
+' '
+'Building file: ../src/zed_hdmi_display.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_hdmi_display.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_hdmi_display.d" -MT"src/zed_hdmi_display.d" -o "src/zed_hdmi_display.o" "../src/zed_hdmi_display.c"
+../src/zed_hdmi_display.c:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.c:53:0:
+../src/zed_hdmi_display.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_hdmi_display.h:57,
+                 from ../src/zed_hdmi_display.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+In file included from ../src/zed_hdmi_display.h:62:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_resolution.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+In file included from ../src/zed_hdmi_display.h:63:0,
+                 from ../src/zed_hdmi_display.c:53:
+../src/video_generator.h:3:1: warning: multi-line comment [-Wcomment]
+ //     /     \
+ ^
+'Finished building: ../src/zed_hdmi_display.c'
+' '
+'Building file: ../src/zed_iic_axi.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/zed_iic_axi.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/zed_iic_axi.d" -MT"src/zed_iic_axi.d" -o "src/zed_iic_axi.o" "../src/zed_iic_axi.c"
+In file included from ../src/zed_iic.h:49:0,
+                 from ../src/zed_iic_axi.c:53:
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^
+../../hdmi_display_bsp/ps7_cortexa9_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^
+'Finished building: ../src/zed_iic_axi.c'
+' '
+'Building target: hdmi_display.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "hdmi_display.elf"  ./src/helloworld.o ./src/platform.o ./src/video_frame_buffer.o ./src/video_generator.o ./src/video_resolution.o ./src/vtc.o ./src/zed_hdmi_display.o ./src/zed_iic_axi.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: hdmi_display.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size hdmi_display.elf  |tee "hdmi_display.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  56844	   1960	  28272	  87076	  15424	hdmi_display.elf
+'Finished building: hdmi_display.elf.size'
+' '
+16:23:43 **** Auto Build of configuration Debug for project median_filter ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: median_filter.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "median_filter.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: median_filter.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size median_filter.elf  |tee "median_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31664	   2224	  22676	  56564	   dcf4	median_filter.elf
+'Finished building: median_filter.elf.size'
+' '
+16:23:46 **** Auto Build of configuration Debug for project median_filter ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: ARM gcc compiler'
+arm-xilinx-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../hdmi_display_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: median_filter.elf'
+'Invoking: ARM gcc linker'
+arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "median_filter.elf"  ./src/helloworld.o ./src/median_filter.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: median_filter.elf'
+' '
+'Invoking: ARM Print Size'
+arm-xilinx-eabi-size median_filter.elf  |tee "median_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31664	   2224	  22676	  56564	   dcf4	median_filter.elf
+'Finished building: median_filter.elf.size'
+' '

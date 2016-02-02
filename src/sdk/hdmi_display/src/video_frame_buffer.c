@@ -262,7 +262,7 @@ int vfb_tx_setup(XAxiVdma *pAxiVdma, XAxiVdma_DmaSetup *pReadCfg, Xuint32 uVideo
 	 *
 	 * These addresses are physical addresses
 	 */
-	Addr = uMemAddr + storage_offset;
+	Addr = uMemAddr + storage_offset + 2*storage_size;
 	for(i = 0; i < uNumFrames; i++)
 	{
 		pReadCfg->FrameStoreStartAddr[i] = Addr;
