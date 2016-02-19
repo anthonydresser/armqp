@@ -1,6 +1,6 @@
-webtalk_init -webtalk_dir D:\\vivadoprojects\\armqp\\src\\sdk\\webtalk
+webtalk_init -webtalk_dir C:\\Users\\Anthony\\armqptestagain\\armqp\\src\\sdk\\webtalk
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Sun Nov 1 23:32:12 2015" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Thu Feb 4 13:38:06 2016" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "SDK v2015.2" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "2015.2" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "amd64" -context "software_version_and_target_device"
@@ -12,9 +12,9 @@ webtalk_add_data -client project -key target_family -value "NA" -context "softwa
 webtalk_add_data -client project -key target_device -value "NA" -context "software_version_and_target_device"
 webtalk_add_data -client project -key target_package -value "NA" -context "software_version_and_target_device"
 webtalk_add_data -client project -key target_speed -value "NA" -context "software_version_and_target_device"
-webtalk_add_data -client project -key random_id -value "flsu7oo1lrksadm962657fadif" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_id -value "2015.2_9" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "9" -context "software_version_and_target_device"
+webtalk_add_data -client project -key random_id -value "72s5e7hcdrr3gjj3ehagulldhk" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_id -value "2015.2_3" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "3" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "" -context "user_environment"
@@ -22,15 +22,9 @@ webtalk_add_data -client project -key cpu_speed -value "" -context "user_environ
 webtalk_add_data -client project -key total_processors -value "" -context "user_environment"
 webtalk_add_data -client project -key system_ram -value "" -context "user_environment"
 webtalk_register_client -client sdk
-webtalk_add_data -client sdk -key uid -value "1446430843238" -context "sdk\\\\bsp/1446430843238"
-webtalk_add_data -client sdk -key hwid -value "1446429521954" -context "sdk\\\\bsp/1446430843238"
-webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\bsp/1446430843238"
-webtalk_add_data -client sdk -key apptemplate -value "hello_world" -context "sdk\\\\bsp/1446430843238"
-webtalk_add_data -client sdk -key uid -value "1446430848991" -context "sdk\\\\application/1446430848991"
-webtalk_add_data -client sdk -key hwid -value "1446429521954" -context "sdk\\\\application/1446430848991"
-webtalk_add_data -client sdk -key bspid -value "1446430843238" -context "sdk\\\\application/1446430848991"
-webtalk_add_data -client sdk -key newbsp -value "true" -context "sdk\\\\application/1446430848991"
-webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\application/1446430848991"
-webtalk_add_data -client sdk -key apptemplate -value "hello_world" -context "sdk\\\\application/1446430848991"
-webtalk_transmit -clientid 218481502 -regid "" -xml D:\\vivadoprojects\\armqp\\src\\sdk\\webtalk\\usage_statistics_ext_sdk.xml -html D:\\vivadoprojects\\armqp\\src\\sdk\\webtalk\\usage_statistics_ext_sdk.html -wdm D:\\vivadoprojects\\armqp\\src\\sdk\\webtalk\\sdk_webtalk.wdm -intro "<H3>SDK Usage Report</H3><BR>"
+webtalk_add_data -client sdk -key uid -value "1454610639606" -context "sdk\\\\bsp/1454610639606"
+webtalk_add_data -client sdk -key hwid -value "1454280650645" -context "sdk\\\\bsp/1454610639606"
+webtalk_add_data -client sdk -key os -value "standalone" -context "sdk\\\\bsp/1454610639606"
+webtalk_add_data -client sdk -key apptemplate -value "null" -context "sdk\\\\bsp/1454610639606"
+webtalk_transmit -clientid 3710716580 -regid "" -xml C:\\Users\\Anthony\\armqptestagain\\armqp\\src\\sdk\\webtalk\\usage_statistics_ext_sdk.xml -html C:\\Users\\Anthony\\armqptestagain\\armqp\\src\\sdk\\webtalk\\usage_statistics_ext_sdk.html -wdm C:\\Users\\Anthony\\armqptestagain\\armqp\\src\\sdk\\webtalk\\sdk_webtalk.wdm -intro "<H3>SDK Usage Report</H3><BR>"
 webtalk_terminate

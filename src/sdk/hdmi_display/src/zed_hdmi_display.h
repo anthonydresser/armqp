@@ -54,6 +54,8 @@
 #include "xparameters.h"
 #include "sleep.h"
 
+#include "xuartps.h"
+
 #include "zed_iic.h"
 
 #include "xvtc.h"
@@ -73,6 +75,11 @@ struct struct_zed_hdmi_display_t
    Xuint32 uDeviceId_VTC_HdmioGenerator;
    Xuint32 uDeviceId_VDMA_Left;
    Xuint32 uDeviceId_VDMA_Right;
+   Xuint32 uDeviceId_uart;
+
+   XUartPs uart;
+   XUartPs_Config * uart_config;
+   Xuint32 uBaseAddr_uart;
 
    zed_iic_t hdmi_out_iic;
 

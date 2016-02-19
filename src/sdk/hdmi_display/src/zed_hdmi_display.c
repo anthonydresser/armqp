@@ -51,13 +51,17 @@
 #include <stdio.h>
 
 #include "zed_hdmi_display.h"
-
+#include "xuartps.h"
+#include "xuartps_hw.h"
+#include "xscugic.h"
 
 #define ADV7511_ADDR   0x72
 #define CARRIER_HDMI_OUT_CONFIG_LEN  (40)
 
 int init_hdmi_iic(zed_hdmi_display_t *pDemo);
 void print_sucess(int ret, char *s);
+void intrpt_uart();
+int setupIntr();
 
 Xuint8 carrier_hdmi_out_config[CARRIER_HDMI_OUT_CONFIG_LEN][3] =
 {
@@ -150,17 +154,28 @@ Xuint8 carrier_hdmi_out_config[CARRIER_HDMI_OUT_CONFIG_LEN][3] =
 	{ADV7511_ADDR>>1, 0xE0, 0xD0}, // Must be set to 0xD0 for proper operation
 	{ADV7511_ADDR>>1, 0xF9, 0x00}  // Fixed I2C Address (This should be set to a non-conflicting I2C address)
 };
+zed_hdmi_display_t *pDemo;
+XScuGic ScuGic;
 
-
-int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
+int zed_hdmi_display_init( zed_hdmi_display_t *top_pDemo )
 {
-	int ret;
+	pDemo=top_pDemo;
 
 	xil_printf("\n\r");
 	xil_printf("------------------------------------------------------\n\r");
 	xil_printf("--        ZedBoard HDMI Display Controller          --\n\r");
 	xil_printf("------------------------------------------------------\n\r");
 	xil_printf("\n\r");
+
+
+	//Initialize UART/Debugging/Interrupts
+	pDemo->uart_config = XUartPs_LookupConfig (pDemo->uDeviceId_uart);
+	print_sucess(XUartPs_CfgInitialize (&(pDemo->uart), pDemo->uart_config, pDemo->uBaseAddr_uart), "uart");
+	print_sucess(setupIntr(), "Interrupt controller");
+
+	XUartPs_SetHandler(&(pDemo->uart), intrpt_uart, XPAR_PS7_UART_1_DEVICE_ID);
+	XUartPs_SetInterruptMask(&(pDemo->uart), XUARTPS_IXR_MASK);
+	XUartPs_SetOperMode(&(pDemo->uart), XUARTPS_OPER_MODE_NORMAL);
 
 	//Initialize HDMI
 	init_hdmi_iic(pDemo);
@@ -246,37 +261,38 @@ int zed_hdmi_display_init( zed_hdmi_display_t *pDemo )
 	vfb_tx_start( &(pDemo->vdma_right) );
 	vfb_dump_registers( &(pDemo->vdma_right) );
 
+	xil_printf("Please type debug char:");
 
 	//Debugging stuff:
 	//d: debug
 	//i: resend iic
-	//1-3: DMA input patterns
-	//4-5: DMA ouput patterns
-	while (1)
-	{
-		xil_printf("Please type debug char:");
-		ret=inbyte();
-		xil_printf("%c\n\r",ret);
-		switch (ret){
-		case 'd' : //Dump/Error Check
-			vfb_dump_registers( &(pDemo->vdma_left) );
-			vfb_check_errors( &(pDemo->vdma_left), 1);
-			vfb_dump_registers( &(pDemo->vdma_right) );
-			vfb_check_errors( &(pDemo->vdma_right), 1);
-			break;
-		case 'i'://Resend I2C HDMI Config
-			xil_printf("Reinitializing Monitor Link\n\r");
-			init_hdmi_iic(pDemo);
-			break;
-		default:
-			xil_printf("%c isn't a debug char, dummy!\n\r", ret);
-			break;
-
-		}
-	}
-
 	return 0;
 }
+
+void intrpt_uart(){
+	u8 ret;
+
+	XUartPs_Recv(&(pDemo->uart), &ret, 1);
+	xil_printf("%c\n\r",ret);
+	switch (ret){
+	case 'd' : //Dump/Error Check
+		vfb_dump_registers( &(pDemo->vdma_left) );
+		vfb_check_errors( &(pDemo->vdma_left), 1);
+		vfb_dump_registers( &(pDemo->vdma_right) );
+		vfb_check_errors( &(pDemo->vdma_right), 1);
+		break;
+	case 'i'://Resend I2C HDMI Config
+		xil_printf("Reinitializing Monitor Link\n\r");
+		init_hdmi_iic(pDemo);
+		break;
+	default:
+		xil_printf("%c isn't a debug char, dummy!\n\r", ret);
+		break;
+	}
+	xil_printf("Please type debug char:");
+
+}
+
 int init_hdmi_iic(zed_hdmi_display_t *pDemo){
 	int ret;
 	xil_printf( "HDMI IIC Initialization ...\n\r" );
@@ -300,6 +316,24 @@ int init_hdmi_iic(zed_hdmi_display_t *pDemo){
 	xil_printf( "HDMI Output Initialization Success\n\r" );
 	return 0;
 }
+
+int setupIntr(void){
+	int result;
+	XScuGic_Config *pCfg = XScuGic_LookupConfig(XPAR_PS7_SCUGIC_0_DEVICE_ID);
+	XScuGic_CfgInitialize(&ScuGic,pCfg,pCfg->CpuBaseAddress);
+	result = XScuGic_SelfTest(&ScuGic);
+	if(result != XST_SUCCESS){
+		return(4);
+	}
+	Xil_ExceptionInit();
+	//Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,(Xil_ExceptionHandler)XScuGic_InterruptHandler,&ScuGic);
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,(Xil_ExceptionHandler)XScuGic_InterruptHandler,&ScuGic);
+	Xil_ExceptionEnable();
+	XScuGic_Connect(&ScuGic,XPS_UART1_INT_ID,(Xil_InterruptHandler)XUartPs_InterruptHandler,&(pDemo->uart));
+	XScuGic_Enable(&ScuGic,XPS_UART1_INT_ID);
+	return(0);
+}
+
 
 void print_sucess(int ret, char *s){
 	if (ret != XST_SUCCESS)

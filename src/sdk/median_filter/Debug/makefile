@@ -35,7 +35,7 @@ all: median_filter.elf secondary-outputs
 median_filter.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM gcc linker'
-	arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hdmi_display_bsp/ps7_cortexa9_0/lib -o "median_filter.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-xilinx-eabi-gcc -Wl,-T -Wl,../src/lscript.ld -L../../standalone_bsp_0/ps7_cortexa9_1/lib -o "median_filter.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

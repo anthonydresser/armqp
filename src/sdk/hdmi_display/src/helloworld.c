@@ -52,6 +52,7 @@
 zed_hdmi_display_t project;
 
 void print(const char *str);
+int median_filter(void);
 
 int main()
 {
@@ -66,9 +67,13 @@ int main()
     project.uBaseAddr_MEM_LeftIn = XPAR_DDR_MEM_BASEADDR + 0x10000000;
     project.uDeviceId_VDMA_Right = XPAR_AXI_VDMA_1_DEVICE_ID;
 	project.uBaseAddr_MEM_RightIn = XPAR_DDR_MEM_BASEADDR + 0x10000000;
+	project.uDeviceId_uart = XPAR_PS7_UART_1_DEVICE_ID;
+	project.uBaseAddr_uart = XPAR_PS7_UART_1_BASEADDR;
 
     project.uNumFrames_HdmiDisplay = XPAR_AXIVDMA_0_NUM_FSTORES;
     zed_hdmi_display_init( &project );
+
+    median_filter();
 
     return 0;
 }
