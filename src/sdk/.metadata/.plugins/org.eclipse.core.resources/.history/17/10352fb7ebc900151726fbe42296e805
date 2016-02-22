@@ -1,0 +1,184 @@
+//
+//  median_filter.c
+//  
+//
+//  Created by Anthony Dresser on 11/22/15.
+//
+//
+
+#include <stdio.h>
+#include "xaxicdma_hw.h"
+#include "xparameters.h"
+#include "xgpio.h"
+
+#define BEGINREADMEMORY  0 // beginning of frame being read
+#define BEGINWRITEMEMORY  0 // beginning of frame being written
+#define WIDTH   1920 // video width
+#define HEIGHT  1080 // video height
+#define APP 2   // addresses per pixel
+#define OFFSET  0
+#define FRAMEONE	0
+#define FRAMETWO	1
+#define	FRAMETHREE	2
+XGpio Gpio;
+
+int median_filter(void)
+{
+    XAxiVdma_ReadReg(, XAXIVDMA_PARKPTR_OFFSET);
+    
+    unsigned short *ptrRM = (unsigned short *) BEGINREADMEMORY;
+    unsigned short *ptrWM = (unsigned short *) BEGINWRITEMEMORY;
+    unsigned short (*ptrA)[8] = malloc(sizeof(unsigned short)*8);
+    unsigned short curMedian;
+    unsigned char currentReadFrame = FRAMEONE;
+    unsigned char currentWriteFrame = FRAMEONE;
+	int Status;
+
+    Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XGpio_SetDataDirection(&Gpio, 1, 0);
+
+	while(1){
+
+		XGpio_DiscreteWrite(&Gpio, 1, currentFrame);
+
+		if(++currentFrame > FRAMETHREE){
+			currentFrame = FRAMEONE;
+		}
+
+		for (int i = 0; i < HEIGHT; i++) {
+			for (int j = 0; j < WIDTH; j++) {
+				memset(ptrA, 0, sizeof(unsigned short)*8); // reset holder array
+
+				// top row
+				if(i == 0){
+
+					// top row, left most column, 1
+					if (j == 0) {
+						(*ptrA)[0] = *(ptrRM + APP*((i)*WIDTH + (j+1)) + OFFSET); // j + 1, i = 2
+						(*ptrA)[1] = *(ptrRM + APP*((i+1)*WIDTH + (j+1)) + OFFSET); // j+1, i+1 = 9
+						(*ptrA)[2] = *(ptrRM + APP*((i+1)*WIDTH + j) + OFFSET); // i+1, j = 8
+						curMedian = median(ptrA, 3);
+						*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+
+					// top row, right more column, 3
+					} else if(j == WIDTH - 1){
+						(*ptrA)[0] = *(ptrRM + APP*((i+1)*WIDTH + j) + OFFSET); // i+1, j = 4
+						(*ptrA)[1] = *(ptrRM + APP*((i)*WIDTH + (j-1)) + OFFSET); // j-1, i = 2
+						(*ptrA)[2] = *(ptrRM + APP*((i+1)*WIDTH + (j-1)) + OFFSET); // j-1, i+1 = 9
+						curMedian = median(ptrA, 3);
+						*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+
+					// top row, but middle columns, 2
+					} else {
+						(*ptrA)[0] = *(ptrRM + APP*((i)*WIDTH + (j-1)) + OFFSET); // j-1, i = 1
+						(*ptrA)[1] = *(ptrRM + APP*((i)*WIDTH + (j+1)) + OFFSET); // j+1, i = 3
+						(*ptrA)[2] = *(ptrRM + APP*((i+1)*WIDTH + (j-1)) + OFFSET); // j-1, i+1 = 8
+						(*ptrA)[3] = *(ptrRM + APP*((i+1)*WIDTH + j) + OFFSET); // i+1, j = 9
+						(*ptrA)[4] = *(ptrRM + APP*((i+1)*WIDTH + (j+1)) + OFFSET); // j+1, i+1 = 4
+						curMedian = median(ptrA, 5);
+						*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+					}
+
+				// bottom row
+				} else if(i == HEIGHT - 1){
+
+					// bottom row, left most column, 7
+					if (j = 0) {
+						(*ptrA)[0] = *(ptrRM + APP*((i-1)*WIDTH) + OFFSET); // i-1 = 8
+						(*ptrA)[1] = *(ptrRM + APP*((i-1)*WIDTH + (j+1)) + OFFSET); // j+1, i-1 = 9
+						(*ptrA)[2] = *(ptrRM + APP*(j+1) + OFFSET); // j+1 = 6
+						curMedian = median(ptrA, 3);
+						*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+
+					// bottom row, right most column, 5
+					} else if(j == WIDTH - 1){
+						(*ptrA)[0] = *(ptrRM + APP*((i-1)*WIDTH + j) + OFFSET); // i-1, j = 4
+						(*ptrA)[1] = *(ptrRM + APP*((i)*WIDTH + (j-1)) + OFFSET); // j-1, i = 6
+						(*ptrA)[2] = *(ptrRM + APP*((i-1)*WIDTH + (j-1)) + OFFSET); // i-1, j-1 = 9
+						curMedian = median(ptrA, 3);
+						*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+
+					// bottom row, but middle column, 6
+					} else {
+						(*ptrA)[0] = *(ptrRM + APP*((i)*WIDTH + (j-1)) + OFFSET); // j-1, i = 7
+						(*ptrA)[1] = *(ptrRM + APP*((i-1)*WIDTH + (j-1)) + OFFSET); // i-1, j-1 = 8
+						(*ptrA)[2] = *(ptrRM + APP*((i-1)*WIDTH + j) + OFFSET); // i-1, j = 9
+						(*ptrA)[3] = *(ptrRM + APP*((i-1)WIDTH + (j+1)) + OFFSET); // j+1, i-1 = 4
+						(*ptrA)[4] = *(ptrRM + APP*((i)*WIDTH + (j+1)) + OFFSET); // j+1, i = 5
+						curMedian = median(ptrA, 5);
+						*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+					}
+
+				//  left most column, but middle rows, 8
+				} else if(j == 0){
+					(*ptrA)[0] = *(ptrRM + APP*((i-1)*WIDTH + j) + OFFSET); // i-1, j = 1
+					(*ptrA)[1] = *(ptrRM + APP*((i-1)*WIDTH + (j+1)) + OFFSET); // i-1, j+1 = 2
+					(*ptrA)[2] = *(ptrRM + APP*((i)*WIDTH + (j+1)) + OFFSET); // i, j+1 = 9
+					(*ptrA)[3] = *(ptrRM + APP*((i+1)*WIDTH + (j+1)) + OFFSET); // i+1, j+1 = 6
+					(*ptrA)[4] = *(ptrRM + APP*((i+1)*WIDTH + j) + OFFSET); // i+1, j = 7
+					curMedian = median(ptrA, 5);
+					*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+
+				// right most column, but middle rows, 4
+				} else if(j == WIDTH - 1){
+					(*ptrA)[0] = *(ptrRM + APP*((i-1)*WIDTH + j) + OFFSET); // i-1, j = 3
+					(*ptrA)[1] = *(ptrRM + APP*((i-1)*WIDTH + (j-1)) + OFFSET); // i-1, j-1 = 2
+					(*ptrA)[2] = *(ptrRM + APP*((i)*WIDTH + (j-1)) + OFFSET); // i, j-1 = 9
+					(*ptrA)[3] = *(ptrRM + APP*((i+1)*WIDTH + (j-1)) + OFFSET); // i+1, j-1 = 6
+					(*ptrA)[4] = *(ptrRM + APP*((i+1)*WIDTH + j) + OFFSET); // i+1, j = 5
+					curMedian = median(ptrA, 5);
+					*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+
+				// middle row, middle column 9
+				} else {
+					(*ptrA)[0] = *(ptrRM + APP*((i-1)*WIDTH = (j-1)) + OFFSET); // i-1, j-1 = 1
+					(*ptrA)[1] = *(ptrRM + APP*((i-1)*WIDTH + j) + OFFSET); // i-1, j = 2
+					(*ptrA)[2] = *(ptrRM + APP*((i-1)*WIDTH + (j+1)) + OFFSET); // i-1, j+1 = 3
+					(*ptrA)[3] = *(ptrRM + APP*((i)*WIDTH + (j+1)) + OFFSET); // i, j+1 = 4
+					(*ptrA)[4] = *(ptrRM + APP*((i+1)*WIDTH + (j+1)) + OFFSET); // i+1, j+1 = 5
+					(*ptrA)[5] = *(ptrRM + APP*((i+1)*WIDTH + j) + OFFSET); // i+1, j = 6
+					(*ptrA)[6] = *(ptrRM + APP*((i+1)*WIDTH + (j-1)) + OFFSET); // i+1, j-1 = 7
+					(*ptrA)[7] = *(ptrRM + APP*((i)*WIDTH + (j-1)) + OFFSET); // i, j-1 = 8
+					curMedian = median(ptrA, 8);
+					*(ptrWM + APP*(i*WIDTH + j) + OFFSET) = curMedian;
+				}
+			}
+		}
+	}
+    free(ptrA);
+    return 0;
+}
+
+unsigned short median(unsigned short (*ptrA)[8], int size){
+    
+    int minIndex;
+    unsigned short minValue;
+    int k = size/2;
+    
+    for (int i = 0; i < k; i++) {
+        minIndex = i;
+        minValue = (*ptrA)[i];
+        for (int j = i+1; j < size; j++) {
+            if ((*ptrA)[j] < minValue) {
+                minIndex = j;
+                minValue = (*ptrA)[j]
+            }
+        }
+        swap(ptrA, i, minIndex);
+    }
+    
+    return (*ptrA)[k];
+}
+
+void swap(unsigned short (*ptrA)[8], int a, int b){
+    unsigned short temp;
+    temp = (*ptrA)[a];
+    (*ptrA)[a] = (*ptrA)[b];
+    (*ptrA)[b] = temp;
+    return;
+}

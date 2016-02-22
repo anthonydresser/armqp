@@ -212,6 +212,16 @@ int vfb_rx_setup(XAxiVdma *pAxiVdma, XAxiVdma_DmaSetup *pWriteCfg, Xuint32 uVide
 			return XST_FAILURE;
 	}
 
+	// set genlock
+
+	Status = XAxiVdma_GenLockSourceSelect(pAxiVdma, XAXIVDMA_EXTERNAL_GENLOCK, XAXIVDMA_WRITE);
+	if (Status != XST_SUCCESS) {
+				xdbg_printf(XDBG_DEBUG_ERROR,
+					"Set write Genlock failed %d\r\n", Status);
+
+				return XST_FAILURE;
+		}
+
 
 	return XST_SUCCESS;
 }
@@ -262,7 +272,7 @@ int vfb_tx_setup(XAxiVdma *pAxiVdma, XAxiVdma_DmaSetup *pReadCfg, Xuint32 uVideo
 	 *
 	 * These addresses are physical addresses
 	 */
-	Addr = uMemAddr + storage_offset;
+	Addr = uMemAddr + storage_offset + 2*storage_size;
 	for(i = 0; i < uNumFrames; i++)
 	{
 		pReadCfg->FrameStoreStartAddr[i] = Addr;
@@ -282,6 +292,15 @@ int vfb_tx_setup(XAxiVdma *pAxiVdma, XAxiVdma_DmaSetup *pReadCfg, Xuint32 uVideo
 			return XST_FAILURE;
 	}
 
+	// set genlock
+	Status = XAxiVdma_GenLockSourceSelect(pAxiVdma, XAXIVDMA_EXTERNAL_GENLOCK, XAXIVDMA_READ);
+	if (Status != XST_SUCCESS) {
+				xdbg_printf(XDBG_DEBUG_ERROR,
+					"Set write Genlock failed %d\r\n", Status);
+
+				return XST_FAILURE;
+		}
+
 	return XST_SUCCESS;
 }
 
@@ -291,6 +310,7 @@ int vfb_rx_start(XAxiVdma *pAxiVdma)
 
    // S2MM Startup
    Status = XAxiVdma_DmaStart(pAxiVdma, XAXIVDMA_WRITE);
+
    if (Status != XST_SUCCESS)
    {
       xil_printf( "Start Write transfer failed %d\r\n", Status);

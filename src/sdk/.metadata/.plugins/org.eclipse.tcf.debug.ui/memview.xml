@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Memory/>
+<Memory>
+<Block Addr="0xfd5484d1" Context="JTAG-jsn-Zed-210248447832-4ba00477-0.0" Size="-1"/>
+</Memory>
