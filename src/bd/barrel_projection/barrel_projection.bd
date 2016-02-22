@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<bd:repository xmlns:bd="http://www.xilinx.com/bd" bd:synthFlowMode="None" bd:tool_version="2015.2" bd:top="barrel_projection" bd:version="1.00.a">
+
+  <spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>barrel_projection</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:parameters>
+      <spirit:parameter>
+        <spirit:name>isTop</spirit:name>
+        <spirit:value spirit:format="bool" spirit:resolve="immediate">true</spirit:value>
+      </spirit:parameter>
+    </spirit:parameters>
+    <spirit:busInterfaces>
+      <spirit:busInterface>
+        <spirit:name>AXIS_IN</spirit:name>
+        <spirit:slave/>
+        <spirit:busType spirit:library="interface" spirit:name="axis" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="axis_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>TDATA_NUM_BYTES</spirit:name>
+            <spirit:value>2</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>TDEST_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>TID_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>TUSER_WIDTH</spirit:name>
+            <spirit:value>0</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_TREADY</spirit:name>
+            <spirit:value>1</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_TSTRB</spirit:name>
+            <spirit:value>0</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_TKEEP</spirit:name>
+            <spirit:value>0</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>HAS_TLAST</spirit:name>
+            <spirit:value>0</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>148500000</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>PHASE</spirit:name>
+            <spirit:value>0.000</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>LAYERED_METADATA</spirit:name>
+            <spirit:value>undef</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>AXIS_Out</spirit:name>
+        <spirit:master/>
+        <spirit:busType spirit:library="interface" spirit:name="axis" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="interface" spirit:name="axis_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>148500000</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>RST.RESET</spirit:name>
+        <spirit:displayName>Reset</spirit:displayName>
+        <spirit:description>Reset</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="reset" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="reset_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>RST</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>reset</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>POLARITY</spirit:name>
+            <spirit:value>ACTIVE_HIGH</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+      <spirit:busInterface>
+        <spirit:name>CLK.CLK</spirit:name>
+        <spirit:displayName>Clk</spirit:displayName>
+        <spirit:description>Clock</spirit:description>
+        <spirit:busType spirit:library="signal" spirit:name="clock" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:abstractionType spirit:library="signal" spirit:name="clock_rtl" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:slave/>
+        <spirit:portMaps>
+          <spirit:portMap>
+            <spirit:logicalPort>
+              <spirit:name>CLK</spirit:name>
+            </spirit:logicalPort>
+            <spirit:physicalPort>
+              <spirit:name>clk</spirit:name>
+            </spirit:physicalPort>
+          </spirit:portMap>
+        </spirit:portMaps>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>FREQ_HZ</spirit:name>
+            <spirit:value>148500000</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>ASSOCIATED_RESET</spirit:name>
+            <spirit:value>reset</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:busInterface>
+    </spirit:busInterfaces>
+    <spirit:model>
+      <spirit:views>
+        <spirit:view>
+          <spirit:name>BlockDiagram</spirit:name>
+          <spirit:envIdentifier>:vivado.xilinx.com:</spirit:envIdentifier>
+          <spirit:hierarchyRef spirit:library="BlockDiagram" spirit:name="barrel_projection_imp" spirit:vendor="xilinx.com" spirit:version="1.00.a"/>
+        </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+        <spirit:port>
+          <spirit:name>reset</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>clk</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+      </spirit:ports>
+    </spirit:model>
+  </spirit:component>
+
+  <spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009">
+    <spirit:vendor>xilinx.com</spirit:vendor>
+    <spirit:library>BlockDiagram</spirit:library>
+    <spirit:name>barrel_projection_imp</spirit:name>
+    <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>barrel_mem_interface_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="barrel_projection" spirit:name="barrel_mem_interface" spirit:vendor="wpi.edu" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">barrel_projection_barrel_mem_interface_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>cordic_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="cordic" spirit:vendor="xilinx.com" spirit:version="6.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">barrel_projection_cordic_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Functional_Selection">Translate</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Data_Format">SignedFraction</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Compensation_Scaling">No_Scale_Compensation</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="cartesian_has_tuser">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="cartesian_tuser_width">22</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="flow_control">Blocking</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="out_tready">true</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>cordic_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="cordic" spirit:vendor="xilinx.com" spirit:version="6.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">barrel_projection_cordic_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="phase_has_tuser">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="phase_tuser_width">22</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="flow_control">Blocking</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="out_tready">true</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>barrel_Math_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="barrelMath" spirit:name="barrel_Math" spirit:vendor="armqp" spirit:version="0.1"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">barrel_projection_barrel_Math_0_1</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>util_vector_logic_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="util_vector_logic" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">barrel_projection_util_vector_logic_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SIZE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_OPERATION">and</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+        <spirit:instanceName>util_vector_logic_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="util_vector_logic" spirit:vendor="xilinx.com" spirit:version="2.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">barrel_projection_util_vector_logic_0_1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_SIZE">1</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_OPERATION">and</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
+    <spirit:interconnections/>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>reset_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_mem_interface_0" spirit:portRef="reset"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="ap_rst"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>clk_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_mem_interface_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="aclk"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="ap_clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_rotateCin_V</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rotateCin_V"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="s_axis_cartesian_tdata"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_rotatePIn_V</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rotatePIn_V"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="s_axis_phase_tdata"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_translateIn_V</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="translateIn_V"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="s_axis_cartesian_tdata"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_xOut_V</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="xOut_V"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_mem_interface_0" spirit:portRef="Math_X"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_yOut_V</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="yOut_V"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_mem_interface_0" spirit:portRef="Math_Y"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_rUserIn_V</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rUserIn_V"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="s_axis_phase_tuser"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_tUserIn_V</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="tUserIn_V"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="s_axis_cartesian_tuser"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_translateIn_V_ap_vld</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="translateIn_V_ap_vld"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="s_axis_cartesian_tvalid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_rotateCin_V_ap_vld</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rotateCin_V_ap_vld"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="s_axis_cartesian_tvalid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_rotatePIn_V_ap_vld</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rotatePIn_V_ap_vld"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="s_axis_phase_tvalid"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_0_m_axis_dout_tdata</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="m_axis_dout_tdata"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="translateOut_V"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_1_m_axis_dout_tdata</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="m_axis_dout_tdata"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rotateOut_V"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>util_vector_logic_0_Res</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="util_vector_logic_0" spirit:portRef="Res"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rotateReadyIn_V"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_1_s_axis_cartesian_tready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="s_axis_cartesian_tready"/>
+        <spirit:internalPortReference spirit:componentRef="util_vector_logic_0" spirit:portRef="Op1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_1_s_axis_phase_tready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="s_axis_phase_tready"/>
+        <spirit:internalPortReference spirit:componentRef="util_vector_logic_0" spirit:portRef="Op2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>util_vector_logic_1_Res</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="util_vector_logic_1" spirit:portRef="Res"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="masterReady_V"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_mem_interface_0_Math_Ready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_mem_interface_0" spirit:portRef="Math_Ready"/>
+        <spirit:internalPortReference spirit:componentRef="util_vector_logic_1" spirit:portRef="Op1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_0_s_axis_cartesian_tready</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="s_axis_cartesian_tready"/>
+        <spirit:internalPortReference spirit:componentRef="util_vector_logic_1" spirit:portRef="Op2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_1_m_axis_dout_tuser</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="m_axis_dout_tuser"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rUserOut_V"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_0_m_axis_dout_tuser</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="m_axis_dout_tuser"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="tUserOut_V"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_0_m_axis_dout_tvalid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="m_axis_dout_tvalid"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="translateOut_V_ap_vld"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>cordic_1_m_axis_dout_tvalid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="m_axis_dout_tvalid"/>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="rotateOut_V_ap_vld"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>barrel_Math_0_masterReadyOut_V</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="barrel_Math_0" spirit:portRef="masterReadyOut_V"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_1" spirit:portRef="m_axis_dout_tready"/>
+        <spirit:internalPortReference spirit:componentRef="cordic_0" spirit:portRef="m_axis_dout_tready"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
+    <spirit:hierConnections>
+      <spirit:hierConnection spirit:interfaceRef="AXIS_IN/AXIS_IN_1">
+        <spirit:activeInterface spirit:busRef="AXIS_IN" spirit:componentRef="barrel_mem_interface_0"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="AXIS_Out/barrel_mem_interface_0_AXIS_Out">
+        <spirit:activeInterface spirit:busRef="AXIS_Out" spirit:componentRef="barrel_mem_interface_0"/>
+      </spirit:hierConnection>
+    </spirit:hierConnections>
+  </spirit:design>
+
+</bd:repository>

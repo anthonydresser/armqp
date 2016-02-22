@@ -51,6 +51,7 @@
 #include <stdio.h>
 
 #include "zed_hdmi_display.h"
+#include <xgpio.h>
 
 
 #define ADV7511_ADDR   0x72

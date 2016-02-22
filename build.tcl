@@ -62,6 +62,10 @@ save_bd_design
 regenerate_bd_layout
 save_bd_design
 
+source $origin_dir/src/bd/barrel_projection.tcl
+save_bd_design
+regenerate_bd_layout
+save_bd_design
 
 # Generate the Wrapper
 

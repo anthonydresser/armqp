@@ -4468,3 +4468,9 @@ con
 17:23:05 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
 17:23:06 WARN  : Linker script will not be updated automatically. Users need to update it manually.
 17:25:04 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+22:28:00 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+22:28:01 INFO  : XSDB server has started successfully.
+22:28:09 INFO  : Processing command line option -hwspec D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+22:28:10 INFO  : Checking for hwspec changes in the project top_level_hw_platform_0.
+18:19:15 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+18:19:18 INFO  : XSDB server has started successfully.
