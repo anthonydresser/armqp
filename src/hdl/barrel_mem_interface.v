@@ -179,6 +179,9 @@ module barrel_mem_interface(
                 OutputY<=OutputY;
         end 
     
+    //Output Position based flags
+    assign AXIS_Out_tUser = (OutputY==0)&&(OutputX==0)//SOF
+    assign AXIS_Out_tLast = OutputX==width;//EOL
     
     blk_mem_gen_0 blk_mem_gen(
         .clka(clk),
