@@ -5,8 +5,10 @@ proc init_gui { IPINST } {
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "buf_capacity" -parent ${Page_0}
   ipgui::add_param $IPINST -name "height" -parent ${Page_0}
-  ipgui::add_param $IPINST -name "width" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "max_rows_in_buffer" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "min_items_in_buffer" -parent ${Page_0}
   ipgui::add_param $IPINST -name "min_rows_in_buffer" -parent ${Page_0}
+  ipgui::add_param $IPINST -name "width" -parent ${Page_0}
 
 
 }

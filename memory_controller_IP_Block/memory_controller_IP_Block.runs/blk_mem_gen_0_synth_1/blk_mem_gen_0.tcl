@@ -5,6 +5,7 @@
 debug::add_scope template.lib 1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z020clg484-1
 
 set_param project.compositeFile.enableAutoGeneration 0
@@ -15,8 +16,13 @@ set_property parent.project_path D:/vivadoprojects/armqp/memory_controller_IP_Bl
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-read_ip d:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
-set_property is_locked true [get_files d:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+set_property ip_repo_paths {
+  d:/vivadoprojects/armqp
+  d:/vivadoprojects/armqp/ip_repo/armqp_barrelmemorycontroller
+} [current_project]
+read_ip D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all d:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp]
+set_property is_locked true [get_files D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
@@ -25,27 +31,27 @@ rename_ref -prefix_all blk_mem_gen_0_
 write_checkpoint -noxdef blk_mem_gen_0.dcp
 catch { report_utilization -file blk_mem_gen_0_utilization_synth.rpt -pb blk_mem_gen_0_utilization_synth.pb }
 if { [catch {
-  file copy -force D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp d:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp
+  file copy -force D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.runs/blk_mem_gen_0_synth_1/blk_mem_gen_0.dcp D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.dcp
 } _RESULT ] } { 
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 if { [catch {
-  write_verilog -force -mode synth_stub d:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.v
+  write_verilog -force -mode synth_stub D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
+  write_vhdl -force -mode synth_stub D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 if { [catch {
-  write_verilog -force -mode funcsim d:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.v
+  write_verilog -force -mode funcsim D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 if { [catch {
-  write_vhdl -force -mode funcsim d:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.vhdl
+  write_vhdl -force -mode funcsim D:/vivadoprojects/armqp/memory_controller_IP_Block/memory_controller_IP_Block.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_funcsim.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
