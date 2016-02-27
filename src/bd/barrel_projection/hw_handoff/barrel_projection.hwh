@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 26 17:44:08 2016" VIVADOVERSION="2015.2">
+
+  <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="barrel_projection" PACKAGE="clg484" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="barrelMath_0" PORT="reset"/>
+        <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="cordic_1" PORT="aclk"/>
+        <CONNECTION INSTANCE="cordic_0" PORT="aclk"/>
+        <CONNECTION INSTANCE="barrelMath_0" PORT="clk"/>
+        <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="xOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_xOut">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="barrelMath_0" PORT="xOut"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="11" NAME="yOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_yOut">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="barrelMath_0" PORT="yOut"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="addr_vld" SIGIS="undef" SIGNAME="barrelMath_0_addr_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="barrelMath_0" PORT="addr_vld"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="AXIS_In_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="AXIS_In_tuser" SIGIS="undef"/>
+    <PORT DIR="I" NAME="AXIS_In_tvalid" SIGIS="undef"/>
+    <PORT DIR="O" NAME="AXIS_In_tready" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="15" NAME="AXIS_Out_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="AXIS_Out_tlast" SIGIS="undef"/>
+    <PORT DIR="O" NAME="AXIS_Out_tuser" SIGIS="undef"/>
+    <PORT DIR="O" NAME="AXIS_Out_tvalid" SIGIS="undef"/>
+    <PORT DIR="I" NAME="AXIS_Out_tready" SIGIS="undef"/>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES>
+    <BUSINTERFACE BUSNAME="External_Interface_AXIS_In" NAME="AXIS_In" TYPE="TARGET">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PORTMAPS>
+        <PORTMAP PHYSICAL="AXIS_In_tdata"/>
+        <PORTMAP PHYSICAL="AXIS_In_tuser"/>
+        <PORTMAP PHYSICAL="AXIS_In_tvalid"/>
+        <PORTMAP PHYSICAL="AXIS_In_tready"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+    <BUSINTERFACE BUSNAME="barrel_mem_interface_0_AXIS_Out" NAME="AXIS_Out" TYPE="INITIATOR">
+      <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+      <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+      <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+      <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+      <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+      <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+      <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+      <PARAMETER NAME="PHASE" VALUE="0.000"/>
+      <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+      <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+      <PORTMAPS>
+        <PORTMAP PHYSICAL="AXIS_Out_tdata"/>
+        <PORTMAP PHYSICAL="AXIS_Out_tlast"/>
+        <PORTMAP PHYSICAL="AXIS_Out_tuser"/>
+        <PORTMAP PHYSICAL="AXIS_Out_tvalid"/>
+        <PORTMAP PHYSICAL="AXIS_Out_tready"/>
+      </PORTMAPS>
+    </BUSINTERFACE>
+  </EXTERNALINTERFACES>
+
+  <MODULES>
+    <MODULE FULLNAME="/barrelMath_0" HWVERSION="1.0" INSTANCE="barrelMath_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="barrelMath" VLNV="armqp:user:barrelMath:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="barrel_projection_barrelMath_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="31" NAME="tIn" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_tIn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="s_axis_cartesian_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tIn_vld" SIGIS="undef" SIGNAME="barrelMath_0_tIn_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="s_axis_cartesian_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tIn_ready" SIGIS="undef" SIGNAME="barrelMath_0_tIn_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="s_axis_cartesian_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="tOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_tOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="m_axis_dout_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="tOut_vld" SIGIS="undef" SIGNAME="barrelMath_0_tOut_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="m_axis_dout_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="tOut_ready" SIGIS="undef" SIGNAME="barrelMath_0_tOut_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_0" PORT="m_axis_dout_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="rCIn" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_rCIn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s_axis_cartesian_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rCIn_vld" SIGIS="undef" SIGNAME="barrelMath_0_rCIn_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s_axis_cartesian_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="rPIn" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_rPIn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s_axis_phase_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rPIn_vld" SIGIS="undef" SIGNAME="barrelMath_0_rPIn_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s_axis_phase_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rCIn_ready" SIGIS="undef" SIGNAME="barrelMath_0_rCIn_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s_axis_cartesian_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rPIn_ready" SIGIS="undef" SIGNAME="barrelMath_0_rPIn_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="s_axis_phase_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="rOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_rOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="m_axis_dout_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rOut_vld" SIGIS="undef" SIGNAME="barrelMath_0_rOut_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="m_axis_dout_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rOut_ready" SIGIS="undef" SIGNAME="barrelMath_0_rOut_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cordic_1" PORT="m_axis_dout_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="xOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_xOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_Y"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="xOut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="11" NAME="yOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_yOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_X"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="yOut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="mem_ready" SIGIS="undef" SIGNAME="barrel_mem_interface_0_Math_Ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_Ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="addr_vld" SIGIS="undef" SIGNAME="barrelMath_0_addr_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_Vaild"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="addr_vld"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="barrelMath_0_tIn" NAME="tIn" TYPE="INITIATOR">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="tIn"/>
+            <PORTMAP PHYSICAL="tIn_vld"/>
+            <PORTMAP PHYSICAL="tIn_ready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_0_M_AXIS_DOUT" NAME="tOut" TYPE="TARGET">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_real {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value real} enabled {attribs {resolve_type generated dependency polar_mag_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_mag_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_mag_fractwidth format long minimum {} maximum {}} value 14} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} field_phase {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_phase_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type generated dependency polar_phase_offset format long minimum {} maximum {}} value 16} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_phase_fractwidth format long minimum {} maximum {}} value 13} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cartesian_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cartesian_tuser} enabled {attribs {resolve_type generated dependency cart_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cart_width format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_phase_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_tuser} enabled {attribs {resolve_type generated dependency phase_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency phase_offset format long minimum {} maximum {}} value 22} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 22}"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="tOut"/>
+            <PORTMAP PHYSICAL="tOut_vld"/>
+            <PORTMAP PHYSICAL="tOut_ready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="barrelMath_0_rCin" NAME="rCin" TYPE="INITIATOR">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="rCIn"/>
+            <PORTMAP PHYSICAL="rCIn_vld"/>
+            <PORTMAP PHYSICAL="rCIn_ready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="barrelMath_0_rPin" NAME="rPin" TYPE="INITIATOR">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="rPIn"/>
+            <PORTMAP PHYSICAL="rPIn_vld"/>
+            <PORTMAP PHYSICAL="rPIn_ready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_1_M_AXIS_DOUT" NAME="rOut" TYPE="TARGET">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type generated dependency complex_width format long minimum {} maximum {}} value 16} stride {attribs {resolve_type generated dependency complex_stride format long minimum {} maximum {}} value 16} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} real {fixed {fractwidth {attribs {resolve_type generated dependency complex_fractwidth format long minimum {} maximum {}} value 14} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cartesian_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cartesian_tuser} enabled {attribs {resolve_type generated dependency cart_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cart_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_phase_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_tuser} enabled {attribs {resolve_type generated dependency phase_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type generated dependency phase_offset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 22}"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="rOut"/>
+            <PORTMAP PHYSICAL="rOut_vld"/>
+            <PORTMAP PHYSICAL="rOut_ready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/barrel_mem_interface_0" HWVERSION="1.4" INSTANCE="barrel_mem_interface_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="barrel_mem_interface" VLNV="wpi.edu:user:barrel_mem_interface:1.4">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="buf_capacity" VALUE="67584"/>
+        <PARAMETER NAME="width" VALUE="1080"/>
+        <PARAMETER NAME="height" VALUE="960"/>
+        <PARAMETER NAME="min_rows_in_buffer" VALUE="60"/>
+        <PARAMETER NAME="min_items_in_buffer" VALUE="64800"/>
+        <PARAMETER NAME="max_rows_in_buffer" VALUE="62"/>
+        <PARAMETER NAME="Component_Name" VALUE="barrel_projection_barrel_mem_interface_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="15" NAME="AXIS_In_tData" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="AXIS_In_tValid" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXIS_In_tReady" SIGIS="undef"/>
+        <PORT DIR="I" NAME="AXIS_In_tUser" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="11" NAME="Math_Y" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_xOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="xOut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="Math_X" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_yOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="yOut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Math_Vaild" SIGIS="undef" SIGNAME="barrelMath_0_addr_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="addr_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Math_Ready" SIGIS="undef" SIGNAME="barrel_mem_interface_0_Math_Ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="mem_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="AXIS_Out_tData" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXIS_Out_tValid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="AXIS_Out_tReady" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXIS_Out_tUser" SIGIS="undef"/>
+        <PORT DIR="O" NAME="AXIS_Out_tLast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="External_Interface_AXIS_In" NAME="AXIS_In" TYPE="TARGET">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="AXIS_In_tData"/>
+            <PORTMAP PHYSICAL="AXIS_In_tUser"/>
+            <PORTMAP PHYSICAL="AXIS_In_tValid"/>
+            <PORTMAP PHYSICAL="AXIS_In_tReady"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="barrel_mem_interface_0_AXIS_Out" NAME="AXIS_Out" TYPE="INITIATOR">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="AXIS_Out_tData"/>
+            <PORTMAP PHYSICAL="AXIS_Out_tLast"/>
+            <PORTMAP PHYSICAL="AXIS_Out_tUser"/>
+            <PORTMAP PHYSICAL="AXIS_Out_tValid"/>
+            <PORTMAP PHYSICAL="AXIS_Out_tReady"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/cordic_0" HWVERSION="6.0" INSTANCE="cordic_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cordic" VLNV="xilinx.com:ip:cordic:6.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=cordic;v=v6_0;d=pg105-cordic.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_ARCHITECTURE" VALUE="2"/>
+        <PARAMETER NAME="C_CORDIC_FUNCTION" VALUE="1"/>
+        <PARAMETER NAME="C_COARSE_ROTATE" VALUE="1"/>
+        <PARAMETER NAME="C_DATA_FORMAT" VALUE="0"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ACLK" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_CARTESIAN" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_PHASE" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ARESETN" VALUE="0"/>
+        <PARAMETER NAME="C_INPUT_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_ITERATIONS" VALUE="0"/>
+        <PARAMETER NAME="C_OUTPUT_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_PHASE_FORMAT" VALUE="0"/>
+        <PARAMETER NAME="C_PIPELINE_MODE" VALUE="-2"/>
+        <PARAMETER NAME="C_PRECISION" VALUE="0"/>
+        <PARAMETER NAME="C_ROUND_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_SCALE_COMP" VALUE="0"/>
+        <PARAMETER NAME="C_THROTTLE_SCHEME" VALUE="2"/>
+        <PARAMETER NAME="C_TLAST_RESOLUTION" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_PHASE_TUSER" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_PHASE_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXIS_PHASE_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S_AXIS_PHASE_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_CARTESIAN_TUSER" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_CARTESIAN_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXIS_CARTESIAN_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXIS_CARTESIAN_TUSER_WIDTH" VALUE="22"/>
+        <PARAMETER NAME="C_M_AXIS_DOUT_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXIS_DOUT_TUSER_WIDTH" VALUE="22"/>
+        <PARAMETER NAME="Component_Name" VALUE="barrel_projection_cordic_0_0"/>
+        <PARAMETER NAME="Functional_Selection" VALUE="Translate"/>
+        <PARAMETER NAME="Architectural_Configuration" VALUE="Parallel"/>
+        <PARAMETER NAME="Pipelining_Mode" VALUE="Maximum"/>
+        <PARAMETER NAME="Data_Format" VALUE="SignedFraction"/>
+        <PARAMETER NAME="Phase_Format" VALUE="Radians"/>
+        <PARAMETER NAME="Input_Width" VALUE="16"/>
+        <PARAMETER NAME="Output_Width" VALUE="16"/>
+        <PARAMETER NAME="Round_Mode" VALUE="Truncate"/>
+        <PARAMETER NAME="Iterations" VALUE="0"/>
+        <PARAMETER NAME="Precision" VALUE="0"/>
+        <PARAMETER NAME="Coarse_Rotation" VALUE="true"/>
+        <PARAMETER NAME="Compensation_Scaling" VALUE="No_Scale_Compensation"/>
+        <PARAMETER NAME="cartesian_has_tuser" VALUE="true"/>
+        <PARAMETER NAME="cartesian_tuser_width" VALUE="22"/>
+        <PARAMETER NAME="cartesian_has_tlast" VALUE="false"/>
+        <PARAMETER NAME="phase_has_tuser" VALUE="false"/>
+        <PARAMETER NAME="phase_tuser_width" VALUE="1"/>
+        <PARAMETER NAME="phase_has_tlast" VALUE="false"/>
+        <PARAMETER NAME="flow_control" VALUE="Blocking"/>
+        <PARAMETER NAME="optimize_goal" VALUE="Performance"/>
+        <PARAMETER NAME="out_tready" VALUE="true"/>
+        <PARAMETER NAME="out_tlast_behv" VALUE="Null"/>
+        <PARAMETER NAME="ACLKEN" VALUE="false"/>
+        <PARAMETER NAME="ARESETN" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_cartesian_tvalid" SIGIS="undef" SIGNAME="barrelMath_0_tIn_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="tIn_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_cartesian_tready" SIGIS="undef" SIGNAME="barrelMath_0_tIn_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="tIn_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="21" NAME="s_axis_cartesian_tuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="31" NAME="s_axis_cartesian_tdata" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_tIn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="tIn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_dout_tvalid" SIGIS="undef" SIGNAME="barrelMath_0_tOut_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="tOut_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_dout_tready" SIGIS="undef" SIGNAME="barrelMath_0_tOut_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="tOut_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="21" NAME="m_axis_dout_tuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="m_axis_dout_tdata" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_tOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="tOut"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="barrelMath_0_tIn" NAME="S_AXIS_CARTESIAN" TYPE="TARGET">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="22"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="s_axis_cartesian_tdata"/>
+            <PORTMAP PHYSICAL="s_axis_cartesian_tready"/>
+            <PORTMAP PHYSICAL="s_axis_cartesian_tuser"/>
+            <PORTMAP PHYSICAL="s_axis_cartesian_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_0_M_AXIS_DOUT" NAME="M_AXIS_DOUT" TYPE="INITIATOR">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_real {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value real} enabled {attribs {resolve_type generated dependency polar_mag_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_mag_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_mag_fractwidth format long minimum {} maximum {}} value 14} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} field_phase {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_phase_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type generated dependency polar_phase_offset format long minimum {} maximum {}} value 16} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_phase_fractwidth format long minimum {} maximum {}} value 13} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cartesian_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cartesian_tuser} enabled {attribs {resolve_type generated dependency cart_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cart_width format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_phase_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_tuser} enabled {attribs {resolve_type generated dependency phase_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency phase_offset format long minimum {} maximum {}} value 22} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 22}"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="22"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="m_axis_dout_tdata"/>
+            <PORTMAP PHYSICAL="m_axis_dout_tready"/>
+            <PORTMAP PHYSICAL="m_axis_dout_tuser"/>
+            <PORTMAP PHYSICAL="m_axis_dout_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE FULLNAME="/cordic_1" HWVERSION="6.0" INSTANCE="cordic_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cordic" VLNV="xilinx.com:ip:cordic:6.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=cordic;v=v6_0;d=pg105-cordic.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_ARCHITECTURE" VALUE="2"/>
+        <PARAMETER NAME="C_CORDIC_FUNCTION" VALUE="0"/>
+        <PARAMETER NAME="C_COARSE_ROTATE" VALUE="1"/>
+        <PARAMETER NAME="C_DATA_FORMAT" VALUE="0"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ACLK" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_CARTESIAN" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_PHASE" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_ARESETN" VALUE="0"/>
+        <PARAMETER NAME="C_INPUT_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_ITERATIONS" VALUE="0"/>
+        <PARAMETER NAME="C_OUTPUT_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_PHASE_FORMAT" VALUE="0"/>
+        <PARAMETER NAME="C_PIPELINE_MODE" VALUE="-2"/>
+        <PARAMETER NAME="C_PRECISION" VALUE="0"/>
+        <PARAMETER NAME="C_ROUND_MODE" VALUE="0"/>
+        <PARAMETER NAME="C_SCALE_COMP" VALUE="0"/>
+        <PARAMETER NAME="C_THROTTLE_SCHEME" VALUE="2"/>
+        <PARAMETER NAME="C_TLAST_RESOLUTION" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_PHASE_TUSER" VALUE="1"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_PHASE_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXIS_PHASE_TDATA_WIDTH" VALUE="16"/>
+        <PARAMETER NAME="C_S_AXIS_PHASE_TUSER_WIDTH" VALUE="22"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_CARTESIAN_TUSER" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_CARTESIAN_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_S_AXIS_CARTESIAN_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_S_AXIS_CARTESIAN_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_DOUT_TDATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_M_AXIS_DOUT_TUSER_WIDTH" VALUE="22"/>
+        <PARAMETER NAME="Component_Name" VALUE="barrel_projection_cordic_1_0"/>
+        <PARAMETER NAME="Functional_Selection" VALUE="Rotate"/>
+        <PARAMETER NAME="Architectural_Configuration" VALUE="Parallel"/>
+        <PARAMETER NAME="Pipelining_Mode" VALUE="Maximum"/>
+        <PARAMETER NAME="Data_Format" VALUE="SignedFraction"/>
+        <PARAMETER NAME="Phase_Format" VALUE="Radians"/>
+        <PARAMETER NAME="Input_Width" VALUE="16"/>
+        <PARAMETER NAME="Output_Width" VALUE="16"/>
+        <PARAMETER NAME="Round_Mode" VALUE="Truncate"/>
+        <PARAMETER NAME="Iterations" VALUE="0"/>
+        <PARAMETER NAME="Precision" VALUE="0"/>
+        <PARAMETER NAME="Coarse_Rotation" VALUE="true"/>
+        <PARAMETER NAME="Compensation_Scaling" VALUE="No_Scale_Compensation"/>
+        <PARAMETER NAME="cartesian_has_tuser" VALUE="false"/>
+        <PARAMETER NAME="cartesian_tuser_width" VALUE="1"/>
+        <PARAMETER NAME="cartesian_has_tlast" VALUE="false"/>
+        <PARAMETER NAME="phase_has_tuser" VALUE="true"/>
+        <PARAMETER NAME="phase_tuser_width" VALUE="22"/>
+        <PARAMETER NAME="phase_has_tlast" VALUE="false"/>
+        <PARAMETER NAME="flow_control" VALUE="Blocking"/>
+        <PARAMETER NAME="optimize_goal" VALUE="Performance"/>
+        <PARAMETER NAME="out_tready" VALUE="true"/>
+        <PARAMETER NAME="out_tlast_behv" VALUE="Null"/>
+        <PARAMETER NAME="ACLKEN" VALUE="false"/>
+        <PARAMETER NAME="ARESETN" VALUE="false"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="External_Ports_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_phase_tvalid" SIGIS="undef" SIGNAME="barrelMath_0_rPIn_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rPIn_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_phase_tready" SIGIS="undef" SIGNAME="barrelMath_0_rPIn_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rPIn_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="21" NAME="s_axis_phase_tuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="15" NAME="s_axis_phase_tdata" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_rPIn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rPIn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_cartesian_tvalid" SIGIS="undef" SIGNAME="barrelMath_0_rCIn_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rCIn_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_cartesian_tready" SIGIS="undef" SIGNAME="barrelMath_0_rCIn_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rCIn_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="s_axis_cartesian_tdata" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_rCIn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rCIn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_dout_tvalid" SIGIS="undef" SIGNAME="barrelMath_0_rOut_vld">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rOut_vld"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_dout_tready" SIGIS="undef" SIGNAME="barrelMath_0_rOut_ready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rOut_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="21" NAME="m_axis_dout_tuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="m_axis_dout_tdata" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_rOut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="barrelMath_0" PORT="rOut"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="barrelMath_0_rCin" NAME="S_AXIS_CARTESIAN" TYPE="TARGET">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="s_axis_cartesian_tdata"/>
+            <PORTMAP PHYSICAL="s_axis_cartesian_tready"/>
+            <PORTMAP PHYSICAL="s_axis_cartesian_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="barrelMath_0_rPin" NAME="S_AXIS_PHASE" TYPE="TARGET">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="22"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="s_axis_phase_tdata"/>
+            <PORTMAP PHYSICAL="s_axis_phase_tready"/>
+            <PORTMAP PHYSICAL="s_axis_phase_tuser"/>
+            <PORTMAP PHYSICAL="s_axis_phase_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="cordic_1_M_AXIS_DOUT" NAME="M_AXIS_DOUT" TYPE="INITIATOR">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type generated dependency complex_width format long minimum {} maximum {}} value 16} stride {attribs {resolve_type generated dependency complex_stride format long minimum {} maximum {}} value 16} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} real {fixed {fractwidth {attribs {resolve_type generated dependency complex_fractwidth format long minimum {} maximum {}} value 14} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cartesian_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cartesian_tuser} enabled {attribs {resolve_type generated dependency cart_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cart_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_phase_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_tuser} enabled {attribs {resolve_type generated dependency phase_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type generated dependency phase_offset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 22}"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="22"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
+          <PORTMAPS>
+            <PORTMAP PHYSICAL="m_axis_dout_tdata"/>
+            <PORTMAP PHYSICAL="m_axis_dout_tready"/>
+            <PORTMAP PHYSICAL="m_axis_dout_tuser"/>
+            <PORTMAP PHYSICAL="m_axis_dout_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

@@ -8042,3 +8042,9 @@ Caused by: java.net.SocketException: Connection reset
 15:40:03 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
 19:24:19 INFO  : Launching XSDB server: xsdb.bat -s C:/Xilinx/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
 19:24:21 INFO  : XSDB server has started successfully.
+16:19:35 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+16:19:37 INFO  : XSDB server has started successfully.
+16:19:37 INFO  : Processing command line option -hwspec D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+17:02:58 INFO  : The new hardware specification file contains the same information as the current specification file. No changes were done to the workspace.
+17:04:14 INFO  : BSP Project P/standalone_bsp_0 has been successfully migrated.
+17:04:25 INFO  : Refreshed build settings on project median_filter

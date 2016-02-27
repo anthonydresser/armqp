@@ -201,7 +201,7 @@ int zed_hdmi_display_init( zed_hdmi_display_t *top_pDemo )
 			&(pDemo->vdmacfg_left_read),           // pReadCfg
 			pDemo->dma_resolution,               // uVideoResolution
 			pDemo->dma_resolution,               // uStorageResolution
-			pDemo->uBaseAddr_MEM_LeftIn,      // uMemAddr
+			pDemo->uBaseAddr_MEM_LeftOut,      // uMemAddr
 			pDemo->uNumFrames_HdmiDisplay          // uNumFrames
 	);
 	xil_printf( "Video Left DMA (Output Side) Initialization Success\n\r" );
@@ -230,7 +230,7 @@ int zed_hdmi_display_init( zed_hdmi_display_t *top_pDemo )
 			&(pDemo->vdmacfg_right_read),           // pReadCfg
 			pDemo->dma_resolution,               // uVideoResolution
 			pDemo->dma_resolution,               // uStorageResolution
-			pDemo->uBaseAddr_MEM_RightIn,      // uMemAddr
+			pDemo->uBaseAddr_MEM_RightOut,      // uMemAddr
 			pDemo->uNumFrames_HdmiDisplay          // uNumFrames
 	);
 	xil_printf( "Video Right DMA (Output Side) Initialization Success\n\r" );
@@ -246,6 +246,65 @@ int zed_hdmi_display_init( zed_hdmi_display_t *top_pDemo )
 				pDemo->uNumFrames_HdmiDisplay          // uNumFrames
 		);
 	xil_printf( "Video Right DMA (Input Side) Initialization Success\n\r" );
+
+
+	// Initialize Left Delay Output Side of AXI VDMA
+	xil_printf( "Video Left Delay DMA (Output Side) Initialization ...\n\r" );
+	vfb_common_init(
+			pDemo->uDeviceId_VDMA_Delay_Left,     // uDeviceId
+			&(pDemo->vdma_delay_left)                    // pAxiVdma
+	);
+	vfb_tx_init(
+			&(pDemo->vdma_delay_left),                   // pAxiVdma
+			&(pDemo->vdmacfg_delay_left_read),           // pReadCfg
+			pDemo->dma_resolution,               // uVideoResolution
+			pDemo->dma_resolution,               // uStorageResolution
+			pDemo->uBaseAddr_MEM_delay_LeftOut,      // uMemAddr
+			pDemo->uNumFrames_HdmiDisplay          // uNumFrames
+	);
+	xil_printf( "Video Left Delay DMA (Output Side) Initialization Success\n\r" );
+
+	//Initialize Left Delay Input Side of AXI VDMA
+	xil_printf( "Video Left Delay DMA (Input Side) Initialization ...\n\r" );
+	vfb_rx_init(
+				&(pDemo->vdma_delay_left),                   // pAxiVdma
+				&(pDemo->vdmacfg_delay_left_write),           // pWriteCfg
+				pDemo->dma_resolution,               // uVideoResolution
+				pDemo->dma_resolution,               // uStorageResolution
+				pDemo->uBaseAddr_MEM_delay_LeftIn,      // uMemAddr
+				pDemo->uNumFrames_HdmiDisplay          // uNumFrames
+		);
+	xil_printf( "Video Left Delay DMA (Input Side) Initialization Success\n\r" );
+
+
+	// Initialize Right Delay Output Side of AXI VDMA
+	xil_printf( "Video Right Delay DMA (Output Side) Initialization ...\n\r" );
+	vfb_common_init(
+			pDemo->uDeviceId_VDMA_Delay_Right,     // uDeviceId
+			&(pDemo->vdma_delay_right)                    // pAxiVdma
+	);
+	vfb_tx_init(
+			&(pDemo->vdma_delay_right),                   // pAxiVdma
+			&(pDemo->vdmacfg_delay_right_read),           // pReadCfg
+			pDemo->dma_resolution,               // uVideoResolution
+			pDemo->dma_resolution,               // uStorageResolution
+			pDemo->uBaseAddr_MEM_delay_RightOut,      // uMemAddr
+			pDemo->uNumFrames_HdmiDisplay          // uNumFrames
+	);
+	xil_printf( "Video Right Delay DMA (Output Side) Initialization Success\n\r" );
+
+	//Initialize Right Delay Input Side of AXI VDMA
+	xil_printf( "Video Right Delay DMA (Input Side) Initialization ...\n\r" );
+	vfb_rx_init(
+				&(pDemo->vdma_delay_right),                   // pAxiVdma
+				&(pDemo->vdmacfg_delay_right_write),           // pWriteCfg
+				pDemo->dma_resolution,               // uVideoResolution
+				pDemo->dma_resolution,               // uStorageResolution
+				pDemo->uBaseAddr_MEM_delay_RightIn,      // uMemAddr
+				pDemo->uNumFrames_HdmiDisplay          // uNumFrames
+		);
+	xil_printf( "Video Right Delay DMA (Input Side) Initialization Success\n\r" );
+
 
 	// Configure VTC on output data path
 	xil_printf( "Video Timing Controller (generator) Initialization ...\n\r" );
@@ -276,10 +335,19 @@ void intrpt_uart(){
 	xil_printf("%c\n\r",ret);
 	switch (ret){
 	case 'd' : //Dump/Error Check
+		xil_printf("Left Main VDMA\n");
 		vfb_dump_registers( &(pDemo->vdma_left) );
 		vfb_check_errors( &(pDemo->vdma_left), 1);
+		xil_printf("Right Main VDMA\n");
 		vfb_dump_registers( &(pDemo->vdma_right) );
 		vfb_check_errors( &(pDemo->vdma_right), 1);
+
+		xil_printf("Left Delay VDMA\n");
+		vfb_dump_registers( &(pDemo->vdma_delay_left) );
+		vfb_check_errors( &(pDemo->vdma_delay_left), 1);
+		xil_printf("Right Delay VDMA\n");
+		vfb_dump_registers( &(pDemo->vdma_delay_right) );
+		vfb_check_errors( &(pDemo->vdma_delay_right), 1);
 		break;
 	case 'i'://Resend I2C HDMI Config
 		xil_printf("Reinitializing Monitor Link\n\r");

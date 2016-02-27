@@ -3,11 +3,11 @@ module mem_interface_testbench;
    parameter width = 1080;
    parameter height = 960;
 
-   reg clk, reset, AXIS_In_Valid, AXIS_Out_Ready;
+   reg clk, reset, AXIS_In_Valid, AXIS_Out_Ready, AXIS_In_tuser;
    reg [15:0] AXIS_In_Data;
    reg [$clog2(height):0] OutputY;
    reg [$clog2(width):0] OutputX;
-
+   
    wire AXIS_In_Ready;
    wire [15:0] AXIS_Out_Data;
    wire AXIS_Out_Valid;
@@ -23,8 +23,9 @@ module mem_interface_testbench;
       reset=1;
       AXIS_In_Valid=0;
       AXIS_In_Data=0;
-      Math_Y=0;
-      Math_X=0;
+      AXIS_In_tuser=0;
+      OutputY=0;
+      OutputX=0;
       AXIS_Out_Ready=0;
       #100;
       //Start Feeding in data from 'VDMA'
@@ -85,10 +86,10 @@ module mem_interface_testbench;
       //print column headers
       $fdisplay(fout, "Xin, Yin, Xout, Yout");
       
-      wait(OutputX==width&&OutputY==height);
+      wait(OutputX==width&&OutputY==1);
       
       $fclose(fout);
-      $stop//Stop simulation
+      $stop;//Stop simulation
    end
    
    //Data Capture Logic
@@ -100,16 +101,15 @@ module mem_interface_testbench;
      .AXIS_IN_tdata(AXIS_In_Data),
      .AXIS_IN_tready(AXIS_In_Ready),
      .AXIS_IN_tvalid(AXIS_In_Valid),
+     .AXIS_In_tuser(AXIS_In_tuser),
      // .AXIS_Out_tdata(AXIS_Out_Data),
      // .AXIS_Out_tready(AXIS_Out_Ready),
      // .AXIS_Out_tvalid(AXIS_Out_Valid),
      .clk(clk),
      .reset(reset),
-     
-     //Additional ports for export test...Lukas please adjust these
-     .Math_Valid(Math_Valid),
-     .MathX(MathX),
-     .MathY(MathY)
+     .addr_vld(Math_Valid),
+     .xOut(MathX),
+     .yOut(MathY)
      );
 
 endmodule

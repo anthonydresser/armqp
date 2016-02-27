@@ -60,13 +60,26 @@ int main()
 
     print("Hello World\n\r");
 
+	//Hardware Handle Setup
     project.uBaseAddr_IIC_HdmiOut = XPAR_ZED_HDMI_IIC_0_BASEADDR;
     project.uDeviceId_VTC_HdmioGenerator = XPAR_V_TC_0_DEVICE_ID;
 
+    //VDMA Handles
     project.uDeviceId_VDMA_Left = XPAR_AXI_VDMA_0_DEVICE_ID;
     project.uBaseAddr_MEM_LeftIn = XPAR_DDR_MEM_BASEADDR + 0x10000000;
+    project.uBaseAddr_MEM_LeftOut = XPAR_DDR_MEM_BASEADDR + 0x10000000;
     project.uDeviceId_VDMA_Right = XPAR_AXI_VDMA_1_DEVICE_ID;
-	project.uBaseAddr_MEM_RightIn = XPAR_DDR_MEM_BASEADDR + 0x10000000;
+	project.uBaseAddr_MEM_RightIn = XPAR_DDR_MEM_BASEADDR + 0x11000000;
+	project.uBaseAddr_MEM_RightOut = XPAR_DDR_MEM_BASEADDR + 0x11000000;
+
+	//VDMA Delay Handles
+	project.uDeviceId_VDMA_Delay_Left = XPAR_AXI_VDMA_3_DEVICE_ID;
+	project.uBaseAddr_MEM_delay_LeftIn = XPAR_DDR_MEM_BASEADDR + 0x13000000;
+	project.uBaseAddr_MEM_delay_LeftOut = XPAR_DDR_MEM_BASEADDR + 0x13000000;
+	project.uDeviceId_VDMA_Delay_Right = XPAR_AXI_VDMA_2_DEVICE_ID;
+	project.uBaseAddr_MEM_delay_RightIn = XPAR_DDR_MEM_BASEADDR + 0x12000000;
+	project.uBaseAddr_MEM_delay_RightOut = XPAR_DDR_MEM_BASEADDR + 0x12000000;
+
 	project.uDeviceId_uart = XPAR_PS7_UART_1_DEVICE_ID;
 	project.uBaseAddr_uart = XPAR_PS7_UART_1_BASEADDR;
 
