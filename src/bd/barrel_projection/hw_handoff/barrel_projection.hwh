@@ -1,21 +1,35 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Feb 26 17:44:08 2016" VIVADOVERSION="2015.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Feb 28 03:06:22 2016" VIVADOVERSION="2015.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="em.avnet.com:zed:part0:1.3" DEVICE="7z020" NAME="barrel_projection" PACKAGE="clg484" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="barrelMath_0" PORT="reset"/>
-        <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="reset"/>
-      </CONNECTIONS>
-    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="AXIS_In_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="I" NAME="AXIS_In_tuser" SIGIS="undef"/>
+    <PORT DIR="I" NAME="AXIS_In_tvalid" SIGIS="undef"/>
+    <PORT DIR="O" NAME="AXIS_In_tready" SIGIS="undef"/>
+    <PORT DIR="O" LEFT="15" NAME="AXIS_Out_tdata" RIGHT="0" SIGIS="undef"/>
+    <PORT DIR="O" NAME="AXIS_Out_tlast" SIGIS="undef"/>
+    <PORT DIR="O" NAME="AXIS_Out_tuser" SIGIS="undef"/>
+    <PORT DIR="O" NAME="AXIS_Out_tvalid" SIGIS="undef"/>
+    <PORT DIR="I" NAME="AXIS_Out_tready" SIGIS="undef"/>
     <PORT CLKFREQUENCY="148500000" DIR="I" NAME="clk" SIGIS="clk" SIGNAME="External_Ports_clk">
       <CONNECTIONS>
         <CONNECTION INSTANCE="cordic_1" PORT="aclk"/>
         <CONNECTION INSTANCE="cordic_0" PORT="aclk"/>
         <CONNECTION INSTANCE="barrelMath_0" PORT="clk"/>
         <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="clk"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="reset" SIGIS="rst" SIGNAME="External_Ports_reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="barrelMath_0" PORT="reset"/>
+        <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="addr_vld" SIGIS="undef" SIGNAME="barrelMath_0_addr_vld">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="barrelMath_0" PORT="addr_vld"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="11" NAME="xOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_xOut">
@@ -28,20 +42,6 @@
         <CONNECTION INSTANCE="barrelMath_0" PORT="yOut"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="addr_vld" SIGIS="undef" SIGNAME="barrelMath_0_addr_vld">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="barrelMath_0" PORT="addr_vld"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="15" NAME="AXIS_In_tdata" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="I" NAME="AXIS_In_tuser" SIGIS="undef"/>
-    <PORT DIR="I" NAME="AXIS_In_tvalid" SIGIS="undef"/>
-    <PORT DIR="O" NAME="AXIS_In_tready" SIGIS="undef"/>
-    <PORT DIR="O" LEFT="15" NAME="AXIS_Out_tdata" RIGHT="0" SIGIS="undef"/>
-    <PORT DIR="O" NAME="AXIS_Out_tlast" SIGIS="undef"/>
-    <PORT DIR="O" NAME="AXIS_Out_tuser" SIGIS="undef"/>
-    <PORT DIR="O" NAME="AXIS_Out_tvalid" SIGIS="undef"/>
-    <PORT DIR="I" NAME="AXIS_Out_tready" SIGIS="undef"/>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -173,14 +173,14 @@
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="xOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_xOut">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_Y"/>
             <CONNECTION INSTANCE="External_Ports" PORT="xOut"/>
+            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_Y"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="11" NAME="yOut" RIGHT="0" SIGIS="undef" SIGNAME="barrelMath_0_yOut">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_X"/>
             <CONNECTION INSTANCE="External_Ports" PORT="yOut"/>
+            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_X"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="mem_ready" SIGIS="undef" SIGNAME="barrel_mem_interface_0_Math_Ready">
@@ -200,24 +200,24 @@
         </PORT>
         <PORT DIR="O" NAME="addr_vld" SIGIS="undef" SIGNAME="barrelMath_0_addr_vld">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_Vaild"/>
             <CONNECTION INSTANCE="External_Ports" PORT="addr_vld"/>
+            <CONNECTION INSTANCE="barrel_mem_interface_0" PORT="Math_Vaild"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="barrelMath_0_tIn" NAME="tIn" TYPE="INITIATOR">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
-          <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PORTMAPS>
             <PORTMAP PHYSICAL="tIn"/>
@@ -227,17 +227,17 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="cordic_0_M_AXIS_DOUT" NAME="tOut" TYPE="TARGET">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
-          <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_real {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value real} enabled {attribs {resolve_type generated dependency polar_mag_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_mag_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_mag_fractwidth format long minimum {} maximum {}} value 14} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}} field_phase {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase} enabled {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency polar_phase_width format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type generated dependency polar_phase_offset format long minimum {} maximum {}} value 16} real {fixed {fractwidth {attribs {resolve_type generated dependency polar_phase_fractwidth format long minimum {} maximum {}} value 13} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cartesian_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cartesian_tuser} enabled {attribs {resolve_type generated dependency cart_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cart_width format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_phase_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_tuser} enabled {attribs {resolve_type generated dependency phase_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency phase_offset format long minimum {} maximum {}} value 22} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 22}"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PORTMAPS>
             <PORTMAP PHYSICAL="tOut"/>
             <PORTMAP PHYSICAL="tOut_vld"/>
@@ -246,16 +246,16 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="barrelMath_0_rCin" NAME="rCin" TYPE="INITIATOR">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
-          <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PORTMAPS>
             <PORTMAP PHYSICAL="rCIn"/>
@@ -265,16 +265,16 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="barrelMath_0_rPin" NAME="rPin" TYPE="INITIATOR">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
-          <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PORTMAPS>
             <PORTMAP PHYSICAL="rPIn"/>
@@ -284,17 +284,17 @@
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="cordic_1_M_AXIS_DOUT" NAME="rOut" TYPE="TARGET">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
-          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
-          <PARAMETER NAME="PHASE" VALUE="0.000"/>
-          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
           <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 32} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type generated dependency complex_width format long minimum {} maximum {}} value 16} stride {attribs {resolve_type generated dependency complex_stride format long minimum {} maximum {}} value 16} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true} real {fixed {fractwidth {attribs {resolve_type generated dependency complex_fractwidth format long minimum {} maximum {}} value 14} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}} TDATA_WIDTH 32 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_cartesian_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value cartesian_tuser} enabled {attribs {resolve_type generated dependency cart_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency cart_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} field_phase_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value phase_tuser} enabled {attribs {resolve_type generated dependency phase_enabled format bool minimum {} maximum {}} value true} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency phase_width format long minimum {} maximum {}} value 22} bitoffset {attribs {resolve_type generated dependency phase_offset format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}} TUSER_WIDTH 22}"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="barrel_projection_clk"/>
+          <PARAMETER NAME="PHASE" VALUE="0.000"/>
           <PORTMAPS>
             <PORTMAP PHYSICAL="rOut"/>
             <PORTMAP PHYSICAL="rOut_vld"/>
@@ -303,7 +303,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE FULLNAME="/barrel_mem_interface_0" HWVERSION="1.4" INSTANCE="barrel_mem_interface_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="barrel_mem_interface" VLNV="wpi.edu:user:barrel_mem_interface:1.4">
+    <MODULE FULLNAME="/barrel_mem_interface_0" HWVERSION="1.5" INSTANCE="barrel_mem_interface_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="barrel_mem_interface" VLNV="wpi.edu:user:barrel_mem_interface:1.5">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="buf_capacity" VALUE="67584"/>

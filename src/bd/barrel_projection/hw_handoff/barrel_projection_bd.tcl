@@ -130,7 +130,7 @@ proc create_root_design { parentCell } {
   set barrelMath_0 [ create_bd_cell -type ip -vlnv armqp:user:barrelMath:1.0 barrelMath_0 ]
 
   # Create instance: barrel_mem_interface_0, and set properties
-  set barrel_mem_interface_0 [ create_bd_cell -type ip -vlnv wpi.edu:user:barrel_mem_interface:1.4 barrel_mem_interface_0 ]
+  set barrel_mem_interface_0 [ create_bd_cell -type ip -vlnv wpi.edu:user:barrel_mem_interface:1.5 barrel_mem_interface_0 ]
 
   # Create instance: cordic_0, and set properties
   set cordic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:cordic:6.0 cordic_0 ]

@@ -47,7 +47,7 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: wpi.edu:user:barrel_mem_interface:1.4
+// IP VLNV: wpi.edu:user:barrel_mem_interface:1.5
 // IP Revision: 1
 
 (* X_CORE_INFO = "barrel_mem_interface,Vivado 2015.2" *)

@@ -7,7 +7,7 @@
   <spirit:componentInstances>
     <spirit:componentInstance>
       <spirit:instanceName>barrel_projection_barrel_mem_interface_0_0</spirit:instanceName>
-      <spirit:componentRef spirit:vendor="wpi.edu" spirit:library="user" spirit:name="barrel_mem_interface" spirit:version="1.4"/>
+      <spirit:componentRef spirit:vendor="wpi.edu" spirit:library="user" spirit:name="barrel_mem_interface" spirit:version="1.5"/>
       <spirit:configurableElementValues>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.buf_capacity">67584</spirit:configurableElementValue>
         <spirit:configurableElementValue spirit:referenceId="PARAM_VALUE.width">1080</spirit:configurableElementValue>

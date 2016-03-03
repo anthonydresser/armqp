@@ -46,7 +46,7 @@
 // 
 // DO NOT MODIFY THIS FILE.
 
-// IP VLNV: wpi.edu:user:barrel_mem_interface:1.4
+// IP VLNV: wpi.edu:user:barrel_mem_interface:1.5
 // IP Revision: 1
 
 // The following must be inserted into your Verilog file for this
