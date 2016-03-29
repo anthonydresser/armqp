@@ -45,11 +45,92 @@ module barrelMath(
 
 
 //Input Coordinate register
-reg signed [11:0] xIn = 12'sd0 - 12'sd540;
-reg signed [11:0] yIn = 12'sd480;
+reg signed [12:0] xIn = 13'sd0 - 13'sd540;
+reg signed [12:0] yIn = 13'sd480;
 wire rIn_ready;
 assign rIn_ready = rPin_tready & rCin_tready;
+reg [13:0] math_vld;
 
+//Math valid daisy chain
+always @(posedge clk)
+	begin
+		if(reset) begin
+			math_vld <= 0;
+		end
+		else if (tOut_tvalid && rCin_tready) begin
+			if(tOut_tvalid)
+				math_vld[0] <= 1'b1;
+			else 
+				math_vld[0] <= 1'b0;
+			if(math_vld[0])
+				math_vld[1] <= 1'b1;
+			else 
+				math_vld[1] <= 1'b0;
+			if(math_vld[1])
+				math_vld[2] <= 1'b1;
+			else 
+				math_vld[2] <= 1'b0;
+			if(math_vld[2])
+				math_vld[3] <= 1'b1;
+			else 
+				math_vld[3] <= 1'b0;
+			if(math_vld[3])
+				math_vld[4] <= 1'b1;
+			else 
+				math_vld[4] <= 1'b0;
+			if(math_vld[4])
+				math_vld[5] <= 1'b1;
+			else 
+				math_vld[5] <= 1'b0;
+			if(math_vld[5])
+				math_vld[6] <= 1'b1;
+			else 
+				math_vld[6] <= 1'b0;
+			if(math_vld[6])
+				math_vld[7] <= 1'b1;
+			else 
+				math_vld[7] <= 1'b0;
+			if(math_vld[7])
+				math_vld[8] <= 1'b1;
+			else 
+				math_vld[8] <= 1'b0;
+			if(math_vld[8])
+				math_vld[9] <= 1'b1;
+			else 
+				math_vld[9] <= 1'b0;
+			if(math_vld[9])
+				math_vld[10] <= 1'b1;
+			else 
+				math_vld[10] <= 1'b0;
+			if(math_vld[10])
+				math_vld[11] <= 1'b1;
+			else 
+				math_vld[11] <= 1'b0;
+			if(math_vld[11])
+				math_vld[12] <= 1'b1;
+			else 
+				math_vld[12] <= 1'b0;
+			if(math_vld[12])
+				math_vld[13] <= 1'b1;
+			else 
+				math_vld[13] <= 1'b0;
+			if(math_vld[13])begin
+					rPin_tvalid <= 1'b1;
+					rCin_tvalid <= 1'b1;
+				end
+			else begin
+				rPin_tvalid <= 1'b0;
+				rCin_tvalid <= 1'b0;
+				end
+		end
+		else begin
+			rPin_tvalid <= 1'b0;
+			rCin_tvalid <= 1'b0;
+			math_vld <= math_vld;
+			rPin_tvalid <= 0;
+			rCin_tvalid <= 0;
+		end
+	end
 
 //Output x,y and increment
 always @(posedge clk)
@@ -68,9 +149,9 @@ always @(posedge clk)
                     //xIn <= xIn + 1'b1;
                     if (xIn >= 539)
                         begin
-                            xIn <= -12'sd540;
-                            if (yIn <= -12'sd479)
-                                yIn <= 12'sd480;
+                            xIn <= -13'sd540;
+                            if (yIn <= -13'sd479)
+                                yIn <= 13'sd480;
                             else
                                 yIn <= yIn - 1'b1;
                        end
@@ -87,6 +168,7 @@ reg [15:0] phase;
 reg [15:0] radius;
 
 //Get output
+//s1
 always @(posedge clk)
     begin
         if(reset) begin
@@ -111,7 +193,8 @@ always @(posedge clk)
 //ALL fixed point using Q4 unless otherwise noted
 
 //calc rsq
-reg [15:0] rsq1, ph1, ra1;
+//s2
+reg [31:0] rsq1, ph1, ra1;
 always @(posedge clk )
     begin
         if(reset) begin
@@ -121,13 +204,14 @@ always @(posedge clk )
         end
         else
             if(tOut_tvalid  & rIn_ready)begin
-                rsq1 <= (10 * radius * radius) >> 2;   //Q4
+                rsq1 <= (10 * radius * radius);   //Q6
                 ph1 <= phase;
                 ra1 <= radius;
             end
     end
     
-reg [15:0] rsq2, ph2, ra2;
+//s3
+reg [31:0] rsq2, ph2, ra2;
 always @(posedge clk)
         begin
             if(reset) begin
@@ -137,14 +221,15 @@ always @(posedge clk)
             end
             else
                 if(tOut_tvalid  & rIn_ready)begin
-                    rsq2 <= rsq1 / 16'd522000;
+                    rsq2 <= rsq1 / 32'd522000;	//Q6
                     ph2 <= ph1;
                     ra2 <= ra1;
                 end
         end
-        
-reg [15:0] floor;
-reg [15:0] rsq3, ph3, ra3;
+
+//s4		
+reg [31:0] floor;
+reg [31:0] rsq3, ph3, ra3;
 always @(posedge clk)
     begin
         if (reset) begin
@@ -156,15 +241,16 @@ always @(posedge clk)
         else
             if(tOut_tvalid  & rIn_ready)
             begin
-                floor <= {rsq2[15:4], 4'b0};
-                rsq3 <= rsq2;
+                floor <= {rsq2[31:6], 6'b0};	//Q6
+                rsq3 <= rsq2;	//Q6
                 ph3 <= ph2;
                 ra3 <= ra2;
             end
     end
 
-reg [15:0] floor2;
-reg [15:0] rsq4,  ph4, ra4;
+//s4
+reg [31:0] floor2;
+reg [31:0] rsq4,  ph4, ra4;
 always @(posedge clk)
     begin
         if (reset) begin
@@ -176,15 +262,16 @@ always @(posedge clk)
         else
             if(tOut_tvalid  & rIn_ready)
             begin
-                floor2 <= (floor > 16'd160)? 16'd160 : floor;
-                rsq4 <= rsq3;
+                floor2 <= (floor > 16'd640)? 16'd640 : floor;	//Q6
+                rsq4 <= rsq3;	//Q6
                 ph4 <= ph3;
                 ra4 <= ra3;
             end
     end
 
-reg [15:0] floor3;
-reg [15:0] rsq5, ph5, ra5;
+//s5
+reg [31:0] floor3;
+reg [31:0] rsq5, ph5, ra5;
 always @(posedge clk)
     begin
         if (reset) begin
@@ -196,15 +283,16 @@ always @(posedge clk)
         else
             if(tOut_tvalid  & rIn_ready)
             begin
-                floor3 <= floor2;
-                rsq5 <= rsq4;
+                floor3 <= floor2;	//Q6
+                rsq5 <= rsq4;	//Q6
                 ph5 <= ph4;
                 ra5 <= ra4;
             end
     end
-    
-reg [15:0] t;
-reg [15:0] k, ph6, ra6;
+
+//s6    
+reg [31:0] t;
+reg [31:0] k, ph6, ra6;
 always @(posedge clk)
     begin
         if (reset) begin
@@ -216,16 +304,17 @@ always @(posedge clk)
         else
             if(tOut_tvalid  & rIn_ready)
             begin
-                t <= rsq5 - floor3; //Q4
-                k <= floor3 >> 4;   //Q0
+                t <= rsq5 - floor3; //Q6
+                k <= floor3 >> 6;   //Q0
                 ph6 <= ph5;
                 ra6 <= ra5;
             end
     end
-    
+ 
+//s7 
 //find params
-reg signed [15:0] m0, m1, p0, p1,  omt;
-reg[15:0] ph7, ra7, t2;
+reg signed [31:0] m0, m1, p0, p1,  omt;
+reg[31:0] ph7, ra7, t2;
 always @(posedge clk)
     begin
     if (reset) begin
@@ -240,11 +329,11 @@ always @(posedge clk)
     end
     else
         if(tOut_tvalid  & rIn_ready) begin
-            t2 <= t;    //Q4
-            omt <= 16'b10000 - t;   //2's comp Q4
+            t2 <= t;    //Q6
+            omt <= 16'b1000000 - t;   //2's comp Q6
             ph7 <= ph6;
             ra7 <= ra6;
-            case (t)
+            case (k)
                //These constants are Q10	2's comp
                     16'd0: begin
                             p0 <= 16'd1024;
@@ -316,9 +405,10 @@ always @(posedge clk)
              end
     end
 
+	//s8-14
 //find res
-reg[15:0] ph8, ra8, ph9, ra9, ph10, ra10, ph11, ra11, ph12, ra12, ph13, ph14;
-reg [15:0] p0_1;
+reg[31:0] ph8, ra8, ph9, ra9, ph10, ra10, ph11, ra11, ph12, ra12, ph13, ph14;
+reg [31:0] p0_1, p1_1;
 reg [31:0] res1, res1_2, res1_3, res1_4, res1_5, res1_6;
 reg [31:0]  res2, res2_2, res2_3, res2_4, res2_5, res2_6;
 reg [31:0] res3, res3_3, res3_4, res3_6, res4, res4_6, res5, rad, rad1;
@@ -337,6 +427,7 @@ always @(posedge clk) begin
         ra11 <= 0;
         ra12 <= 0;
         p0_1 <= 0;
+		p1_1 <=0;
         res1 <= 0;
         res1_2 <= 0;
         res1_3 <= 0;
@@ -361,38 +452,39 @@ always @(posedge clk) begin
     end
     else
         if(tOut_tvalid  & rIn_ready) begin
-            res1 <= 16'b10000 + (16'd2 * t2);  //Q4
-            res1_2 <= m0 * t2; //Q14
-            res1_3 <= omt * omt;   //Q8
-            res1_4 <= 16'd10000 + (16'd2 * omt); //Q4
-            res1_5 <= m1 * omt; //Q14
-            res1_6 <= t2 * t2; //Q8
+            res1 <= 16'b1000000 + (16'd2 * t2);  //Q6
+            res1_2 <= (m0 * t2); //Q16
+            res1_3 <= (omt * omt) >>> 4;   //Q8
+            res1_4 <= 16'b1000000 + (16'd2 * omt); //Q6	//b NOT d
+            res1_5 <= (m1 * omt) >>> 2; //Q14
+            res1_6 <= (t2 * t2) >>> 4; //Q8
             ph8 <= ph7;
             ra8 <= ra7;
             p0_1 <= p0;
+			p1_1 <= p1;
             
-            res2 <= p0_1 * res1;  //Q14   carry p0
-            res2_2 <= res1_2; //Q14
+            res2 <= (p0_1 * res1);  //Q16   carry p0
+            res2_2 <= res1_2; //Q16
             res2_3 <= res1_3; //Q8
-            res2_4 <= res1_4 * p0_1;  //Q14 carry p0
+            res2_4 <= (res1_4 * p1_1) >>> 2;  //Q14 carry p0
             res2_5 <= res1_5;   //Q14
             res2_6 <= res1_6;    //Q8
             ph9 <= ph8;
             ra9 <= ra8;
             
-            res3 <= (res2 + res2_2)>>>4; //Q10
-            res3_3 <= res2_3 >>> 4;  //Q4
+            res3 <= (res2 + res2_2)>>>6; //Q10
+            res3_3 <= res2_3 >>> 2;  //Q6
             res3_4 <= (res2_4 - res2_5) >>> 4;  //Q10
-            res3_6 <= res2_6 >>> 4; //Q4
+            res3_6 <= res2_6 >>> 2; //Q6
             ph10 <= ph9;
             ra10 <= ra9;
             
-            res4 <= res3 * res3_3;   //Q14
-            res4_6 <= res3_6 * res3_4;   //Q14
+            res4 <= res3 * res3_3;   //Q16
+            res4_6 <= res3_6 * res3_4;   //Q16
             ph11 <= ph10;
             ra11 <= ra10;
             
-            res5 <= res4 + res4_6;   //Q14
+            res5 <= (res4 + res4_6)>>>2;   //Q14
             ph12 <= ph11;
             ra12 <= ra11;
             
@@ -404,24 +496,23 @@ always @(posedge clk) begin
         end
 end
 
+//s15 (rP/C vld)
 //Output to rOut_tdata
 always @(posedge clk)begin
     if(reset) begin
-        rPin_tvalid <= 0;
-        rCin_tvalid <= 0;
+
         rCin_tdata <= 0;
         rPin_tdata <= 0;
     end
     else begin
        if (tOut_tvalid  & rIn_ready) begin
-            rPin_tvalid <= 1'b1;
-            rCin_tvalid <= 1'b1;
+            
             rCin_tdata <= {16'b0, rad1[15:0]};
             rPin_tdata <= ph14;
             end
        else begin
-            rPin_tvalid <= 1'b0;
-            rCin_tvalid <= 1'b0;
+            rCin_tdata <= 0;
+			rPin_tdata <= 0;
             end
    end
 end
@@ -441,8 +532,8 @@ always  @(posedge clk)
         else begin
             if (rOut_tvalid && mem_ready)
                 begin
-                    xOut <= rOut_tdata[15:3] + 540;//(rOut_tdata[15]) ? 0 : (rOut_tdata[15:4] > 1079) ?  1079 :  rOut_tdata[15:4] ;
-                    yOut <= 960 - rOut_tdata[31:19] + 480;//(rOut_tdata[31]) ? 0 : (rOut_tdata[31:20] > 959) ? 959 : rOut_tdata[31:20] ;
+                    xOut <= rOut_tdata[15:4] + 540;//(rOut_tdata[15]) ? 0 : (rOut_tdata[15:4] > 1079) ?  1079 :  rOut_tdata[15:4] ;
+                    yOut <= ((rOut_tdata[31:20] * 12'b111111111111)+ 480);//(rOut_tdata[31]) ? 0 : (rOut_tdata[31:20] > 959) ? 959 : rOut_tdata[31:20] ;
                     addr_vld <= 1;
                 end
            else begin
