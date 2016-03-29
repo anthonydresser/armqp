@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Mar 03 14:30:30 2016
+# Process ID: 8608
+# Log file: D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/synth_1/math_tester.vds
+# Journal file: D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source math_tester.tcl -notrace
+Command: synth_design -top math_tester -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+WARNING: [Synth 8-2292] literal value truncated to fit in 16 bits [D:/vivadoprojects/armqp/src/hdl/barrel_math_hdl.v:224]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 278.730 ; gain = 96.145
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'math_tester' [D:/vivadoprojects/armqp/src/hdl/math_tester.v:23]
+INFO: [Synth 8-638] synthesizing module 'barrelMath' [D:/vivadoprojects/armqp/src/hdl/barrel_math_hdl.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/vivadoprojects/armqp/src/hdl/barrel_math_hdl.v:336]
+INFO: [Synth 8-256] done synthesizing module 'barrelMath' (1#1) [D:/vivadoprojects/armqp/src/hdl/barrel_math_hdl.v:22]
+INFO: [Synth 8-638] synthesizing module 'rotate' [D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/synth_1/.Xil/Vivado-8608-Andrew-PC/realtime/rotate_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'rotate' (2#1) [D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/synth_1/.Xil/Vivado-8608-Andrew-PC/realtime/rotate_stub.v:7]
+INFO: [Synth 8-638] synthesizing module 'translate' [D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/synth_1/.Xil/Vivado-8608-Andrew-PC/realtime/translate_stub.v:7]
+INFO: [Synth 8-256] done synthesizing module 'translate' (3#1) [D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/synth_1/.Xil/Vivado-8608-Andrew-PC/realtime/translate_stub.v:7]
+WARNING: [Synth 8-85] always block has no event control specified [D:/vivadoprojects/armqp/src/hdl/math_tester.v:106]
+ERROR: [Synth 8-146] cannot resolve hierarchical name [D:/vivadoprojects/armqp/src/hdl/math_tester.v:121]
+ERROR: [Synth 8-285] failed synthesizing module 'math_tester' [D:/vivadoprojects/armqp/src/hdl/math_tester.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 297.602 ; gain = 115.016
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+10 Infos, 2 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 03 14:30:38 2016...

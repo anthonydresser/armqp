@@ -75,6 +75,8 @@ struct struct_zed_hdmi_display_t
    Xuint32 uDeviceId_VTC_HdmioGenerator;
    Xuint32 uDeviceId_VDMA_Left;
    Xuint32 uDeviceId_VDMA_Right;
+   Xuint32 uDeviceId_VDMA_Delay_Left;
+   Xuint32 uDeviceId_VDMA_Delay_Right;
    Xuint32 uDeviceId_uart;
 
    XUartPs uart;
@@ -107,6 +109,18 @@ struct struct_zed_hdmi_display_t
    XAxiVdma_DmaSetup vdmacfg_right_write;
    Xuint32 uBaseAddr_MEM_RightIn;
    Xuint32 uBaseAddr_MEM_RightOut;
+
+   XAxiVdma vdma_delay_left;
+   XAxiVdma_DmaSetup vdmacfg_delay_left_read;
+   XAxiVdma_DmaSetup vdmacfg_delay_left_write;
+   Xuint32 uBaseAddr_MEM_delay_LeftIn;
+   Xuint32 uBaseAddr_MEM_delay_LeftOut;
+
+   XAxiVdma vdma_delay_right;
+   XAxiVdma_DmaSetup vdmacfg_delay_right_read;
+   XAxiVdma_DmaSetup vdmacfg_delay_right_write;
+   Xuint32 uBaseAddr_MEM_delay_RightIn;
+   Xuint32 uBaseAddr_MEM_delay_RightOut;
 
    Xuint32 uNumFrames_HdmiDisplay;
 
