@@ -14,6 +14,7 @@ module mem_interface_testbench;
    
    wire Math_Valid;
    wire [11:0] MathX, MathY;
+   wire memReady;
    
    integer fout;
 
@@ -21,22 +22,23 @@ module mem_interface_testbench;
       //Hold Reset for 100ns
       clk=0;
       reset=1;
-      AXIS_In_Valid=0;
-      AXIS_In_Data=0;
-      Math_Y=0;
-      Math_X=0;
-      AXIS_Out_Ready=0;
+      AXIS_In_Valid<=0;
+      AXIS_In_Data<=0;
+//      MathY=0;
+//      MathX=0;
+      AXIS_Out_Ready<=0;
       #100;
       //Start Feeding in data from 'VDMA'
       reset=0;
-      AXIS_In_Valid=1;
+      AXIS_In_Valid<=1;
    end
 
 
 
    //clk generation: 148.5MHz (6.7ns)
    always begin
-      #6.7 clk = ~clk;
+      #6.7;
+      clk = ~clk;
    end
    
    //Counter reference
@@ -46,8 +48,8 @@ module mem_interface_testbench;
             if(reset)
                 OutputX<=0;
             else
-            if(Math_Valid)
-                if(OutputX==width)
+            if(Math_Valid&&memReady)
+                if(OutputX==width-1)
                     OutputX<=0;
                 else
                     OutputX<=OutputX+1'b1;
@@ -61,8 +63,8 @@ module mem_interface_testbench;
             if(reset)
                 OutputY<=0;
             else
-            if(Math_Valid&&OutputX==width)
-                if(OutputY==height)
+            if(Math_Valid&&memReady&&OutputX==width-1)
+                if(OutputY==height-1)
                     OutputY<=0;
                 else
                     OutputY<=OutputY+1'b1;
@@ -80,36 +82,38 @@ module mem_interface_testbench;
 
 //Data Capture & Testing
    initial begin
-      //open file descriptor
+  //    open file descriptor
       fout = $fopen("output.csv", "w");
-      //print column headers
+    //  print column headers
       $fdisplay(fout, "Xin, Yin, Xout, Yout");
       
-      wait(OutputX==width&&OutputY==height);
+      wait(OutputX==width-1&&OutputY==height-1);
       
       $fclose(fout);
-      $stop//Stop simulation
+      $stop;//Stop simulation
    end
    
-   //Data Capture Logic
+  // Data Capture Logic
    always @(posedge clk)
-      if(Math_Valid)//Discard invalid samples
+      if(Math_Valid&&memReady)//Discard invalid samples
          $fdisplay(fout, "%d, %d, %d, %d", OutputX, OutputY, MathX, MathY);
    
-   barrel_projection_wrapper UUT(
+   barrel_proj_wrapper UUT(
      .AXIS_IN_tdata(AXIS_In_Data),
      .AXIS_IN_tready(AXIS_In_Ready),
      .AXIS_IN_tvalid(AXIS_In_Valid),
-     // .AXIS_Out_tdata(AXIS_Out_Data),
-     // .AXIS_Out_tready(AXIS_Out_Ready),
-     // .AXIS_Out_tvalid(AXIS_Out_Valid),
+      .AXIS_Out_tdata(AXIS_Out_Data),
+      .AXIS_Out_tready(AXIS_Out_Ready),
+      .AXIS_Out_tvalid(AXIS_Out_Valid),
      .clk(clk),
      .reset(reset),
+     .memReady(memReady),
      
      //Additional ports for export test...Lukas please adjust these
      .Math_Valid(Math_Valid),
      .MathX(MathX),
      .MathY(MathY)
+     
      );
 
 endmodule
