@@ -22,13 +22,18 @@
 
 module math_tester();
     
+<<<<<<< HEAD
     parameter height=1080;
     parameter width=960;
+=======
+
+>>>>>>> 7f9b013335902d770ac0ae33ea8ab76c18d39dc9
     reg clk;
     reg reset;
     
     //for debugging only
     real fixbuff;
+<<<<<<< HEAD
     integer f_polarCoordsFixedRadius;
     integer x,y,status;
     reg [15:0] t_polarRadius [0:height-1][0:width-1];
@@ -36,6 +41,9 @@ module math_tester();
     reg [15:0] TranslateValidDelay;
     reg signed [12:0] thisX, thisY;
     reg [15:0] thisLoad;
+=======
+
+>>>>>>> 7f9b013335902d770ac0ae33ea8ab76c18d39dc9
     
     //Math Unique I/O
     wire [11:0] xOut, yOut;
@@ -88,6 +96,7 @@ module math_tester();
         .addr_vld(addr_vld)
     );
     
+<<<<<<< HEAD
 //    rotate rot_inst(
 //        .aclk(clk),
 //        .s_axis_phase_tvalid(rot_s_axis_phase_tvalid),
@@ -100,6 +109,21 @@ module math_tester();
 //        .m_axis_dout_tready(rot_m_axis_dout_tready),
 //        .m_axis_dout_tdata(rot_m_axis_dout_tdata)
 //    );
+=======
+
+    rotate rot_inst(
+        .aclk(clk),
+        .s_axis_phase_tvalid(rot_s_axis_phase_tvalid),
+        .s_axis_phase_tready(rot_s_axis_phase_tready),
+        .s_axis_phase_tdata(rot_s_axis_phase_tdata),
+        .s_axis_cartesian_tvalid(rot_s_axis_cartesian_tvalid),
+        .s_axis_cartesian_tready(rot_s_axis_cartesian_tready),
+        .s_axis_cartesian_tdata(rot_s_axis_cartesian_tdata),
+        .m_axis_dout_tvalid(rot_m_axis_dout_tvalid),
+        .m_axis_dout_tready(rot_m_axis_dout_tready),
+        .m_axis_dout_tdata(rot_m_axis_dout_tdata)
+    );
+>>>>>>> 7f9b013335902d770ac0ae33ea8ab76c18d39dc9
       
 //    translate tran_inst(
 //        .aclk(clk),
@@ -116,6 +140,7 @@ module math_tester();
       #6.7 clk = ~clk;
     end
     
+<<<<<<< HEAD
     //Load up radius table
     initial begin      
         f_polarCoordsFixedRadius = $fopen("polarCoordsFixedRadius.csv", "r");
@@ -134,6 +159,9 @@ module math_tester();
     end
     
     //Do initial stimulus
+=======
+
+>>>>>>> 7f9b013335902d770ac0ae33ea8ab76c18d39dc9
     initial begin
         clk=0;
         reset=1;
@@ -153,16 +181,21 @@ module math_tester();
         mem_ready=1;
     end
     
+<<<<<<< HEAD
     //Monitoring tools
+=======
+
+>>>>>>> 7f9b013335902d770ac0ae33ea8ab76c18d39dc9
     always @(posedge clk) begin
         if(math_inst.tOut_tvalid && math_inst.rCin_tready) begin
             $display("------------------------");
             $display("Head of Pipe is at x=%0d, y=%0d", math_inst.xIn, math_inst.yIn);
             
+
             fixbuff = (math_inst.rsq2[14:0] / (2**4)); //Signed Fixed point Q4 to real number
             if(math_inst.rsq2[15]==1) fixbuff = -fixbuff;
             $display("rsq2=%f", fixbuff);
-            
+
             fixbuff = (math_inst.phase[14:0] / (2**3));//Signed Fixed point Q3 to real number
             if(math_inst.phase[15]==1) fixbuff = -fixbuff;
             $display("phase=%f", fixbuff);
@@ -175,6 +208,7 @@ module math_tester();
     end
     
 
+<<<<<<< HEAD
     
     //CORDIC Model for Translate (Cartesian to Polar)
     always @(posedge clk) begin
@@ -191,4 +225,6 @@ module math_tester();
             tran_m_axis_dout_tdata=TranslateDataDelay[255:240];
         end
     end
+=======
+>>>>>>> 7f9b013335902d770ac0ae33ea8ab76c18d39dc9
 endmodule
