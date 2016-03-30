@@ -8048,3 +8048,20 @@ Caused by: java.net.SocketException: Connection reset
 17:02:58 INFO  : The new hardware specification file contains the same information as the current specification file. No changes were done to the workspace.
 17:04:14 INFO  : BSP Project P/standalone_bsp_0 has been successfully migrated.
 17:04:25 INFO  : Refreshed build settings on project median_filter
+13:02:26 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+13:02:29 INFO  : XSDB server has started successfully.
+13:02:30 INFO  : Processing command line option -hwspec D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+13:02:32 INFO  : Checking for hwspec changes in the project top_level_hw_platform_1.
+14:31:04 INFO  : Launching XSDB server: xsdb.bat -s C:/XilinxVivado/SDK/2015.2/scripts/xsdb/xsdb/xsdb-server.tcl
+14:31:06 INFO  : XSDB server has started successfully.
+14:31:07 INFO  : Processing command line option -hwspec D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+14:31:08 INFO  : Checking for hwspec changes in the project top_level_hw_platform_1.
+14:31:11 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1459362625355,  Project:1456521551003
+14:31:11 INFO  : The hardware specification for project 'top_level_hw_platform_1' is different from D:/vivadoprojects/armqp/src/sdk/top_level.hdf.
+14:31:11 INFO  : Copied contents of D:/vivadoprojects/armqp/src/sdk/top_level.hdf into \top_level_hw_platform_1\system.hdf.
+14:31:45 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:31:50 INFO  : 
+14:31:51 INFO  : Updating hardware inferred compiler options for hdmi_display.
+14:31:52 INFO  : Updating hardware inferred compiler options for median_filter.
+14:31:52 INFO  : Clearing existing target manager status.
+14:40:54 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
