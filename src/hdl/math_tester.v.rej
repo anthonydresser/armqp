@@ -1,0 +1,20 @@
+diff a/src/hdl/math_tester.v b/src/hdl/math_tester.v	(rejected hunks)
+@@ -22,13 +22,18 @@
+ 
+ module math_tester();
+     
++<<<<<<< HEAD
+     parameter height=1080;
+     parameter width=960;
++=======
++
++>>>>>>> 7f9b013335902d770ac0ae33ea8ab76c18d39dc9
+     reg clk;
+     reg reset;
+     
+     //for debugging only
+     real fixbuff;
++<<<<<<< HEAD
+     integer f_polarCoordsFixedRadius;
+     integer x,y,status;
+     reg [15:0] t_polarRadius [0:height-1][0:width-1];
