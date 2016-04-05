@@ -165,6 +165,10 @@
          <obj_property name="ObjectShortName">ra4[15:0]</obj_property>
          <obj_property name="CustomSignalColor">#A52A2A</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">REALRADIX</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">3</obj_property>
+         <obj_property name="radix_otherWidth">0</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group165" type="group">
@@ -221,8 +225,8 @@
          <obj_property name="ElementShortName">ra6[15:0]</obj_property>
          <obj_property name="ObjectShortName">ra6[15:0]</obj_property>
          <obj_property name="Radix">REALRADIX</obj_property>
-         <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-         <obj_property name="radix_fractionWidth">4</obj_property>
+         <obj_property name="radix_realType">SIGNEDFIXEDPOINTRADIX</obj_property>
+         <obj_property name="radix_fractionWidth">3</obj_property>
          <obj_property name="radix_otherWidth">0</obj_property>
          <obj_property name="CustomSignalColor">#A52A2A</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
