@@ -3,14 +3,14 @@ module mem_interface_testbench;
    parameter width = 1080;
    parameter height = 960;
 
-   reg clk, reset, AXIS_In_tValid, AXIS_Out_tReady, AXIS_In_tuser;
-   reg [15:0] AXIS_In_tData;
+   reg clk, reset, AXIS_In_Valid, AXIS_Out_Ready;
+   reg [15:0] AXIS_In_Data;
    reg [$clog2(height):0] OutputY;
    reg [$clog2(width):0] OutputX;
-   
-   wire AXIS_In_tReady;
-   wire [15:0] AXIS_Out_tData;
-   wire AXIS_Out_tValid;
+
+   wire AXIS_In_Ready;
+   wire [15:0] AXIS_Out_Data;
+   wire AXIS_Out_Valid;
    
    wire Math_Valid;
    wire [11:0] MathX, MathY;
@@ -22,16 +22,15 @@ module mem_interface_testbench;
       //Hold Reset for 100ns
       clk=0;
       reset=1;
-      AXIS_In_tValid=0;
-      AXIS_In_tData=0;
-      AXIS_In_tuser=0;
-      OutputY=0;
-      OutputX=0;
-      AXIS_Out_tReady=0;
-      #1000;
+      AXIS_In_Valid<=0;
+      AXIS_In_Data<=0;
+//      MathY=0;
+//      MathX=0;
+      AXIS_Out_Ready<=0;
+      #100;
       //Start Feeding in data from 'VDMA'
       reset=0;
-      AXIS_In_tValid=1;
+      AXIS_In_Valid<=1;
    end
 
 
@@ -76,10 +75,10 @@ module mem_interface_testbench;
 //simulating video input data as a counter
    always @(posedge clk)
      if(reset)
-         AXIS_In_tData<=0;
+         AXIS_In_Data<=0;
      else
-         if(AXIS_In_tReady)
-             AXIS_In_tData<=AXIS_In_tData+1'b1;      
+         if(AXIS_In_Ready)
+             AXIS_In_Data<=AXIS_In_Data+1'b1;      
 
 //Data Capture & Testing
    initial begin
@@ -88,8 +87,7 @@ module mem_interface_testbench;
     //  print column headers
       $fdisplay(fout, "Xin, Yin, Xout, Yout");
       
-
-      wait(OutputX==width&&OutputY==1);
+      wait(OutputX==width-1&&OutputY==height-1);
       
       $fclose(fout);
       $stop;//Stop simulation
@@ -100,7 +98,6 @@ module mem_interface_testbench;
       if(Math_Valid&&memReady)//Discard invalid samples
          $fdisplay(fout, "%d, %d, %d, %d", OutputX, OutputY, MathX, MathY);
    
-
    barrel_proj_wrapper UUT(
      .AXIS_IN_tdata(AXIS_In_Data),
      .AXIS_IN_tready(AXIS_In_Ready),
@@ -117,7 +114,6 @@ module mem_interface_testbench;
      .MathX(MathX),
      .MathY(MathY)
      
-
      );
 
 endmodule

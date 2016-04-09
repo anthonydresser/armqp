@@ -204,7 +204,7 @@ always @(posedge clk )
         end
         else
             if(tOut_tvalid  & rIn_ready)begin
-                rsq1 <= (10 * radius * radius);   //Q6
+                rsq1 <= (10 * radius * radius) << 4;   //Q10
                 ph1 <= phase;
                 ra1 <= radius;
             end
@@ -221,7 +221,7 @@ always @(posedge clk)
             end
             else
                 if(tOut_tvalid  & rIn_ready)begin
-                    rsq2 <= rsq1 / 32'd522000;	//Q6
+                    rsq2 <= rsq1 / 32'd522000;	//Q10
                     ph2 <= ph1;
                     ra2 <= ra1;
                 end
@@ -241,8 +241,8 @@ always @(posedge clk)
         else
             if(tOut_tvalid  & rIn_ready)
             begin
-                floor <= {rsq2[31:6], 6'b0};	//Q6
-                rsq3 <= rsq2;	//Q6
+                floor <= {rsq2[31:10], 10'b0};	//Q10
+                rsq3 <= rsq2;	//Q10
                 ph3 <= ph2;
                 ra3 <= ra2;
             end
@@ -262,8 +262,8 @@ always @(posedge clk)
         else
             if(tOut_tvalid  & rIn_ready)
             begin
-                floor2 <= (floor > 16'd640)? 16'd640 : floor;	//Q6
-                rsq4 <= rsq3;	//Q6
+                floor2 <= (floor > 16'd10240)? 16'd10240 : floor;	//Q10
+                rsq4 <= rsq3;	//Q10
                 ph4 <= ph3;
                 ra4 <= ra3;
             end
@@ -283,8 +283,8 @@ always @(posedge clk)
         else
             if(tOut_tvalid  & rIn_ready)
             begin
-                floor3 <= floor2;	//Q6
-                rsq5 <= rsq4;	//Q6
+                floor3 <= floor2;	//Q10
+                rsq5 <= rsq4;	//Q10
                 ph5 <= ph4;
                 ra5 <= ra4;
             end
@@ -304,8 +304,8 @@ always @(posedge clk)
         else
             if(tOut_tvalid  & rIn_ready)
             begin
-                t <= rsq5 - floor3; //Q6
-                k <= floor3 >> 6;   //Q0
+                t <= rsq5 - floor3; //Q10
+                k <= floor3 >> 10;   //Q0
                 ph6 <= ph5;
                 ra6 <= ra5;
             end
@@ -329,8 +329,8 @@ always @(posedge clk)
     end
     else
         if(tOut_tvalid  & rIn_ready) begin
-            t2 <= t;    //Q6
-            omt <= 16'b1000000 - t;   //2's comp Q6
+            t2 <= t;    //Q10
+            omt <= 16'b10000000000 - t;   //2's comp Q10
             ph7 <= ph6;
             ra7 <= ra6;
             case (k)
@@ -452,39 +452,39 @@ always @(posedge clk) begin
     end
     else
         if(tOut_tvalid  & rIn_ready) begin
-            res1 <= 16'b1000000 + (16'd2 * t2);  //Q6
-            res1_2 <= (m0 * t2); //Q16
-            res1_3 <= (omt * omt) >>> 4;   //Q8
-            res1_4 <= 16'b1000000 + (16'd2 * omt); //Q6	//b NOT d
-            res1_5 <= (m1 * omt) >>> 2; //Q14
-            res1_6 <= (t2 * t2) >>> 4; //Q8
+            res1 <= 16'b10000000000 + (16'd2 * t2);  //Q10
+            res1_2 <= (m0 * t2); //Q20
+            res1_3 <= (omt * omt) >>> 8;   //Q12
+            res1_4 <= 16'b10000000000 + (16'd2 * omt); //Q10	//b NOT d
+            res1_5 <= (m1 * omt) >>> 6; //Q14
+            res1_6 <= (t2 * t2) >>> 6; //Q14
             ph8 <= ph7;
             ra8 <= ra7;
             p0_1 <= p0;
 			p1_1 <= p1;
             
-            res2 <= (p0_1 * res1);  //Q16   carry p0
-            res2_2 <= res1_2; //Q16
-            res2_3 <= res1_3; //Q8
-            res2_4 <= (res1_4 * p1_1) >>> 2;  //Q14 carry p0
+            res2 <= (p0_1 * res1) ;  //Q20   carry p0
+            res2_2 <= res1_2; //Q20
+            res2_3 <= res1_3; //Q12
+            res2_4 <= (res1_4 * p1_1) >>> 6;  //Q14 carry p0
             res2_5 <= res1_5;   //Q14
-            res2_6 <= res1_6;    //Q8
+            res2_6 <= res1_6;    //Q14
             ph9 <= ph8;
             ra9 <= ra8;
             
-            res3 <= (res2 + res2_2)>>>6; //Q10
-            res3_3 <= res2_3 >>> 2;  //Q6
+            res3 <= (res2 + res2_2)>>>10; //Q10
+            res3_3 <= res2_3 ;  //Q12
             res3_4 <= (res2_4 - res2_5) >>> 4;  //Q10
-            res3_6 <= res2_6 >>> 2; //Q6
+            res3_6 <= res2_6 ; //Q14
             ph10 <= ph9;
             ra10 <= ra9;
             
-            res4 <= res3 * res3_3;   //Q16
-            res4_6 <= res3_6 * res3_4;   //Q16
+            res4 <= (res3 * res3_3) >>> 4;   //Q18
+            res4_6 <= (res3_6 * res3_4) >>> 6;   //Q18
             ph11 <= ph10;
             ra11 <= ra10;
             
-            res5 <= (res4 + res4_6)>>>2;   //Q14
+            res5 <= (res4 + res4_6) >>>4;   //Q14
             ph12 <= ph11;
             ra12 <= ra11;
             
