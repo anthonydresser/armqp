@@ -144,7 +144,7 @@ always @(posedge clk)
         else begin
             if(tIn_tready)
                 begin
-                    tIn_tdata <= {yIn, 3'b0,  xIn, 3'b0};
+                    tIn_tdata <= {yIn, 4'b0,  xIn, 4'b0};
                     tIn_tvalid <= 1;
                     //xIn <= xIn + 1'b1;
                     if (xIn >= 539)

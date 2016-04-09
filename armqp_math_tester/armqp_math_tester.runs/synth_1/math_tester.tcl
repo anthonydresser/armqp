@@ -14,10 +14,6 @@ set_property parent.project_path D:/vivadoprojects/armqp/armqp_math_tester/armqp
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-add_files -quiet D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/rotate_synth_1/rotate.dcp
-set_property used_in_implementation false [get_files D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/rotate_synth_1/rotate.dcp]
-add_files -quiet D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/translate_synth_1/translate.dcp
-set_property used_in_implementation false [get_files D:/vivadoprojects/armqp/armqp_math_tester/armqp_math_tester.runs/translate_synth_1/translate.dcp]
 read_verilog -library xil_defaultlib {
   D:/vivadoprojects/armqp/src/hdl/barrel_math_hdl.v
   D:/vivadoprojects/armqp/src/hdl/math_tester.v

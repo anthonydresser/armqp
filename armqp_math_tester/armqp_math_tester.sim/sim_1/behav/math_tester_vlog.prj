@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  "../../../../src/hdl/barrel_math_hdl.v"
+verilog xil_defaultlib  "../../../../src/hdl/barrelMath.v"
 verilog xil_defaultlib  "../../../../src/hdl/math_tester.v"
 
 # compile glbl module

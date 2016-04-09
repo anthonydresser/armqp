@@ -8,7 +8,6 @@ LD_SRCS += \
 
 C_SRCS += \
 ../src/helloworld.c \
-../src/median_filter.c \
 ../src/platform.c \
 ../src/video_frame_buffer.c \
 ../src/video_generator.c \
@@ -19,7 +18,6 @@ C_SRCS += \
 
 OBJS += \
 ./src/helloworld.o \
-./src/median_filter.o \
 ./src/platform.o \
 ./src/video_frame_buffer.o \
 ./src/video_generator.o \
@@ -30,7 +28,6 @@ OBJS += \
 
 C_DEPS += \
 ./src/helloworld.d \
-./src/median_filter.d \
 ./src/platform.d \
 ./src/video_frame_buffer.d \
 ./src/video_generator.d \

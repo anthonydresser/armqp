@@ -119,6 +119,7 @@ module math_tester();
     //Load up radius table
     initial begin      
         f_polarCoordsFixedRadius = $fopen("../../../polarCoordsFixedRadius.csv", "r");
+
         
         if(f_polarCoordsFixedRadius==0) begin
             $display("Invalid File Descriptor/Could not find polarCoordsFixedRadius.csv");
@@ -195,4 +196,5 @@ module math_tester();
             tran_m_axis_dout_tdata=TranslateDataDelay[255:240];
         end
     end
+
 endmodule
