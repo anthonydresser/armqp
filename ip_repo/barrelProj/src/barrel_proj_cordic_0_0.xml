@@ -114,7 +114,7 @@
 					<spirit:name>FREQ_HZ</spirit:name>
 					<spirit:value spirit:format="string"
 							spirit:resolve="generated"
-							spirit:id="BUSIFPARAM_VALUE.S_AXIS_CARTESIAN.FREQ_HZ">148500000</spirit:value>
+							spirit:id="BUSIFPARAM_VALUE.S_AXIS_CARTESIAN.FREQ_HZ">148571428</spirit:value>
 				</spirit:parameter>
 				<spirit:parameter>
 					<spirit:name>CLK_DOMAIN</spirit:name>
@@ -171,7 +171,7 @@
 					<spirit:name>FREQ_HZ</spirit:name>
 					<spirit:displayName>aclk</spirit:displayName>
 					<spirit:value spirit:resolve="user"
-							spirit:id="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ">148500000</spirit:value>
+							spirit:id="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ">148571428</spirit:value>
 				</spirit:parameter>
 				<spirit:parameter>
 					<spirit:name>CLK_DOMAIN</spirit:name>
@@ -416,7 +416,7 @@
 					<spirit:name>FREQ_HZ</spirit:name>
 					<spirit:value spirit:format="string"
 							spirit:resolve="generated"
-							spirit:id="BUSIFPARAM_VALUE.M_AXIS_DOUT.FREQ_HZ">148500000</spirit:value>
+							spirit:id="BUSIFPARAM_VALUE.M_AXIS_DOUT.FREQ_HZ">148571428</spirit:value>
 				</spirit:parameter>
 				<spirit:parameter>
 					<spirit:name>LAYERED_METADATA</spirit:name>
@@ -496,7 +496,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -504,7 +504,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:42 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:35 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>
@@ -561,7 +561,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -595,7 +595,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -603,7 +603,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:42 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:35 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>
@@ -630,7 +630,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -638,7 +638,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:42 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:35 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>
@@ -695,7 +695,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -730,7 +730,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -738,7 +738,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:42 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:35 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>
@@ -765,7 +765,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -800,7 +800,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -808,7 +808,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:43 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:36 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>
@@ -834,7 +834,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>5b501398</spirit:value>
+						<spirit:value>fdc45386</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -842,7 +842,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:43 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:36 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>
@@ -2412,12 +2412,6 @@
 						xilinx:valueSource="user"/>
 				<xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.out_tready"
 						xilinx:valueSource="user"/>
-				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ"
-						xilinx:valueSource="user_prop"/>
-				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_DOUT.FREQ_HZ"
-						xilinx:valueSource="user_prop"/>
-				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CARTESIAN.FREQ_HZ"
-						xilinx:valueSource="user_prop"/>
 				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.CLK_DOMAIN"
 						xilinx:valueSource="default_prop"/>
 				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_DOUT.CLK_DOMAIN"
@@ -2440,6 +2434,12 @@
 						xilinx:valueSource="constant_prop"/>
 				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CARTESIAN.HAS_TLAST"
 						xilinx:valueSource="constant_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK_INTF.FREQ_HZ"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS_DOUT.FREQ_HZ"
+						xilinx:valueSource="user_prop"/>
+				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S_AXIS_CARTESIAN.FREQ_HZ"
+						xilinx:valueSource="user_prop"/>
 			</xilinx:configElementInfos>
 		</xilinx:coreExtensions>
 		<xilinx:packagingInfo>

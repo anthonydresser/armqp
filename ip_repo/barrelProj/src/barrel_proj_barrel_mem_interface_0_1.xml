@@ -82,7 +82,7 @@
 					<spirit:name>FREQ_HZ</spirit:name>
 					<spirit:value spirit:format="string"
 							spirit:resolve="generated"
-							spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">148500000</spirit:value>
+							spirit:id="BUSIFPARAM_VALUE.CLK.FREQ_HZ">148571428</spirit:value>
 				</spirit:parameter>
 			</spirit:parameters>
 		</spirit:busInterface>
@@ -196,7 +196,7 @@
 					<spirit:name>FREQ_HZ</spirit:name>
 					<spirit:value spirit:format="string"
 							spirit:resolve="generated"
-							spirit:id="BUSIFPARAM_VALUE.AXIS_IN.FREQ_HZ">148500000</spirit:value>
+							spirit:id="BUSIFPARAM_VALUE.AXIS_IN.FREQ_HZ">148571428</spirit:value>
 				</spirit:parameter>
 			</spirit:parameters>
 		</spirit:busInterface>
@@ -312,7 +312,7 @@
 					<spirit:name>FREQ_HZ</spirit:name>
 					<spirit:value spirit:format="string"
 							spirit:resolve="generated"
-							spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.FREQ_HZ">148500000</spirit:value>
+							spirit:id="BUSIFPARAM_VALUE.AXIS_OUT.FREQ_HZ">148571428</spirit:value>
 				</spirit:parameter>
 			</spirit:parameters>
 		</spirit:busInterface>
@@ -338,7 +338,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>de60c734</spirit:value>
+						<spirit:value>2d9e0538</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -346,7 +346,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:44 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:36 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>
@@ -372,7 +372,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>de60c734</spirit:value>
+						<spirit:value>2d9e0538</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -407,7 +407,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>de60c734</spirit:value>
+						<spirit:value>2d9e0538</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -415,7 +415,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:44 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:36 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>
@@ -441,7 +441,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>de60c734</spirit:value>
+						<spirit:value>2d9e0538</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -476,7 +476,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRC</spirit:name>
-						<spirit:value>de60c734</spirit:value>
+						<spirit:value>2d9e0538</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>boundaryCRCversion</spirit:name>
@@ -484,7 +484,7 @@
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>GENtimestamp</spirit:name>
-						<spirit:value>Sat Apr 16 19:44:44 UTC 2016</spirit:value>
+						<spirit:value>Sat Apr 23 16:16:36 UTC 2016</spirit:value>
 					</spirit:parameter>
 					<spirit:parameter>
 						<spirit:name>StaleAtRelink</spirit:name>

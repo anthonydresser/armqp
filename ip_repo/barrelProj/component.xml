@@ -219,7 +219,7 @@
 			<spirit:parameters>
 				<spirit:parameter>
 					<spirit:name>FREQ_HZ</spirit:name>
-					<spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK.FREQ_HZ">148500000</spirit:value>
+					<spirit:value spirit:id="BUSIFPARAM_VALUE.CLK.CLK.FREQ_HZ">148571428</spirit:value>
 				</spirit:parameter>
 				<spirit:parameter>
 					<spirit:name>PHASE</spirit:name>
@@ -274,12 +274,6 @@
 				<spirit:fileSetRef>
 					<spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
 				</spirit:fileSetRef>
-				<spirit:parameters>
-					<spirit:parameter>
-						<spirit:name>viewChecksum</spirit:name>
-						<spirit:value>a220b7f0</spirit:value>
-					</spirit:parameter>
-				</spirit:parameters>
 			</spirit:view>
 			<spirit:view>
 				<spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
@@ -289,12 +283,6 @@
 				<spirit:fileSetRef>
 					<spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
 				</spirit:fileSetRef>
-				<spirit:parameters>
-					<spirit:parameter>
-						<spirit:name>viewChecksum</spirit:name>
-						<spirit:value>eec3f300</spirit:value>
-					</spirit:parameter>
-				</spirit:parameters>
 			</spirit:view>
 			<spirit:view>
 				<spirit:name>xilinx_xpgui</spirit:name>
@@ -303,26 +291,6 @@
 				<spirit:fileSetRef>
 					<spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
 				</spirit:fileSetRef>
-				<spirit:parameters>
-					<spirit:parameter>
-						<spirit:name>viewChecksum</spirit:name>
-						<spirit:value>f64a5dae</spirit:value>
-					</spirit:parameter>
-				</spirit:parameters>
-			</spirit:view>
-			<spirit:view>
-				<spirit:name>xilinx_utilityxitfiles</spirit:name>
-				<spirit:displayName>Utility XIT/TTCL</spirit:displayName>
-				<spirit:envIdentifier>:vivado.xilinx.com:xit.util</spirit:envIdentifier>
-				<spirit:fileSetRef>
-					<spirit:localName>xilinx_utilityxitfiles_view_fileset</spirit:localName>
-				</spirit:fileSetRef>
-				<spirit:parameters>
-					<spirit:parameter>
-						<spirit:name>viewChecksum</spirit:name>
-						<spirit:value>48e31bbc</spirit:value>
-					</spirit:parameter>
-				</spirit:parameters>
 			</spirit:view>
 		</spirit:views>
 		<spirit:ports>
@@ -726,7 +694,7 @@
 				<spirit:name>src/barrel_proj.v</spirit:name>
 				<spirit:fileType>verilogSource</spirit:fileType>
 				<spirit:userFileType>IMPORTED_FILE</spirit:userFileType>
-				<spirit:userFileType>CHECKSUM_bd6015f2</spirit:userFileType>
+				<spirit:userFileType>CHECKSUM_15e24592</spirit:userFileType>
 				<spirit:define>
 					<spirit:name>processing_order</spirit:name>
 					<spirit:value>early</spirit:value>
@@ -954,13 +922,6 @@
 				<spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
 			</spirit:file>
 		</spirit:fileSet>
-		<spirit:fileSet>
-			<spirit:name>xilinx_utilityxitfiles_view_fileset</spirit:name>
-			<spirit:file>
-				<spirit:name>src/barrel_proj.hwdef</spirit:name>
-				<spirit:fileType>unknown</spirit:fileType>
-			</spirit:file>
-		</spirit:fileSet>
 	</spirit:fileSets>
 	<spirit:description>barrel_proj_v1_0</spirit:description>
 	<spirit:parameters>
@@ -980,10 +941,10 @@
 				<xilinx:taxonomy>/UserIP</xilinx:taxonomy>
 			</xilinx:taxonomies>
 			<xilinx:displayName>barrel_proj_v1_0</xilinx:displayName>
-			<xilinx:coreRevision>3</xilinx:coreRevision>
-			<xilinx:coreCreationDateTime>2016-04-16T19:47:32Z</xilinx:coreCreationDateTime>
+			<xilinx:coreRevision>1</xilinx:coreRevision>
+			<xilinx:coreCreationDateTime>2016-04-23T16:17:28Z</xilinx:coreCreationDateTime>
 			<xilinx:tags>
-				<xilinx:tag xilinx:name="armqp:user:barrel_proj:1.0_ARCHIVE_LOCATION">C:/Users/Lukas/Documents/MQP/armqp_vdma2</xilinx:tag>
+				<xilinx:tag xilinx:name="armqp:user:barrel_proj:1.0_ARCHIVE_LOCATION">C:/Users/Lukas/Documents/MQP/armqp_vdma2/armqp/ip_repo/barrelProj</xilinx:tag>
 			</xilinx:tags>
 			<xilinx:configElementInfos>
 				<xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXIS_IN.TDATA_NUM_BYTES"
@@ -1030,14 +991,6 @@
 		</xilinx:coreExtensions>
 		<xilinx:packagingInfo>
 			<xilinx:xilinxVersion>2015.2</xilinx:xilinxVersion>
-			<xilinx:checksum xilinx:scope="busInterfaces"
-					xilinx:value="582ff40c"/>
-			<xilinx:checksum xilinx:scope="fileGroups"
-					xilinx:value="7f894f66"/>
-			<xilinx:checksum xilinx:scope="ports"
-					xilinx:value="7c8500c5"/>
-			<xilinx:checksum xilinx:scope="parameters"
-					xilinx:value="0f38b724"/>
 		</xilinx:packagingInfo>
 	</spirit:vendorExtensions>
 </spirit:component>

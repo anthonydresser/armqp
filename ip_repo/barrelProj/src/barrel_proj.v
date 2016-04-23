@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Sat Apr 16 15:44:41 2016
+//Date        : Sat Apr 23 12:16:34 2016
 //Host        : Lukas-laptop running 64-bit Service Pack 1  (build 7601)
 //Command     : generate_target barrel_proj.bd
 //Design      : barrel_proj
