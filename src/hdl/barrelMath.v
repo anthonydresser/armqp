@@ -10,6 +10,7 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: 
+//		Controller for barrel projection section and performs math on radius using Catmull Rom Spline function
 // 
 // Dependencies: 
 // 
@@ -167,7 +168,7 @@ always @(posedge clk)
 reg [15:0] phase;
 reg [15:0] radius;
 
-//Get output
+//Get output from CORDIC
 //s1
 always @(posedge clk)
     begin
@@ -405,7 +406,7 @@ always @(posedge clk)
              end
     end
 
-	//s8-14
+//s8-14
 //find res
 reg[31:0] ph8, ra8, ph9, ra9, ph10, ra10, ph11, ra11, ph12, ra12, ph13, ph14;
 reg [31:0] p0_1, p1_1;
@@ -455,7 +456,7 @@ always @(posedge clk) begin
             res1 <= 16'b10000000000 + (16'd2 * t2);  //Q10
             res1_2 <= (m0 * t2); //Q20
             res1_3 <= (omt * omt) >>> 8;   //Q12
-            res1_4 <= 16'b10000000000 + (16'd2 * omt); //Q10	//b NOT d
+            res1_4 <= 16'b10000000000 + (16'd2 * omt); //Q10
             res1_5 <= (m1 * omt) >>> 6; //Q14
             res1_6 <= (t2 * t2) >>> 6; //Q14
             ph8 <= ph7;
@@ -463,10 +464,10 @@ always @(posedge clk) begin
             p0_1 <= p0;
 			p1_1 <= p1;
             
-            res2 <= (p0_1 * res1) ;  //Q20   carry p0
+            res2 <= (p0_1 * res1) ;  //Q20
             res2_2 <= res1_2; //Q20
             res2_3 <= res1_3; //Q12
-            res2_4 <= (res1_4 * p1_1) >>> 6;  //Q14 carry p0
+            res2_4 <= (res1_4 * p1_1) >>> 6;  //Q14
             res2_5 <= res1_5;   //Q14
             res2_6 <= res1_6;    //Q14
             ph9 <= ph8;
@@ -532,8 +533,8 @@ always  @(posedge clk)
         else begin
             if (rOut_tvalid && mem_ready)
                 begin
-                    xOut <= rOut_tdata[15:4] + 540;//(rOut_tdata[15]) ? 0 : (rOut_tdata[15:4] > 1079) ?  1079 :  rOut_tdata[15:4] ;
-                    yOut <= ((rOut_tdata[31:20] * 12'b111111111111)+ 480);//(rOut_tdata[31]) ? 0 : (rOut_tdata[31:20] > 959) ? 959 : rOut_tdata[31:20] ;
+                    xOut <= rOut_tdata[15:4] + 540;
+                    yOut <= ((rOut_tdata[31:20] * 12'b111111111111)+ 480);
                     addr_vld <= 1;
                 end
            else begin

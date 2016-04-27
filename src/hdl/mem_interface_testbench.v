@@ -1,4 +1,25 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: WPI
+// Engineer: Andrew Weiler, Lukas Hunker, Anthony Dresser
+// 
+// Create Date: 03/03/2016 01:00:25 PM
+// Design Name: 
+// Module Name: mem_interface_testbench
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+//		Test bench to perform simulation on the entire barrel projection module and
+//		output resulting lookup tbale to csv
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 module mem_interface_testbench;
    parameter width = 1080;
    parameter height = 960;

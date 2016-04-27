@@ -1,15 +1,16 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: Andrew Weiler
+// Company: WPI
+// Engineer: Andrew Weiler, Lukas Hunker, Anthony Dresser
 // 
 // Create Date: 03/03/2016 01:00:25 PM
-// Design Name: 
+// Design Name: AR MQP
 // Module Name: math_tester
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
 // Description: 
+//		Test bench to perform behavioral simulation on the barrel projection math module
 // 
 // Dependencies: 
 // 
