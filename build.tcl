@@ -2,7 +2,7 @@
 # Vivado (TM) v2015.2 (64-bit)
 #
 # This file contains the Vivado Tcl commands for re-creating the project to the state*
-# It creates the project in a new directory using referencing 
+# It creates the project in a new directory using referencing
 # files under source control in the fixed NOA directory tree.
 # The generated project is not under source control.
 # when this script was generated. In order to re-create the project, please source this
@@ -13,33 +13,33 @@
 #   run results please launch the synthesis/implementation runs as needed.
 #
 
-# If block diagram is modified, export the bd script to 
-# "origin_dir/src/bd/design1.tcl" using the vivado tool. 
+# If block diagram is modified, export the bd script to
+# "origin_dir/src/bd/design1.tcl" using the vivado tool.
 
 
 puts "The name of this script is $argv0"
 
-# Set User Environment Variables. Each is set once for a new 
+# Set User Environment Variables. Each is set once for a new
 # project.
 # Top Level file name without path and without extension.
-# This file must be in origin_dir/src/hdl/ 
+# This file must be in origin_dir/src/hdl/
 
 set TopLevelFileName "top_level"
-set ActiveConstraints "main" 
+set ActiveConstraints "main"
 
 # End User Environment Variables
 
 # Set the reference directory to where the script is
 set origin_dir [file dirname [info script]]
 
-# Create project 
+# Create project
 create_project armqp $origin_dir/armqp
 
 # Set the directory path for the new project
 set proj_dir [get_property directory [current_project]]
 
 #######################################################
-# Copied from Xilinx Write Project Tcl result 
+# Copied from Xilinx Write Project Tcl result
 # for this specific project when first created.
 #######################################################
 # Set project properties
@@ -50,7 +50,7 @@ set_property "default_lib" "xil_defaultlib" $obj
 #######################################################
 
 set FPGAPartNumber [get_property "part" $obj]
- 
+
 set basedir "$origin_dir/ip_repo/"
 
 set_property  ip_repo_paths  $basedir [current_project]
@@ -58,11 +58,6 @@ update_ip_catalog
 
 # Create Block Design
 source $origin_dir/src/bd/design_1.tcl
-save_bd_design
-regenerate_bd_layout
-save_bd_design
-
-source $origin_dir/src/bd/barrel_projection.tcl
 save_bd_design
 regenerate_bd_layout
 save_bd_design
@@ -96,13 +91,13 @@ generate_target all [get_files $origin_dir/armqp/armqp.srcs/sources_1/ip/clk_wiz
 
 set basedir "$origin_dir/src/"
 
-proc incr_filename {name} { 
+proc incr_filename {name} {
 set digits [regexp -inline {\d+$} $name]
 set prefix [string range $name 0 end-[string length $digits]]
-set num [scan $digits %d] 
-# prevents problems with invalid octal numbers 
-format "%s%0*d" $prefix [string length $digits] [incr num] 
-} 
+set num [scan $digits %d]
+# prevents problems with invalid octal numbers
+format "%s%0*d" $prefix [string length $digits] [incr num]
+}
 
 set ConstrSetName "Constrs_1"
 add_files -fileset constrs_1 -norecurse $origin_dir/src/hdl/main.xdc
